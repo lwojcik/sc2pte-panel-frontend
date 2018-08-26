@@ -9,7 +9,7 @@ import './PlayerHeader.css';
 
 const PlayerHeader = ({ data }) => (
   <div className="PlayerHeader">
-    <Avatar rank={data.rank} portrait={data.portrait} />
+    <Avatar rank={data.rank} portrait={data.portrait} server={data.server} />
     <PlayerInfo name={data.name} clan={data.clan} />
     <Legend />
   </div>
@@ -22,6 +22,7 @@ PlayerHeader.propTypes = {
       name: PropTypes.string.isRequired,
       tag: PropTypes.string.isRequired,
     }),
+    server: PropTypes.oneOf(['', 'eu', 'us', 'kr']).isRequired,
     rank: PropTypes.string,
     portrait: PropTypes.shape({
       x: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,

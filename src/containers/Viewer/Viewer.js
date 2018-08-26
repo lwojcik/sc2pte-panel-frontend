@@ -15,6 +15,7 @@ class Viewer extends Component {
       isLoaded: false,
       status: 'loading',
       player: {
+        server: '',
         name: '',
         clan: {
           name: '',

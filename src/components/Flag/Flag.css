@@ -1,0 +1,21 @@
+.Flag {
+  position: absolute;
+  top:0;
+  left:0;
+  color:#fff;
+  z-index:120;
+  width: 20px;
+  height: 13px;
+}
+
+.Flag.Flag--eu {
+  background: url('./Images/Flag--eu.png') no-repeat left top;
+}
+
+.Flag.Flag--us {
+  background: url('./Images/Flag--us.png') no-repeat left top;
+}
+
+.Flag.Flag--kr {
+  background: url('./Images/Flag--kr.png') no-repeat left top;
+}
