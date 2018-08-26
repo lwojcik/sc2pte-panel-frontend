@@ -1,7 +1,8 @@
 {
   "name": "sc2profile-twitch-extension-frontend",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "ajv": "6.5.1",
     "autoprefixer": "7.1.6",
