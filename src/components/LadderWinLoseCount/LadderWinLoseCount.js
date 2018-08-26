@@ -14,7 +14,7 @@ const LadderWinLoseCount = ({ wins, ties, losses }) => {
         <span className="separator">
           &nbsp;/&nbsp;
         </span>
-        <span className="countTies" title="Ties">
+        <span className="countTies" title="Draws">
           {(ties < 10 ? `0${ties}` : ties)}
         </span>
         <span className="separator">

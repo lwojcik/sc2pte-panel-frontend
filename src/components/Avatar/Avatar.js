@@ -3,14 +3,16 @@ import PropTypes from 'prop-types';
 
 import Frame from '../Frame/Frame';
 import Portrait from '../Portrait/Portrait';
+import Flag from '../Flag/Flag';
 
 import './Avatar.css';
 
-const Avatar = ({ rank, portrait }) => (
+const Avatar = ({ rank, portrait, server }) => (
   <div className="Avatar">
     <Frame rank={rank}>
       <Portrait source={portrait} />
     </Frame>
+    <Flag server={server} />
   </div>
 );
 
@@ -24,6 +26,7 @@ Avatar.propTypes = {
     offset: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     url: PropTypes.string,
   }),
+  server: PropTypes.oneOf(['', 'eu', 'us', 'kr']),
 };
 
 Avatar.defaultProps = {
@@ -36,6 +39,7 @@ Avatar.defaultProps = {
     offset: 0,
     url: '',
   },
+  server: '',
 };
 
 export default Avatar;
