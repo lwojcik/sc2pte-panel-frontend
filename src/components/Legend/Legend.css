@@ -1,0 +1,31 @@
+.Legend {
+  font-size:12px;
+  color:#098efe;
+  position: absolute;
+  top:60px;
+  left:110px;
+}
+
+.Legend span {
+  padding-right:10px;
+}
+
+.Legend span:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-left: 3px;
+}
+
+.Legend--win:after {
+  background: #5cea00;
+}
+
+.Legend--draw:after {
+  background:orange;
+}
+
+.Legend--loss:after {
+  background: red;
+}

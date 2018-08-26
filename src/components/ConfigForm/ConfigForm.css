@@ -1,0 +1,35 @@
+.ConfigForm {
+  margin: 1rem 0 2rem;
+}
+
+.ConfigForm input::-webkit-input-placeholder {
+  color:#999;
+}
+
+.ConfigForm input:-moz-placeholder {
+  color:#999;
+}
+
+.ConfigForm input::-moz-placeholder {
+  color:#999;
+}
+
+.ConfigForm input:-ms-input-placeholder {
+  color:#999;
+}
+
+.ConfigForm input:focus::-webkit-input-placeholder {
+  color:transparent;
+}
+
+.ConfigForm input:focus:-moz-placeholder {
+  color:transparent;
+}
+
+.ConfigForm input:focus::-moz-placeholder {
+  color:transparent;
+}
+
+.ConfigForm input:focus:-ms-input-placeholder {
+  color:transparent;
+}

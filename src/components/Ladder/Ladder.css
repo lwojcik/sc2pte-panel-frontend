@@ -1,0 +1,13 @@
+.Ladder {
+  margin-bottom: 5px;
+  position: relative;
+  height:65px;
+  color:#65d3fc;
+}
+
+.Stats {
+  position: absolute;
+  left:50px;
+  top:0;
+  line-height: 1;
+}
