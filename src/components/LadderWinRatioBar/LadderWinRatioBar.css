@@ -18,6 +18,8 @@
 .LadderWinRatioBar .bar {
   float: left;
   height:100%;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
 }
 
 

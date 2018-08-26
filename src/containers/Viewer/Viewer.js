@@ -81,8 +81,13 @@ class Viewer extends Component {
     };
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     this.getViewerData();
+    this.interval = setInterval(() => this.getViewerData(), process.env.REACT_APP_UPDATE_INTERVAL);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   async getViewerData() {
