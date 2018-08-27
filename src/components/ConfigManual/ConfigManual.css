@@ -2,6 +2,10 @@
   font-weight: bold;
 }
 
+.ConfigManual ol {
+  padding-left: 1rem;
+}
+
 .ConfigManual .forumUrls {
   padding: 0 1rem;
 }

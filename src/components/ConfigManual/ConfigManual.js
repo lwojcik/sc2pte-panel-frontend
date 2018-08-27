@@ -86,7 +86,7 @@ class ConfigManual extends Component {
                   <b>[Region]</b>&nbsp;/&nbsp;<b>[Name]</b>
                 </li>
                 <li>
-                  Click <b>Submit</b> to save your data in the extension.
+                  Click <b>Save</b> to save your data in the extension.
                 </li>
                 <li>
                   <b>Done!</b> Add the extension to one of the panels in your channel page.
