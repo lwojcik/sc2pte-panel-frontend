@@ -11,7 +11,7 @@ module.exports = {
           kr: 'KR - Korea',
         },
         playerid: {
-          label: 'Id',
+          label: 'Player ID',
         },
         region: {
           label: 'Region',

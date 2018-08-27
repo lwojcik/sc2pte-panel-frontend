@@ -144,6 +144,7 @@ class Config extends Component {
           content={Phrases[lang].config.messages[status.message]}
           throbberVisible={status.throbberVisible}
         />
+        <ConfigManual phrases={Phrases[lang].config.manual} />
         <ConfigForm
           phrases={Phrases[lang].config}
           onSubmit={this.handleSubmit}
@@ -153,7 +154,6 @@ class Config extends Component {
           name={name}
           submissionDisabled={submissionDisabled}
         />
-        <ConfigManual phrases={Phrases[lang].config.manual} />
       </ConfigWrapper>
     );
   }

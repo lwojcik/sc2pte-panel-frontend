@@ -82,7 +82,7 @@ class ConfigManual extends Component {
                 <li>You should be redirected to your StarCraft II profile page.</li>
                 <li>Look at the URL of your profile page and copy the
                   following info to the config form above:<br /><br />
-                  http://&nbsp;<b>[Server]</b>&nbsp;.battle.net/sc2/en/profile/&nbsp;<b>[Id]</b>&nbsp;/&nbsp;
+                  http://&nbsp;<b>[Server]</b>&nbsp;.battle.net/sc2/en/profile/&nbsp;<b>[Player&nbsp;ID]</b>&nbsp;/&nbsp;
                   <b>[Region]</b>&nbsp;/&nbsp;<b>[Name]</b>
                 </li>
                 <li>

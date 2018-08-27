@@ -8,3 +8,10 @@ body {
   height: 100%;
   box-sizing: border-box;
 }
+
+.ConfigWrapper,
+.ConfigWrapper select,
+.ConfigWrapper input,
+.ConfigWrapper button {
+  font-size: 12px;
+}
