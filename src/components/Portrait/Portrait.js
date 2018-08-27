@@ -3,8 +3,15 @@ import PropTypes from 'prop-types';
 
 import DefaultPortrait from './images/Portrait-default.png';
 
+/** Until Blizzard portraits aren't served over HTTPS I have to do this nonsense */
+const getLocalPortraitCopy = (source) => {
+  const fileName = source.split('/').slice(-1)[0];
+  return require(`./images/${fileName}`); // eslint-disable-line global-require, import/no-dynamic-require
+};
+
 const Portrait = ({ source }) => {
-  const PortraitImage = source.url ? source.url : DefaultPortrait;
+  const PortraitImage = source.url ? getLocalPortraitCopy(source.url) : DefaultPortrait;
+
   const PortraitStyle = {
     width: source.w === '' ? 90 : source.w,
     height: source.h === '' ? 90 : source.h,
