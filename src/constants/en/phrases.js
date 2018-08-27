@@ -7,8 +7,8 @@ module.exports = {
           label: 'Server',
           choose: 'Choose a server',
           eu: 'EU - Europe',
-          us: 'US - North America',
-          kr: 'KR - South Korea',
+          us: 'US - Americas & Oceania',
+          kr: 'KR - Korea',
         },
         playerid: {
           label: 'Id',
