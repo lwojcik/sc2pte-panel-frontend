@@ -31,9 +31,7 @@ module.exports = {
         button: {
           label: 'Instructions - click to view ↓',
         },
-        content: {
-          step: 'Under construction',
-        },
+        content: {},
       },
       messages: {
         config_get_no_config_found_warning: 'No StarCraft II profile found. Fill the form below to make the extension work.',

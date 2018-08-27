@@ -1,0 +1,19 @@
+.ConfigManual .CollapseManualButton {
+  font-weight: bold;
+}
+
+.ConfigManual .forumUrls {
+  padding: 0 1rem;
+}
+
+.ConfigManual .forumUrls li {
+  margin:1rem 0;
+}
+
+.ConfigManual li {
+  margin:1rem;
+}
+
+.ConfigManual .forumUrls img {
+  padding:1rem;
+}
