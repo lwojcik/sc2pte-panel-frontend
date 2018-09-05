@@ -1,13 +1,19 @@
 .Ladder {
-  margin-bottom: 5px;
+  width: 100%;
   position: relative;
-  height:65px;
+  margin-bottom: 1.25rem;
   color:#65d3fc;
+  min-height:51px;
+  align-self: center;
+  flex: 1;
 }
 
-.Stats {
-  position: absolute;
-  left:50px;
-  top:0;
+.Ladder:last-child {
+  margin-bottom: 0;
+}
+
+.Ladder .Stats {
   line-height: 1;
+  padding-left: 50px;
+  min-width: 150px;
 }

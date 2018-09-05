@@ -1,15 +1,19 @@
+html, body {
+  padding: 0;
+}
+
 .ViewerPanelWrapper {
-  border:1px solid black;
+  background:#000102 url("./ViewerPanelWrapper-bg.png") no-repeat right bottom;
+  background-size:cover;
+  display: flex;
   width: 100%;
-  max-width:320px;
+  height: 100vh;
   padding:30px;
-  height:500px;
-  background:#01122e url("./ViewerPanelWrapper-bg.png") no-repeat center top;
   color:#fff;
   box-sizing:border-box;
   position:relative;
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .ViewerPanelWrapper p {

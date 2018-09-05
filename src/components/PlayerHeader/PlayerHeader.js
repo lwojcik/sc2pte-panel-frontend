@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import Avatar from '../Avatar/Avatar';
 import PlayerInfo from '../PlayerInfo/PlayerInfo';
-import Legend from '../Legend/Legend';
 
 import './PlayerHeader.css';
 
@@ -11,7 +10,6 @@ const PlayerHeader = ({ data }) => (
   <div className="PlayerHeader">
     <Avatar rank={data.rank} portrait={data.portrait} server={data.server} />
     <PlayerInfo name={data.name} clan={data.clan} />
-    <Legend />
   </div>
 );
 

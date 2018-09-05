@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import ClanTag from '../ClanTag/ClanTag';
 import PlayerName from '../PlayerName/PlayerName';
 import ClanName from '../ClanName/ClanName';
+import Legend from '../Legend/Legend';
 
 import './PlayerInfo.css';
 
@@ -13,6 +14,7 @@ const PlayerInfo = ({ name, clan }) => (
     {' '}
     <PlayerName name={name} />
     <ClanName name={clan.name} />
+    <Legend />
   </div>
 );
 

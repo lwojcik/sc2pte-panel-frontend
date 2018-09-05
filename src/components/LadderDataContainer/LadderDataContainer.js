@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import Ladder from '../Ladder/Ladder';
 
-import './LadderData.css';
+import './LadderDataContainer.css';
 
-const LadderData = ({ data }) => (
-  <div className="LadderData">
+const LadderDataContainer = ({ data }) => (
+  <div className="LadderDataContainer">
     <Ladder mode="1v1" data={data['1v1']} />
     <Ladder mode="archon" data={data.archon} />
     <Ladder mode="2v2" data={data['2v2']} />
@@ -15,7 +15,7 @@ const LadderData = ({ data }) => (
   </div>
 );
 
-LadderData.propTypes = {
+LadderDataContainer.propTypes = {
   data: PropTypes.shape({
     '1v1': PropTypes.shape({
       totalLadders: PropTypes.number,
@@ -65,7 +65,7 @@ LadderData.propTypes = {
   }),
 };
 
-LadderData.defaultProps = {
+LadderDataContainer.defaultProps = {
   data: {
     '1v1': {
       totalLadders: 0,
@@ -115,4 +115,4 @@ LadderData.defaultProps = {
   },
 };
 
-export default LadderData;
+export default LadderDataContainer;

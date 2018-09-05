@@ -1,8 +1,10 @@
 .LadderTopMMR {
   font-size:12px;
-  position: absolute;
-  top:36px;
-  left:50px;
+  min-width: 120px;
+  line-height: 1;
+  padding-left: 50px;
   color:#baf8fe;
   font-weight: bold;
+  position: absolute;
+  top:40px;
 }

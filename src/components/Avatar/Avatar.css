@@ -1,5 +1,5 @@
 .Avatar {
-  position: absolute;
-  left:0;
-  top:0;
+  position: relative;
+  width: 84px;
+  height: 83px;
 }

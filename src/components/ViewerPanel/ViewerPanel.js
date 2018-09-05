@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PlayerHeader from '../PlayerHeader/PlayerHeader';
-import LadderData from '../LadderData/LadderData';
+import LadderDataContainer from '../LadderDataContainer/LadderDataContainer';
 
 import './ViewerPanel.css';
 
@@ -10,7 +10,7 @@ import './ViewerPanel.css';
 const ViewerPanel = ({ playerData, ladderData }) => (
   <div className="ViewerPanel">
     <PlayerHeader data={playerData} />
-    <LadderData data={ladderData} />
+    <LadderDataContainer data={ladderData} />
   </div>
 );
 

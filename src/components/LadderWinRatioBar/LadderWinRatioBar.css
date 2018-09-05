@@ -1,9 +1,9 @@
 .LadderWinRatioBar {
-  width:211px;
-  box-sizing:border-box;
+  width: 100%;
+  min-width:220px;
   position: absolute;
-  top: 19px;
-  left: 42px;
+  top:19px;
+  padding-left: 42px;
 }
 
 .LadderWinRatioBar .bar-overall {
@@ -11,7 +11,6 @@
   height:14px;
   padding:1px;
   background: #010b1c;
-  position: relative;
   box-sizing:border-box;
 }
 

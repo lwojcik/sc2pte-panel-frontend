@@ -1,11 +1,11 @@
 .LadderRankImage {
+  position: absolute;
+  top:0;
+  left:0;
   background-position: -99px 4px;
   background-repeat: no-repeat;
   width: 46px;
   height: 51px;
-  position: absolute;
-  top:0;
-  left:0;
   z-index:10;
 }
 

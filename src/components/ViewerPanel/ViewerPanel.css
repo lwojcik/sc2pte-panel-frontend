@@ -1,10 +1,6 @@
 .ViewerPanel {
-  width: 100%;
-  max-width:320px;
-  height:500px;
   color:#fff;
-  box-sizing:border-box;
-  position:relative;
+  width: 100%;
   font-family: Arial, Helvetica, sans-serif;
   animation: fadein 1s;
   -moz-animation: fadein 1s; /* Firefox */

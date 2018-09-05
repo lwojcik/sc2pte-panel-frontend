@@ -1,14 +1,17 @@
 .Legend {
   font-size:12px;
+  line-height: 1.2rem;
   color:#098efe;
-  position: absolute;
-  top:60px;
-  left:110px;
-  width:150px;
 }
 
 .Legend span {
+  display: inline-block;
   padding-right:10px;
+
+}
+
+.Legend span:last-child {
+  padding-right: 0;
 }
 
 .Legend span:after {
