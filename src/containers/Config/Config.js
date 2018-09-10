@@ -130,10 +130,11 @@ class Config extends Component {
     const lang = determineLanguage(this.props);
     const {
       status,
-      server,
-      playerid,
-      region,
-      name,
+      profileUrl,
+      // server,
+      // playerid,
+      // region,
+      // name,
       submissionDisabled,
     } = this.state;
 
@@ -144,16 +145,17 @@ class Config extends Component {
           content={Phrases[lang].config.messages[status.message]}
           throbberVisible={status.throbberVisible}
         />
-        <ConfigManual phrases={Phrases[lang].config.manual} />
         <ConfigForm
           phrases={Phrases[lang].config}
           onSubmit={this.handleSubmit}
-          server={server}
-          playerid={playerid}
-          region={region}
-          name={name}
+          profileUrl={profileUrl}
+          // server={server}
+          // playerid={playerid}
+          // region={region}
+          // name={name}
           submissionDisabled={submissionDisabled}
         />
+        <ConfigManual phrases={Phrases[lang].config.manual} />
       </ConfigWrapper>
     );
   }

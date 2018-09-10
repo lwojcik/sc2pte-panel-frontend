@@ -34,3 +34,36 @@ export async function saveConfig(channelId, configObject) {
     return error;
   }
 }
+
+export const profileUrlRegex = /(eu|us|kr)\.battle\.net\/sc2\/[a-z]{2}\/profile\/([0-9]*)\/([0-9]{1})\/([^/?\t\r\n]*)/gi; // https://regexr.com/3v88p
+
+export function constructProfileUrl(server, playerId, region, name) {
+  const validServer = /(eu|us|kr)/gi.test(server);
+  const validPlayerId = /([0-9]*)/g.test(playerId);
+  const validRegion = /([0-9]{1})/g.test(region);
+  const validName = /([^/?\t\r\n]*)/gi.test(name);
+
+  if (validServer && validPlayerId && validRegion && validName) {
+    return `http://${server}.battle.net/${playerId}/${region}/${name}`;
+  }
+  return false;
+}
+
+export function validateProfileUrl(url) {
+  return profileUrlRegex.test(url);
+}
+
+export function unpackProfileUrl(url) {
+  const urlIsValid = validateProfileUrl(url);
+
+  if (urlIsValid) {
+    const regexGroup = profileUrlRegex.exec(url);
+    return {
+      server: regexGroup[1],
+      id: regexGroup[2],
+      region: regexGroup[3],
+      name: regexGroup[4],
+    };
+  }
+  return false;
+}

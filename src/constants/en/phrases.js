@@ -19,6 +19,9 @@ module.exports = {
         name: {
           label: 'Name',
         },
+        profileUrl: {
+          label: 'Battle.net profile URL',
+        },
         submit: {
           label: 'Save',
         },

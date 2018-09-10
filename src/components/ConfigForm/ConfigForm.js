@@ -5,8 +5,8 @@ import { Button } from 'reactstrap';
 import {
   Form,
   Text,
-  Select,
-  Option,
+  // Select,
+  // Option,
 } from 'informed';
 
 import Phrases from '../../constants/phrases';
@@ -16,17 +16,29 @@ import ConfigFormLabel from '../ConfigFormLabel/ConfigFormLabel';
 import ConfigFormError from '../ConfigFormError/ConfigFormError';
 import ConfigFormSubmitWrapper from '../ConfigFormSubmitWrapper/ConfigFormSubmitWrapper';
 
+import { validateProfileUrl } from '../../helpers/config';
+
 import './ConfigForm.css';
+
 
 /* eslint-disable arrow-body-style */
 
 const validate = (value) => {
-  return !value ? Phrases.en.config.validation.fieldCannotBeEmpty : null;
+  const valueIsEmpty = !value;
+  const valueIsValid = validateProfileUrl(value);
+
+  if (valueIsEmpty) {
+    return Phrases.en.config.validation.urlCannotBeEmpty;
+  }
+  if (valueIsValid === false) {
+    return Phrases.en.config.validation.urlLooksInvalid;
+  }
+  return null;
 };
 
-const validateSelect = (value) => {
-  return !value ? Phrases.en.config.validation.selectServer : null;
-};
+// const validateSelect = (value) => {
+//   return !value ? Phrases.en.config.validation.selectServer : null;
+// };
 
 /* eslint-enable arrow-body-style */
 
@@ -36,15 +48,31 @@ const ConfigForm = ({
   phrases, // eslint-disable-line
   onSubmit,
   submissionDisabled,
-  server,
-  playerid,
-  region,
-  name,
+  profileUrl,
+  // server,
+  // playerid,
+  // region,
+  // name,
 }) => (
   <Form className="ConfigForm" id="ConfigForm" onSubmit={onSubmit}>
     {({ formState }) => (
       <React.Fragment>
         <ConfigFormGroup>
+          <ConfigFormLabel text={phrases.fields.profileUrl.label} fieldName="profileUrl" />
+          <Text
+            placeholder={profileUrl}
+            className={cx(formState.errors.profileUrl)}
+            field="profileUrl"
+            id="profileUrl"
+            validateOnBlur
+            validateOnChange
+            validate={validate}
+          />
+          <ConfigFormError>
+            {formState.errors.profileUrl}
+          </ConfigFormError>
+        </ConfigFormGroup>
+        {/* <ConfigFormGroup>
           <ConfigFormLabel text={phrases.fields.server.label} />
           <Select
             value={server}
@@ -116,7 +144,7 @@ const ConfigForm = ({
           <ConfigFormError>
             {formState.errors.name}
           </ConfigFormError>
-        </ConfigFormGroup>
+        </ConfigFormGroup> */}
         <ConfigFormSubmitWrapper>
           <Button color="primary" disabled={submissionDisabled || formState.invalid || formState.pristine}>
             {phrases.fields.submit.label}
@@ -130,18 +158,20 @@ const ConfigForm = ({
 ConfigForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   submissionDisabled: PropTypes.bool,
-  server: PropTypes.string,
-  playerid: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  region: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  name: PropTypes.string,
+  profileUrl: PropTypes.string,
+  // server: PropTypes.string,
+  // playerid: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  // region: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  // name: PropTypes.string,
 };
 
 ConfigForm.defaultProps = {
   submissionDisabled: true,
-  server: '',
-  playerid: '',
-  region: '',
-  name: '',
+  profileUrl: '',
+  // server: '',
+  // playerid: '',
+  // region: '',
+  // name: '',
 };
 
 export default ConfigForm;

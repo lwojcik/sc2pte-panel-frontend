@@ -2,16 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  Col,
+  // Col,
   FormGroup,
 } from 'reactstrap';
 
 
 const ConfigFormSubmitWrapper = ({ children }) => (
   <FormGroup check row>
-    <Col md={{ size: 11, offset: 1 }}>
-      {children}
-    </Col>
+    {children}
   </FormGroup>
 );
 
