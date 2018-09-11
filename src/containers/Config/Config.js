@@ -6,7 +6,12 @@ import ConfigManual from '../../components/ConfigManual/ConfigManual';
 import ConfigWrapper from '../../components/ConfigWrapper/ConfigWrapper';
 
 import { getTwitchAuth, determineLanguage } from '../../helpers/shared';
-import { getConfig, saveConfig } from '../../helpers/config';
+import {
+  getConfig,
+  saveConfig,
+  constructProfileUrl,
+  unpackProfileUrl,
+} from '../../helpers/config';
 
 import Phrases from '../../constants/phrases';
 
@@ -43,9 +48,19 @@ class Config extends Component {
             submissionDisabled: false,
           });
         } else if (playerConfig.status === 200) {
+          const {
+            server,
+            playerid,
+            region,
+            name,
+          } = playerConfig;
+
+          const profileUrl = constructProfileUrl(server, playerid, region, name);
+
           this.setState({
             channelId,
             token,
+            profileUrl,
             ...playerConfig,
             status: {
               type: 'success',
@@ -79,11 +94,14 @@ class Config extends Component {
 
   async handleSubmit(formValues) {
     try {
-      const { channelId, token } = this.state;
+      const { channelId, token } = this.state; // eslint-disable-line
+      const configDataValues = unpackProfileUrl(formValues.profileUrl);  // eslint-disable-line
+      const configToSave = { ...configDataValues }; // eslint-disable-line
       const payload = {
-        ...formValues,
+        ...configToSave,
         token,
       };
+      console.log(payload); // eslint-disable-line
       this.setState({
         status: {
           type: 'info',
@@ -131,10 +149,6 @@ class Config extends Component {
     const {
       status,
       profileUrl,
-      // server,
-      // playerid,
-      // region,
-      // name,
       submissionDisabled,
     } = this.state;
 
@@ -149,10 +163,6 @@ class Config extends Component {
           phrases={Phrases[lang].config}
           onSubmit={this.handleSubmit}
           profileUrl={profileUrl}
-          // server={server}
-          // playerid={playerid}
-          // region={region}
-          // name={name}
           submissionDisabled={submissionDisabled}
         />
         <ConfigManual phrases={Phrases[lang].config.manual} />
