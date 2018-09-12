@@ -101,7 +101,6 @@ class Config extends Component {
         ...configToSave,
         token,
       };
-      console.log(payload); // eslint-disable-line
       this.setState({
         status: {
           type: 'info',

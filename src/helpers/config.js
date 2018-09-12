@@ -10,7 +10,9 @@ export function constructProfileUrl(server, playerId, region, name) {
   const validName = /([^/?\t\r\n]*)/gi.test(name);
 
   if (validServer && validPlayerId && validRegion && validName) {
-    return `http://${server.toLowerCase()}.battle.net/${playerId}/${region}/${name}`;
+    const profileLang = server === 'kr' ? 'ko' : 'en';
+
+    return `http://${server.toLowerCase()}.battle.net/sc2/profile/${profileLang}/${playerId}/${region}/${name}`;
   }
   return '';
 }
