@@ -20,7 +20,9 @@ module.exports = {
           label: 'Name',
         },
         profileUrl: {
-          label: 'Battle.net profile URL',
+          label: 'StarCraft II profile URL',
+          examplePrefix: 'Example',
+          exampleContent: 'http://eu.battle.net/sc2/en/profile/5593296/1/Lukem/',
         },
         submit: {
           label: 'Save',
@@ -33,7 +35,7 @@ module.exports = {
       },
       manual: {
         button: {
-          label: 'Instructions - click to view ↓',
+          label: 'How to get your StarCraft II profile URL? ↓',
         },
         content: {},
       },

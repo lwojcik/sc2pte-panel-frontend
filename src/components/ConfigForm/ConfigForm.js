@@ -24,13 +24,15 @@ import './ConfigForm.css';
 /* eslint-disable arrow-body-style */
 
 const validateFieldNotEmpty = (value) => {
-  return (value === '') ? Phrases.en.config.validation.fieldCannotBeEmpty : null;
+  return (!value && value === '')
+    ? Phrases.en.config.validation.fieldCannotBeEmpty
+    : null;
 };
 
-const validateBnetProfileUrl = (value) => {
-  console.log('validateBnetProfileUrl'); // eslint-disable-line
-  console.log(validateProfileUrl(value)); // eslint-disable-line
-  return validateProfileUrl(value) === true ? Phrases.en.config.validation.urlLooksInvalid : null;
+const validateBnetProfileUrl = (profileUrl) => {
+  return !validateProfileUrl(profileUrl) === true
+    ? Phrases.en.config.validation.urlLooksInvalid
+    : null;
 };
 
 const validate = (value) => {
@@ -57,6 +59,8 @@ const ConfigForm = ({
             className={cx(formState.errors.profileUrl)}
             field="profileUrl"
             id="profileUrl"
+            validateOnBlur
+            validateOnChange
             validate={validate}
           />
           <ConfigFormError>

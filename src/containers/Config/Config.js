@@ -70,8 +70,11 @@ class Config extends Component {
             submissionDisabled: false,
           });
         } else {
+          console.log(playerConfig); // eslint-disable-line
           this.setState({
             status: {
+              channelId,
+              token,
               type: 'danger',
               message: 'config_get_error',
               throbberVisible: false,
@@ -81,6 +84,7 @@ class Config extends Component {
         }
       });
     } catch (error) {
+      console.log(error); // eslint-disable-line
       this.setState({
         status: {
           type: 'danger',
@@ -95,6 +99,7 @@ class Config extends Component {
   async handleSubmit(formValues) {
     try {
       const { channelId, token } = this.state; // eslint-disable-line
+      console.log(this.state); // eslint-disable-line
       const configDataValues = unpackProfileUrl(formValues.profileUrl);  // eslint-disable-line
       const configToSave = { ...configDataValues }; // eslint-disable-line
       const payload = {
