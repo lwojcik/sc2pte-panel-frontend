@@ -83,9 +83,13 @@ class Viewer extends Component {
   }
 
   componentDidMount() {
-    this.populateStateWithCachedData();
-    this.getViewerData();
-    this.interval = setInterval(() => this.getViewerData(), process.env.REACT_APP_UPDATE_INTERVAL);
+    getTwitchAuth(async (auth) => {
+      const { channelId, token } = auth;
+      const updateInterval = process.env.REACT_APP_UPDATE_INTERVAL;
+      this.populateStateWithCachedData(channelId);
+      this.getViewerData(channelId, token);
+      this.setUpdateInterval(channelId, token, updateInterval);
+    });
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -100,48 +104,49 @@ class Viewer extends Component {
     clearInterval(this.interval);
   }
 
-  async getViewerData() {
-    getTwitchAuth(async (auth) => {
-      try {
-        const { channelId, token } = auth;
-        const viewerData = await getViewerData(channelId, token);
-        let viewerState;
-
-        switch (viewerData.status) {
-          case 200:
-            viewerState = {
-              isLoaded: true,
-              status: 'ready',
-              player: viewerData.player,
-              ladders: viewerData.ladders,
-            };
-            this.setState(viewerState);
-            this.cacheStateToLocalStorage(JSON.stringify(viewerState));
-            break;
-          case 404:
-            viewerState = {
-              isLoaded: false,
-              status: 'not_found',
-            };
-            this.setState(viewerState);
-            break;
-          case 500:
-            this.populateStateWithCachedData();
-            break;
-          default:
-            viewerState = {
-              isLoaded: false,
-              status: 'error',
-            };
-        }
-      } catch (e) {
-        this.populateStateWithCachedData();
-      }
-    });
+  setUpdateInterval(channelId, token, interval) {
+    this.interval = setInterval(() => this.getViewerData(channelId, token), interval);
   }
 
-  getCachedData = () => {
-    const serializedCachedData = getFromLocalStorage('sc2ptedata');
+  async getViewerData(channelId, token) {
+    try {
+      const viewerData = await getViewerData(channelId, token);
+      let viewerState;
+
+      switch (viewerData.status) {
+        case 200:
+          viewerState = {
+            isLoaded: true,
+            status: 'ready',
+            player: viewerData.player,
+            ladders: viewerData.ladders,
+          };
+          this.setState(viewerState);
+          this.cacheStateToLocalStorage(channelId, JSON.stringify(viewerState));
+          break;
+        case 404:
+          viewerState = {
+            isLoaded: false,
+            status: 'not_found',
+          };
+          this.setState(viewerState);
+          break;
+        case 500:
+          this.populateStateWithCachedData();
+          break;
+        default:
+          viewerState = {
+            isLoaded: false,
+            status: 'error',
+          };
+      }
+    } catch (e) {
+      this.populateStateWithCachedData(channelId);
+    }
+  }
+
+  getCachedData = (channelId) => {
+    const serializedCachedData = getFromLocalStorage(`sc2pte-${channelId}`);
     if (serializedCachedData) {
       const cachedDataObject = JSON.parse(serializedCachedData);
       return cachedDataObject;
@@ -149,12 +154,12 @@ class Viewer extends Component {
     return null;
   }
 
-  cacheStateToLocalStorage = (data) => {
-    saveToLocalStorage('sc2ptedata', data);
+  cacheStateToLocalStorage = (channelId, data) => {
+    saveToLocalStorage(`sc2pte-${channelId}`, data);
   }
 
-  populateStateWithCachedData() {
-    const cachedData = this.getCachedData();
+  populateStateWithCachedData(channelId) {
+    const cachedData = this.getCachedData(channelId);
     if (cachedData) {
       this.setState(cachedData);
     } else {
