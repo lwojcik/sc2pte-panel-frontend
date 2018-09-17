@@ -1,19 +1,29 @@
 language: node_js
-
 os:
-  - linux
-  - osx
-
+- linux
+- osx
 node_js:
-  - "node"
-  - "lts/*"
-  - "7"
-  - "8"
-  - "9"
-  - "10"
-
+- node
+- lts/*
+- '7'
+- '8'
+- '9'
+- '10'
 install:
-  - npm install
-
+- npm install
 script:
-  - npm run build
+- npm run build
+- cd build/
+- zip -r sc2pte-build.zip ./*
+addons:
+  artifacts: true
+  working_dir: build
+before_deploy:
+- git config --local user.name "Łukasz Wójcik"
+- git config --local user.email "lwojcik@lukem.net"
+- git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+deploy:
+  provider: releases
+  api_key:
+    secure: UBWwv+mh1CRxJq+xrlONoXJum2mLuWRw8+QGcil4+OahC1eqfzf3Hz/vLALbzgdnguIH8rAkF1xT9gA6kvECTqZQwOwjT7uKsCBTRCvwEiXwHlxCSfL2KKimtahmqKkbLsuajyOlYmbOXdh1yXKFj3ugQzj84KBpuEdCciakxLmzqCOxI2Ti9k/oQlczif9LmN7o5092q03YboHuq9h4uwoVKYFMQsFtFxl7Ik+J62tfFh3w6R4LwCHRW7w1Rtr4fC9vGQCfSNKq6KGhWH/HENN+b0kNYdFO2tB9Y7lCTemPI3eB1vPqe5nGveqAr19euRhuipJzfpS7o1GrKBmECueLrTKHARw3z5JEJk1TFwl1br4QI+eCBKFkoOw75BtcU2dJLZt3FbDhm1LXa7AIjbQVo0jjpHruM7cFzetjSyXGz6x9KzkrwOuWO9e4XegOYn9C7YB1u55nAs7Hk1ILwlr9HyzYgtxMauxhJak1jJHZNce2bgx+Bf9ifCGZx2SNxWk2AXSZy4d1BJ5EsrnghS7LZGNa50OCl7Vu1SKTvk9yM7tJI2/4BurIU1FQfyWS3AeY4ZUeTmb4yfErrRYAcZ89ukEpwT0HOY+/RFAnP3kjJ+9b9lnkwGhS9JV0AqzUbSt/uNkRfhmJhmIIH96RCIb908KvIJQMMCjxUjHvkbc=
+  file: build/sc2pte-build.zip
