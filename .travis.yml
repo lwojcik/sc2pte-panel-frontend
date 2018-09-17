@@ -17,3 +17,9 @@ install:
 
 script:
   - npm run build
+  - cd build/
+  - zip -r build-${TRAVIS_BUILD_NUMBER}-${TRAVIS_JOB_NUMBER}.zip ./*
+
+addons:
+  artifacts: true
+  working_dir: build
