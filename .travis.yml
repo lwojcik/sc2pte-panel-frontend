@@ -29,3 +29,5 @@ deploy:
   file: build/sc2pte-build.zip
   on:
     repo: lukemsc/sc2profile-twitch-extension-frontend
+    branch: master
+    condition: $TRAVIS_NODE_VERSION = 8
