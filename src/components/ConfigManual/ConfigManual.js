@@ -87,7 +87,8 @@ class ConfigManual extends Component {
                   Copy-paste it to the configuration form and click <i>Save</i>.
                 </li>
                 <li>
-                  Done! Add the extension to one of the panels in your channel page.
+                  Done! Complete the extension setup by
+                  adding it to one of the panels in your channel page.
                 </li>
               </ol>
             </CardBody>

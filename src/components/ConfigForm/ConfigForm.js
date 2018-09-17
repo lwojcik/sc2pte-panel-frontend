@@ -5,8 +5,6 @@ import { Button } from 'reactstrap';
 import {
   Form,
   Text,
-  // Select,
-  // Option,
 } from 'informed';
 
 import Phrases from '../../constants/phrases';
@@ -23,6 +21,12 @@ import './ConfigForm.css';
 
 /* eslint-disable arrow-body-style */
 
+const validateFieldLength = (value, number) => {
+  return (!typeof value === 'undefined' && value.length > number)
+    ? Phrases.en.config.validation.urlTooLong
+    : null;
+};
+
 const validateFieldNotEmpty = (value) => {
   return (!value && value === '')
     ? Phrases.en.config.validation.fieldCannotBeEmpty
@@ -36,7 +40,9 @@ const validateBnetProfileUrl = (profileUrl) => {
 };
 
 const validate = (value) => {
-  return validateFieldNotEmpty(value) || validateBnetProfileUrl(value);
+  return validateFieldNotEmpty(value)
+    || validateFieldLength(value, 70)
+    || validateBnetProfileUrl(value);
 };
 
 /* eslint-enable arrow-body-style */
@@ -44,7 +50,7 @@ const validate = (value) => {
 const cx = errorObject => classnames('form-control', errorObject ? 'is-invalid' : '');
 
 const ConfigForm = ({
-  phrases, // eslint-disable-line
+  phrases, // eslint-disable-line react/prop-types
   onSubmit,
   submissionDisabled,
   profileUrl,

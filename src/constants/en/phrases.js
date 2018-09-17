@@ -29,9 +29,9 @@ module.exports = {
         },
       },
       validation: {
-        fieldCannotBeEmpty: 'Field cannot be empty',
-        urlLooksInvalid: 'Profile URL looks invalid',
-        selectServer: 'Select server',
+        fieldCannotBeEmpty: 'Field cannot be empty!',
+        urlLooksInvalid: 'Profile URL looks invalid. Make sure you the link you entered is correct.',
+        urlTooLong: 'Profile URL cannot be longer than 70 characters!',
       },
       manual: {
         button: {
@@ -40,13 +40,13 @@ module.exports = {
         content: {},
       },
       messages: {
-        config_get_no_config_found_warning: 'No StarCraft II profile found. Fill the form below to make the extension work.',
+        config_get_no_config_found_warning: 'No StarCraft II profile found. Fill the form below and click Save to make the extension work.',
         config_get_error: 'Ooops, an error occured while getting config data. Please refresh the page and try again.',
         config_get_inprogress: 'Loading your configuration. Please wait...',
-        config_get_success: 'Extension configured successfully! Want to showcase a different StarCraft II profile? Fill the form below.',
+        config_get_success: 'Extension configured successfully! Want to showcase different StarCraft II profile? Fill the form below.',
         config_save_success: 'Your configuration has been saved successfully! Go to your channel page and add the extension to your panels.',
         config_save_inprogress: 'Saving your configuration. Please wait...',
-        config_save_error: 'Error while saving configuration. Please refresh the page and try again.',
+        config_save_error: 'Error while saving configuration. Make sure the link you entered is correct. If the error persists, please try again later.',
       },
     },
   },

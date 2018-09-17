@@ -27,8 +27,7 @@ export function constructProfileUrl(server, playerId, region, name) {
   return '';
 }
 
-export const validateProfileUrl = (url) => { // eslint-disable-line arrow-body-style
-  console.log(url); // eslint-disable-line
+export const validateProfileUrl = (url) => {
   const validationResult = profileUrlRegex.test(url);
   profileUrlRegex.lastIndex = 0;
   return validationResult;
@@ -39,7 +38,7 @@ export function unpackProfileUrl(url) {
   if (urlIsValid) {
     const profileUrlString = url.match(profileUrlRegex);
     const profileDataArray = profileUrlRegex.exec(profileUrlString);
-    console.log(profileDataArray); // eslint-disable-line
+    profileUrlRegex.lastIndex = 0;
     const unpackedConfig = {
       server: profileDataArray[1],
       playerid: profileDataArray[2],

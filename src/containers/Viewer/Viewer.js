@@ -165,7 +165,7 @@ class Viewer extends Component {
     } else {
       this.setState({
         isLoaded: false,
-        status: 'error',
+        status: 'loading',
       });
     }
   }
