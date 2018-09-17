@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 
 import { Label } from 'reactstrap';
 
-const ConfigFormLabel = ({ text }) => (
-  <Label for={text.toLowerCase()} sm={12} md={12}>
+const ConfigFormLabel = ({ text, fieldName }) => (
+  <Label for={fieldName}>
     {text}
     {':'}
   </Label>
 );
 
 ConfigFormLabel.propTypes = {
+  fieldName: PropTypes.string.isRequired,
   text: PropTypes.string,
 };
 

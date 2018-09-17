@@ -80,16 +80,14 @@ class ConfigManual extends Component {
                   Log in again if prompted.
                 </li>
                 <li>You should be redirected to your StarCraft II profile page.</li>
-                <li>Look at the URL of your profile page and copy the
-                  following info to the config form above:<br /><br />
-                  http://&nbsp;<b>[Server]</b>&nbsp;.battle.net/sc2/en/profile/&nbsp;<b>[Player&nbsp;ID]</b>&nbsp;/&nbsp;
-                  <b>[Region]</b>&nbsp;/&nbsp;<b>[Name]</b>
+                <li>Look at the URL of your profile page. It should look like this:<br /><br />
+                  <b>http://eu.battle.net/sc2/en/profile/5593296/1/Lukem/</b>
                 </li>
                 <li>
-                  Click <b>Save</b> to save your data in the extension.
+                  Copy-paste it to the configuration form and click <i>Save</i>.
                 </li>
                 <li>
-                  <b>Done!</b> Add the extension to one of the panels in your channel page.
+                  Done! Add the extension to one of the panels in your channel page.
                 </li>
               </ol>
             </CardBody>

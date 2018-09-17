@@ -6,7 +6,12 @@ import ConfigManual from '../../components/ConfigManual/ConfigManual';
 import ConfigWrapper from '../../components/ConfigWrapper/ConfigWrapper';
 
 import { getTwitchAuth, determineLanguage } from '../../helpers/shared';
-import { getConfig, saveConfig } from '../../helpers/config';
+import {
+  getConfig,
+  saveConfig,
+  constructProfileUrl,
+  unpackProfileUrl,
+} from '../../helpers/config';
 
 import Phrases from '../../constants/phrases';
 
@@ -43,9 +48,19 @@ class Config extends Component {
             submissionDisabled: false,
           });
         } else if (playerConfig.status === 200) {
+          const {
+            server,
+            playerid,
+            region,
+            name,
+          } = playerConfig;
+
+          const profileUrl = constructProfileUrl(server, playerid, region, name);
+
           this.setState({
             channelId,
             token,
+            profileUrl,
             ...playerConfig,
             status: {
               type: 'success',
@@ -55,8 +70,11 @@ class Config extends Component {
             submissionDisabled: false,
           });
         } else {
+          console.log(playerConfig); // eslint-disable-line
           this.setState({
             status: {
+              channelId,
+              token,
               type: 'danger',
               message: 'config_get_error',
               throbberVisible: false,
@@ -66,6 +84,7 @@ class Config extends Component {
         }
       });
     } catch (error) {
+      console.log(error); // eslint-disable-line
       this.setState({
         status: {
           type: 'danger',
@@ -79,9 +98,12 @@ class Config extends Component {
 
   async handleSubmit(formValues) {
     try {
-      const { channelId, token } = this.state;
+      const { channelId, token } = this.state; // eslint-disable-line
+      console.log(this.state); // eslint-disable-line
+      const configDataValues = unpackProfileUrl(formValues.profileUrl);  // eslint-disable-line
+      const configToSave = { ...configDataValues }; // eslint-disable-line
       const payload = {
-        ...formValues,
+        ...configToSave,
         token,
       };
       this.setState({
@@ -130,10 +152,7 @@ class Config extends Component {
     const lang = determineLanguage(this.props);
     const {
       status,
-      server,
-      playerid,
-      region,
-      name,
+      profileUrl,
       submissionDisabled,
     } = this.state;
 
@@ -144,16 +163,13 @@ class Config extends Component {
           content={Phrases[lang].config.messages[status.message]}
           throbberVisible={status.throbberVisible}
         />
-        <ConfigManual phrases={Phrases[lang].config.manual} />
         <ConfigForm
           phrases={Phrases[lang].config}
           onSubmit={this.handleSubmit}
-          server={server}
-          playerid={playerid}
-          region={region}
-          name={name}
+          profileUrl={profileUrl}
           submissionDisabled={submissionDisabled}
         />
+        <ConfigManual phrases={Phrases[lang].config.manual} />
       </ConfigWrapper>
     );
   }

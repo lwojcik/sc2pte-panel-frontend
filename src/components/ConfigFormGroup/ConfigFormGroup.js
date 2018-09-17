@@ -8,13 +8,13 @@ import {
 
 const ConfigFormGroup = ({ children }) => (
   <FormGroup row>
-    <Col sm={12} md={2}>
+    <Col sm={12}>
       {children[0]}
     </Col>
-    <Col sm={12} md={4}>
+    <Col sm={12}>
       {children[1]}
     </Col>
-    <Col sm={12} md={6}>
+    <Col sm={12}>
       {children[2]}
     </Col>
   </FormGroup>
