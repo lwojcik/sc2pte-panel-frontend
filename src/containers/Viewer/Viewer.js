@@ -115,14 +115,22 @@ class Viewer extends Component {
 
       switch (viewerData.status) {
         case 200:
-          viewerState = {
-            isLoaded: true,
-            status: 'ready',
-            player: viewerData.player,
-            ladders: viewerData.ladders,
-          };
-          this.setState(viewerState);
-          this.cacheStateToLocalStorage(channelId, JSON.stringify(viewerState));
+          if (viewerData.player.hasOwnProperty.call(viewerData.player, 'name') === false) {
+            viewerState = {
+              isLoaded: false,
+              status: 'error',
+            };
+            this.setState(viewerState);
+          } else {
+            viewerState = {
+              isLoaded: true,
+              status: 'ready',
+              player: viewerData.player,
+              ladders: viewerData.ladders,
+            };
+            this.setState(viewerState);
+            this.cacheStateToLocalStorage(channelId, JSON.stringify(viewerState));
+          }
           break;
         case 404:
           viewerState = {

@@ -14,7 +14,7 @@ const MessageToDisplay = ({ status }) => {
       return (
         <ViewerError
           emote="¯\_(ツ)_/¯"
-          message="Profile not found!"
+          message="StarCraft II profile not found. Make sure the extension is configured properly in your Twitch dashboard."
         />
       );
 
@@ -22,7 +22,7 @@ const MessageToDisplay = ({ status }) => {
       return (
         <ViewerError
           emote="(╯°□°）╯︵ ┻━┻"
-          message="Error loading player data!"
+          message="Ooops! We couldn't fetch your StarCraft II stats. Please check again later."
         />
       );
 
