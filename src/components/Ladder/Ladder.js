@@ -12,13 +12,15 @@ import './Ladder.css';
 
 const Ladder = ({ mode, data }) => (
   <div className="Ladder">
-    <LadderRankImage rank={data.topRank} />
-    <div className="Stats">
-      <LadderMode mode={mode} />
-      <LadderWinLoseCount wins={data.wins} ties={data.ties} losses={data.losses} />
+    <div className="LadderWrapper">
+      <LadderRankImage rank={data.topRank} />
+      <div className="Stats">
+        <LadderMode mode={mode} />
+        <LadderWinLoseCount wins={data.wins} ties={data.ties} losses={data.losses} />
+      </div>
+      <LadderWinRatioBar wins={data.wins} ties={data.ties} losses={data.losses} />
+      <LadderTopMMR mmr={data.topMMR} />
     </div>
-    <LadderWinRatioBar wins={data.wins} ties={data.ties} losses={data.losses} />
-    <LadderTopMMR mmr={data.topMMR} />
   </div>
 );
 
