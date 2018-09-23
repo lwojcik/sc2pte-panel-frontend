@@ -13,7 +13,7 @@ Install and configure [sc2profile-twitch-extension-api](https://github.com/lukem
 
 
 
-To run a local server you need Node.js, preferably LTS version. 
+To run a local server you need Node.js, preferably LTS version. Once installed, run the following commands:
 
 ```
 $ git clone https://github.com/lukemsc/sc2profile-twitch-extension-frontend.git`
