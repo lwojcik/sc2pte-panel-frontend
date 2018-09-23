@@ -8,4 +8,5 @@ This is an official repository of [StarCraft II Profile Twitch Extension](https:
 To run a local server you need Node.js, preferably LTS version.
 
 `$ git clone https://github.com/lukemsc/sc2profile-twitch-extension-frontend.git`
+
 `$ cd sc2profile-twitch-extension-frontend`
