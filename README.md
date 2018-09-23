@@ -51,6 +51,10 @@ $ zip -r build.zip ./*
 
 Upload the zipped package via [Extension Dashboard on Twitch Developers Site](https://dev.twitch.tv/dashboard/extensions).
 
+## Contact
+
+See [the project homepage](https://sc2pte.lukem.net/) for contact information.
+
 ## License
 
 Code is available under MIT license. See [LICENSE](https://raw.githubusercontent.com/lukemsc/sc2profile-twitch-extension-frontend/master/LICENSE) for more information.
