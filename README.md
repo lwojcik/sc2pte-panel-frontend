@@ -9,7 +9,9 @@ For current status see [the kanban board of the project](https://github.com/orgs
 
 ## Setup
 
-To run a local server you need Node.js, preferably LTS version.
+Install and configure (sc2profile-twitch-extension-api)(https://github.com/lukemsc/sc2profile-twitch-extension-api) first.
+
+To run a local server you need Node.js, preferably LTS version. 
 
 ```
 $ git clone https://github.com/lukemsc/sc2profile-twitch-extension-frontend.git`
@@ -17,6 +19,8 @@ $ cd sc2profile-twitch-extension-frontend
 $ npm install
 $ HTTPS=true npm start
 ```
+
+The project hasn't been set up to work with [https://github.com/twitchdev/developer-rig](Twitch Developer Rig) yet.
 
 ## Build
 
