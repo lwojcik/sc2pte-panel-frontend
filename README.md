@@ -11,11 +11,24 @@ For current status see [the kanban board of the project](https://github.com/orgs
 
 Install and configure (sc2profile-twitch-extension-api)(https://github.com/lukemsc/sc2profile-twitch-extension-api) first.
 
+
+
 To run a local server you need Node.js, preferably LTS version. 
 
 ```
 $ git clone https://github.com/lukemsc/sc2profile-twitch-extension-frontend.git`
 $ cd sc2profile-twitch-extension-frontend
+$ cp .env.sample .env
+```
+
+Fill the `.env` file with the following information:
+
+* `REACT_APP_SC2PTE_API_URL` - extension API URL (default is `http://localhost:3000`)
+* `REACT_APP_UPDATE_INTERVAL` - how often the extension will poll for stat updates (in miliseconds) - for testing purposes it is reasonable to keep this value low (e.g. `5000` for 5 seconds)
+
+You can now complete the setup process and run the project locally:
+
+```
 $ npm install
 $ HTTPS=true npm start
 ```
@@ -24,12 +37,14 @@ The project hasn't been set up to work with [https://github.com/twitchdev/develo
 
 ## Build
 
-To create a ZIP package suitable to be deployed on Twitch.tv follow the steps below:
+Create `.env.production` file with environment variables to be used in production environment.
+
+To create a ZIP package suitable for deployment on Twitch.tv follow the steps below:
 
 ```
 $ npm run build
 $ cd build/
-$ zip -r ./* build.zip
+$ zip -r build.zip ./*
 ```
 
 Upload the zipped package via [Extension Dashboard on Twitch Developers Site](https://dev.twitch.tv/dashboard/extensions).
