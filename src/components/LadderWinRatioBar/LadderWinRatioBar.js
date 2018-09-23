@@ -3,19 +3,30 @@ import PropTypes from 'prop-types';
 
 import './LadderWinRatioBar.css';
 
+const checkIfZero = number => Number.isNaN(number) || number === 0;
+
+const calculatePercentage = (number, total) => {
+  const fraction = number / total;
+  return checkIfZero(fraction) ? 0 : Math.round(fraction * 100);
+};
+
 const LadderWinRatioBar = ({ wins, ties, losses }) => {
   const gamesOverall = wins + ties + losses;
 
+  const winsPercentage = checkIfZero(wins) ? 0 : calculatePercentage(wins, gamesOverall);
+  const tiesPercentage = checkIfZero(ties) ? 0 : calculatePercentage(ties, gamesOverall);
+  const lossesPercentage = checkIfZero(losses) ? 0 : 100 - winsPercentage - tiesPercentage;
+
   const BarWinsStyle = {
-    width: `${Math.round(Number.isNaN(wins / gamesOverall) ? 0 : (wins / gamesOverall) * 100)}%`,
+    width: `${winsPercentage}%`,
   };
 
   const BarTiesStyle = {
-    width: `${Math.round(Number.isNaN(ties / gamesOverall) ? 0 : (ties / gamesOverall) * 100)}%`,
+    width: `${tiesPercentage}%`,
   };
 
   const BarLossesStyle = {
-    width: `${Math.round(Number.isNaN(losses / gamesOverall) ? 0 : (losses / gamesOverall) * 100)}%`,
+    width: `${lossesPercentage}%`,
   };
 
   return (
