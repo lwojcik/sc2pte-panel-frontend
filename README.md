@@ -5,7 +5,7 @@
 
 This is an official repository of [StarCraft II Profile Twitch Extension](https://sc2pte.lukem.net/).
 
-For current status see [the kanban board of the project](https://github.com/orgs/lukemsc/projects/1)
+For current status see [the kanban board of the project](https://github.com/orgs/lukemsc/projects/1).
 
 ## Setup
 
