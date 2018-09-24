@@ -33,7 +33,7 @@ $ npm install
 $ HTTPS=true npm start
 ```
 
-The project hasn't been set up to work with [https://github.com/twitchdev/developer-rig](Twitch Developer Rig) yet.
+The project hasn't been set up to work with [Twitch Developer Rig](https://github.com/twitchdev/developer-rig) yet.
 
 ## Build
 
