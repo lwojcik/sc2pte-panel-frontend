@@ -4,6 +4,7 @@ import StatusMessage from '../../components/StatusMessage/StatusMessage';
 import ConfigForm from '../../components/ConfigForm/ConfigForm';
 import ConfigManual from '../../components/ConfigManual/ConfigManual';
 import ConfigWrapper from '../../components/ConfigWrapper/ConfigWrapper';
+import Footer from '../../components/Footer/Footer';
 
 import { getTwitchAuth, determineLanguage } from '../../helpers/shared';
 import {
@@ -166,6 +167,7 @@ class Config extends Component {
           submissionDisabled={submissionDisabled}
         />
         <ConfigManual phrases={Phrases[lang].config.manual} />
+        <Footer />
       </ConfigWrapper>
     );
   }

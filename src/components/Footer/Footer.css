@@ -1,0 +1,11 @@
+.Footer {
+  margin: 3rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.Footer p {
+  color:#666;
+  text-align: left;
+  line-height: 1.6;
+}
