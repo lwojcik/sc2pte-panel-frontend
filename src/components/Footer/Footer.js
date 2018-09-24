@@ -6,13 +6,13 @@ import './Footer.css';
 const Footer = () => (
   <div className="Footer">
     <p>
-      <a href="https://sc2pte.lukem.net">
+      <a href="https://sc2pte.lukem.net" target="_blank" rel="noopener noreferrer">
         Project homepage
       </a>
     </p>
     <p>
-      Created by <a href="https://twitter.com/lukem_sc">@Lukem_sc</a> &ndash; <a href="https://lukem.net">Lukem.net</a><br />
-      Design by <a href="https://twitter.com/lexgrizzly">@LexGrizzly</a> &ndash; <a href="https://grizzlygamingmx.wordpress.com/">GrizzlyGaming</a>
+      Created by <a href="https://twitter.com/lukem_sc" target="_blank" rel="noopener noreferrer">@Lukem_sc</a> &ndash; <a href="https://lukem.net" target="_blank" rel="noopener noreferrer">Lukem.net</a><br />
+      Design by <a href="https://twitter.com/lexgrizzly" target="_blank" rel="noopener noreferrer">@LexGrizzly</a> &ndash; <a href="https://grizzlygamingmx.wordpress.com/" target="_blank" rel="noopener noreferrer">GrizzlyGaming</a>
     </p>
   </div>
 );
