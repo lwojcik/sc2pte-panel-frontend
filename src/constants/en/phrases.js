@@ -24,6 +24,9 @@ module.exports = {
           examplePrefix: 'Example',
           exampleContent: 'http://eu.battle.net/sc2/en/profile/5593296/1/Lukem/',
         },
+        playerName: {
+          label: 'In-game username',
+        },
         submit: {
           label: 'Save',
         },
@@ -31,7 +34,7 @@ module.exports = {
       validation: {
         fieldCannotBeEmpty: 'Field cannot be empty!',
         urlLooksInvalid: 'Profile URL looks invalid. Make sure you the link you entered is correct.',
-        urlTooLong: 'Profile URL cannot be longer than 70 characters!',
+        valueTooLong: 'Value cannot be longer than 70 characters!',
       },
       manual: {
         button: {

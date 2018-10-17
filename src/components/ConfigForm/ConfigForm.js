@@ -14,7 +14,7 @@ import ConfigFormLabel from '../ConfigFormLabel/ConfigFormLabel';
 import ConfigFormError from '../ConfigFormError/ConfigFormError';
 import ConfigFormSubmitWrapper from '../ConfigFormSubmitWrapper/ConfigFormSubmitWrapper';
 
-import { validateLegacyProfileUrl } from '../../helpers/config';
+import { validateNewProfileUrl, validateLegacyProfileUrl } from '../../helpers/config';
 
 import './ConfigForm.css';
 
@@ -22,27 +22,45 @@ import './ConfigForm.css';
 /* eslint-disable arrow-body-style */
 
 const validateFieldLength = (value, number) => {
-  return (!typeof value === 'undefined' && value.length > number)
-    ? Phrases.en.config.validation.urlTooLong
+  return (!typeof value == null && value.length > number)
+    ? Phrases.en.config.validation.valueTooLong
     : null;
 };
 
 const validateFieldNotEmpty = (value) => {
-  return (!value && value === '')
+  return (!value && value == null)
     ? Phrases.en.config.validation.fieldCannotBeEmpty
     : null;
 };
 
-const validateBnetProfileUrl = (profileUrl) => {
+const validateNewBnetProfileUrl = (profileUrl) => {
+  return !validateNewProfileUrl(profileUrl) === true
+    ? Phrases.en.config.validation.urlLooksInvalid
+    : null;
+};
+
+const validateLegacyBnetProfileUrl = (profileUrl) => {
   return !validateLegacyProfileUrl(profileUrl) === true
     ? Phrases.en.config.validation.urlLooksInvalid
     : null;
 };
 
-const validate = (value) => {
-  return validateFieldNotEmpty(value)
-    || validateFieldLength(value, 70)
-    || validateBnetProfileUrl(value);
+const validateProfileUrl = (value) => {
+  return (validateFieldNotEmpty(value) || validateFieldLength(value, 80))
+    && (validateLegacyBnetProfileUrl(value) || validateNewBnetProfileUrl(value));
+};
+
+const validateLettersAndNumbers = (value) => {
+  return (!value && value.matches(/^[A-z0-9]+$/g))
+    ? Phrases.en.config.validation.invalidCharacters
+    : null;
+};
+
+const validatePlayerName = (value) => {
+  const result = validateFieldNotEmpty(value)
+    || validateFieldLength(value, 12)
+    || validateLettersAndNumbers(value);
+  return result;
 };
 
 /* eslint-enable arrow-body-style */
@@ -54,6 +72,7 @@ const ConfigForm = ({
   onSubmit,
   submissionDisabled,
   profileUrl,
+  playerName,
 }) => (
   <Form className="ConfigForm" id="ConfigForm" onSubmit={onSubmit}>
     {({ formState }) => (
@@ -67,10 +86,27 @@ const ConfigForm = ({
             id="profileUrl"
             validateOnBlur
             validateOnChange
-            validate={validate}
+            validate={validateProfileUrl}
+            maxLength="80"
           />
           <ConfigFormError>
             {formState.errors.profileUrl}
+          </ConfigFormError>
+        </ConfigFormGroup>
+        <ConfigFormGroup>
+          <ConfigFormLabel text={phrases.fields.playerName.label} fieldName="playerName" />
+          <Text
+            placeholder={playerName}
+            className={cx(formState.errors.playerName)}
+            field="playerName"
+            id="playerName"
+            validateOnBlur
+            validateOnChange
+            validate={validatePlayerName}
+            maxLength="12"
+          />
+          <ConfigFormError>
+            {formState.errors.playerName}
           </ConfigFormError>
         </ConfigFormGroup>
         <ConfigFormSubmitWrapper>
@@ -87,11 +123,13 @@ ConfigForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   submissionDisabled: PropTypes.bool,
   profileUrl: PropTypes.string,
+  playerName: PropTypes.string,
 };
 
 ConfigForm.defaultProps = {
   submissionDisabled: true,
   profileUrl: '',
+  playerName: '',
 };
 
 export default ConfigForm;

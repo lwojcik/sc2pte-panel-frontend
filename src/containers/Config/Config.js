@@ -10,7 +10,7 @@ import { getTwitchAuth, determineLanguage } from '../../helpers/shared';
 import {
   getConfig,
   saveConfig,
-  constructLegacyProfileUrl,
+  constructProfileUrl,
   unpackProfileUrl,
 } from '../../helpers/config';
 
@@ -56,7 +56,7 @@ class Config extends Component {
             name,
           } = playerConfig;
 
-          const profileUrl = constructLegacyProfileUrl(server, playerid, region, name);
+          const profileUrl = constructProfileUrl(server, playerid, region, name);
           const playerName = playerConfig.name;
 
           this.setState({
@@ -101,8 +101,10 @@ class Config extends Component {
     try {
       const { channelId, token } = this.state;
       const configDataValues = unpackProfileUrl(formValues.profileUrl);
+      const name = formValues.playerName;
       const payload = {
         ...configDataValues,
+        name,
         token,
       };
       this.setState({
