@@ -90,7 +90,7 @@ class ConfigManual extends Component {
               <p><b>Method 3 - try searching for your profile in any the following sites:</b></p>
               <ol>
                 <li><a href="http://www.rankedftw.com/">Ranked FTW</a></li>
-                <li><a href="https://sc2replaystats.com/ladder/index">Sc2replayStats</a></li>
+                <li><a href="https://sc2replaystats.com/ladder/index">Sc2ReplayStats</a></li>
                 <li><a href="http://ggtracker.com/players">GGTracker</a></li>
               </ol>
             </CardBody>
