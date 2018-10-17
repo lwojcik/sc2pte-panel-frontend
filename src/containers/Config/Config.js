@@ -57,12 +57,14 @@ class Config extends Component {
           } = playerConfig;
 
           const profileUrl = constructProfileUrl(server, playerid, region, name);
+          const playerName = playerConfig.name;
 
           this.setState({
             channelId,
             token,
             profileUrl,
             ...playerConfig,
+            playerName,
             status: {
               type: 'success',
               message: 'config_get_success',
@@ -99,8 +101,10 @@ class Config extends Component {
     try {
       const { channelId, token } = this.state;
       const configDataValues = unpackProfileUrl(formValues.profileUrl);
+      const name = formValues.playerName;
       const payload = {
         ...configDataValues,
+        name,
         token,
       };
       this.setState({
@@ -150,6 +154,7 @@ class Config extends Component {
     const {
       status,
       profileUrl,
+      playerName,
       submissionDisabled,
     } = this.state;
 
@@ -164,6 +169,7 @@ class Config extends Component {
           phrases={Phrases[lang].config}
           onSubmit={this.handleSubmit}
           profileUrl={profileUrl}
+          playerName={playerName}
           submissionDisabled={submissionDisabled}
         />
         <ConfigManual phrases={Phrases[lang].config.manual} />
