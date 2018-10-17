@@ -10,8 +10,8 @@ import {
 } from 'reactstrap';
 
 import './ConfigManual.css';
-import ConfigStepPic1 from './Images/config-step-pic1.png';
-import ConfigStepPic2 from './Images/config-step-pic2.png';
+// import ConfigStepPic1 from './Images/config-step-pic1.png';
+// import ConfigStepPic2 from './Images/config-step-pic2.png';
 
 class ConfigManual extends Component {
   constructor(props) {
@@ -43,9 +43,23 @@ class ConfigManual extends Component {
           </CardHeader>
           <Collapse isOpen={collapse}>
             <CardBody>
+              <p>Your StarCraft II profile URL looks like this:</p>
+              <p><i>https://starcraft2.com/en-us/profile/2/1/5593296/</i></p>
+              <p>or</p>
+              <p><i>http://eu.battle.net/sc2/en/profile/5593296/1/Lukem/</i></p>
+              <p>How do I know my StarCraft II profile URL?</p>
+              <p><b>Method 1 - StarCraft II homepage:</b></p>
+              <ol>
+                <li>Login to <a href="https://starcraft2.com/" target="_blank" rel="noopener noreferrer">StarCraft II official website &raquo;</a></li>
+                <li>
+                  Copy the link labelled as <b>View Profile</b> in
+                  top right corner of the page.
+                </li>
+              </ol>
+              <p><b>Method 2 - StarCraft II Forums:</b></p>
               <ol>
                 <li>
-                  Go to <b>StarCraft II Forums</b> in your player profile region:
+                  Login to <b>StarCraft II Forums</b> in your region:
                   <ul className="forumUrls">
                     <li>
                       <a href="https://us.battle.net/forums/en/sc2/" target="_blank" rel="noopener noreferrer">
@@ -65,31 +79,19 @@ class ConfigManual extends Component {
                   </ul>
                 </li>
                 <li>
-                  Select <b>My Account</b>, then <b>Log In</b>.
-                  <br />
-                  <img src={ConfigStepPic1} alt="" />
+                  Once logged in, copy the link labelled as <b>Profile</b> in
+                  top right corner of the forum homepage.
                 </li>
-                <li>
-                  Log in using your Blizzard account credentials.
-                </li>
-                <li>
-                  On the forum page click <b>Posting as:</b>. Select <b>Profile</b>.<br />
-                  <img src={ConfigStepPic2} alt="" />
-                </li>
-                <li>
-                  Log in again if prompted.
-                </li>
-                <li>You should be redirected to your StarCraft II profile page.</li>
-                <li>Look at the URL of your profile page. It should look like this:<br /><br />
-                  <b>http://eu.battle.net/sc2/en/profile/5593296/1/Lukem/</b>
-                </li>
-                <li>
-                  Copy-paste it to the configuration form and click <i>Save</i>.
-                </li>
-                <li>
-                  Done! Complete the extension setup by
-                  adding it to one of the panels in your channel page.
-                </li>
+              </ol>
+              <p>
+                If you ever posted on StarCraft II forums,
+                your profile URL is also visible under your portrait alongside each of your posts.
+              </p>
+              <p><b>Method 3 - try searching for your profile in any the following sites:</b></p>
+              <ol>
+                <li><a href="http://www.rankedftw.com/">Ranked FTW</a></li>
+                <li><a href="https://sc2replaystats.com/ladder/index">Sc2replayStats</a></li>
+                <li><a href="http://ggtracker.com/players">GGTracker</a></li>
               </ol>
             </CardBody>
           </Collapse>
