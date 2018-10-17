@@ -3,7 +3,7 @@ import appConfig from '../constants/app';
 
 const profileUrlRegex = /(eu|us|kr)\.battle\.net\/sc2\/[a-z]{2}\/profile\/([0-9]*)\/([0-9]{1})\/([^/?\t\r\n]*)/gi; // https://regexr.com/3v81r
 
-export function constructProfileUrl(server, playerId, region, name) {
+export function constructLegacyProfileUrl(server, playerId, region, name) {
   const isValidServer = /(eu|us|kr)/gi;
   const isValidPlayerId = /([0-9]*)/g;
   const isValidRegion = /([0-9]{1})/g;
@@ -27,14 +27,14 @@ export function constructProfileUrl(server, playerId, region, name) {
   return '';
 }
 
-export const validateProfileUrl = (url) => {
+export const validateLegacyProfileUrl = (url) => {
   const validationResult = profileUrlRegex.test(url);
   profileUrlRegex.lastIndex = 0;
   return validationResult;
 };
 
 export function unpackProfileUrl(url) {
-  const urlIsValid = validateProfileUrl(url);
+  const urlIsValid = validateLegacyProfileUrl(url);
   if (urlIsValid) {
     const profileUrlString = url.match(profileUrlRegex);
     const profileDataArray = profileUrlRegex.exec(profileUrlString);

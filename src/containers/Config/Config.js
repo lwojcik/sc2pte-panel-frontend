@@ -10,7 +10,7 @@ import { getTwitchAuth, determineLanguage } from '../../helpers/shared';
 import {
   getConfig,
   saveConfig,
-  constructProfileUrl,
+  constructLegacyProfileUrl,
   unpackProfileUrl,
 } from '../../helpers/config';
 
@@ -56,13 +56,15 @@ class Config extends Component {
             name,
           } = playerConfig;
 
-          const profileUrl = constructProfileUrl(server, playerid, region, name);
+          const profileUrl = constructLegacyProfileUrl(server, playerid, region, name);
+          const playerName = playerConfig.name;
 
           this.setState({
             channelId,
             token,
             profileUrl,
             ...playerConfig,
+            playerName,
             status: {
               type: 'success',
               message: 'config_get_success',
@@ -150,6 +152,7 @@ class Config extends Component {
     const {
       status,
       profileUrl,
+      playerName,
       submissionDisabled,
     } = this.state;
 
@@ -164,6 +167,7 @@ class Config extends Component {
           phrases={Phrases[lang].config}
           onSubmit={this.handleSubmit}
           profileUrl={profileUrl}
+          playerName={playerName}
           submissionDisabled={submissionDisabled}
         />
         <ConfigManual phrases={Phrases[lang].config.manual} />

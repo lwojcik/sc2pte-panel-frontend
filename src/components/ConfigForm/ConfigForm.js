@@ -14,7 +14,7 @@ import ConfigFormLabel from '../ConfigFormLabel/ConfigFormLabel';
 import ConfigFormError from '../ConfigFormError/ConfigFormError';
 import ConfigFormSubmitWrapper from '../ConfigFormSubmitWrapper/ConfigFormSubmitWrapper';
 
-import { validateProfileUrl } from '../../helpers/config';
+import { validateLegacyProfileUrl } from '../../helpers/config';
 
 import './ConfigForm.css';
 
@@ -34,7 +34,7 @@ const validateFieldNotEmpty = (value) => {
 };
 
 const validateBnetProfileUrl = (profileUrl) => {
-  return !validateProfileUrl(profileUrl) === true
+  return !validateLegacyProfileUrl(profileUrl) === true
     ? Phrases.en.config.validation.urlLooksInvalid
     : null;
 };
