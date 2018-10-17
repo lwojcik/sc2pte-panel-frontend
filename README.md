@@ -11,7 +11,7 @@ For current status see [the kanban board of the project](https://github.com/orgs
 
 ## Setup
 
-Install and configure [sc2profile-twitch-extension-api](https://github.com/lukemsc/sc2profile-twitch-extension-api) first.
+Install and configure [sc2profile-twitch-extension-api](https://github.com/lukemnet/sc2profile-twitch-extension-api) first.
 
 To run a local server you need Node.js, preferably LTS version. Once installed, run the following commands:
 
