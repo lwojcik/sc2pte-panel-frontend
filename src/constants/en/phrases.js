@@ -33,8 +33,9 @@ module.exports = {
       },
       validation: {
         fieldCannotBeEmpty: 'Field cannot be empty!',
-        urlLooksInvalid: 'Profile URL looks invalid. Make sure you the link you entered is correct.',
+        urlLooksInvalid: 'Profile URL looks invalid. Make sure the profile link you entered is correct.',
         valueTooLong: 'Value cannot be longer than 70 characters!',
+        invalidCharacters: 'Your username contains invalid characters.',
       },
       manual: {
         button: {
@@ -49,7 +50,7 @@ module.exports = {
         config_get_success: 'Extension configured successfully! Want to showcase different StarCraft II profile? Fill the form below.',
         config_save_success: 'Your configuration has been saved successfully! Go to your channel page and add the extension to your panels.',
         config_save_inprogress: 'Saving your configuration. Please wait...',
-        config_save_error: 'Error while saving configuration. Make sure the link you entered is correct. If the error persists, please try again later.',
+        config_save_error: 'Error while saving configuration. Make sure the link and the username you entered are correct. If the error persists, please try again later.',
       },
     },
   },

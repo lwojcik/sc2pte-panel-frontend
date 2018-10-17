@@ -50,16 +50,15 @@ const validateProfileUrl = (value) => {
     && (validateLegacyBnetProfileUrl(value) || validateNewBnetProfileUrl(value));
 };
 
-const validateLettersAndNumbers = (value) => {
-  return (!value && value.matches(/^[A-z0-9]+$/g))
-    ? Phrases.en.config.validation.invalidCharacters
-    : null;
-};
+// const validateLettersAndNumbers = (value) => {
+//   return (!value && value.match(/^[A-z0-9]+$/g))
+//     ? Phrases.en.config.validation.invalidCharacters
+//     : null;
+// };
 
 const validatePlayerName = (value) => {
   const result = validateFieldNotEmpty(value)
-    || validateFieldLength(value, 12)
-    || validateLettersAndNumbers(value);
+    || validateFieldLength(value, 12);
   return result;
 };
 
