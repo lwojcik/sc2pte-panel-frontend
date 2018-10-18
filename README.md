@@ -1,7 +1,7 @@
 # sc2profile-twitch-extension-frontend
 [![Greenkeeper badge](https://badges.greenkeeper.io/lukemsc/sc2profile-twitch-extension-frontend.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/lukemsc/sc2profile-twitch-extension-frontend.svg?branch=master)](https://travis-ci.org/lukemsc/sc2profile-twitch-extension-frontend)
-[![Build status](https://ci.appveyor.com/api/projects/status/a2glv7bbciua61g6?svg=true)](https://ci.appveyor.com/project/lwojcik/sc2profile-twitch-extension-frontend)
+[![Travis Build Status](https://travis-ci.org/lukemnet/sc2profile-twitch-extension-frontend.svg?branch=master)](https://travis-ci.org/lukemnet/sc2profile-twitch-extension-frontend)
+[![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/a2glv7bbciua61g6?svg=true)](https://ci.appveyor.com/project/lwojcik/sc2profile-twitch-extension-frontend)
 [![Maintainability](https://api.codeclimate.com/v1/badges/613ab5f8144a72e939c5/maintainability)](https://codeclimate.com/github/lukemsc/sc2profile-twitch-extension-frontend/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/613ab5f8144a72e939c5/test_coverage)](https://codeclimate.com/github/lukemsc/sc2profile-twitch-extension-frontend/test_coverage)
 
