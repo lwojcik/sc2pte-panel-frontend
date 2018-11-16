@@ -89,9 +89,9 @@ class ConfigManual extends Component {
               </p>
               <p><b>Method 3 - try searching for your profile in any the following sites:</b></p>
               <ol>
-                <li><a href="http://www.rankedftw.com/">Ranked FTW</a></li>
-                <li><a href="https://sc2replaystats.com/ladder/index">Sc2ReplayStats</a></li>
-                <li><a href="http://ggtracker.com/players">GGTracker</a></li>
+                <li><a href="http://www.rankedftw.com/" target="_blank" rel="noopener noreferrer">Ranked FTW</a></li>
+                <li><a href="https://sc2replaystats.com/ladder/index" target="_blank" rel="noopener noreferrer">Sc2ReplayStats</a></li>
+                <li><a href="http://ggtracker.com/players" target="_blank" rel="noopener noreferrer">GGTracker</a></li>
               </ol>
             </CardBody>
           </Collapse>
@@ -101,20 +101,5 @@ class ConfigManual extends Component {
     /* eslint-enable react/jsx-one-expression-per-line */
   }
 }
-
-// const ConfigManual = ({ phrases }) => ( // eslint-disable-line
-//   <React.Fragment>
-//     <Button color="link">
-//       {phrases.button.label}
-//     </Button>
-//     <Collapse isOpen>
-//       <Card>
-//         <CardBody>
-//           {phrases.content.step}
-//         </CardBody>
-//       </Card>
-//     </Collapse>
-//   </React.Fragment>
-// );
 
 export default ConfigManual;
