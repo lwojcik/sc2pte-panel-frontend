@@ -1,32 +1,7 @@
 import fetch from 'cross-fetch';
 import appConfig from '../constants/app';
 
-const legacyProfileUrlRegex = /(eu|us|kr)\.battle\.net\/sc2\/[a-z]{2}\/profile\/([0-9]*)\/([0-9]{1})\/([^/?\t\r\n]*)/gi; // https://regexr.com/3v81r
-const newProfileUrlRegex = /starcraft2\.com\/(?:[A-z]{2}-[A-z]{2})\/profile\/([0-9]{1})\/([0-9]{1})\/([0-9]*)/gi; // https://regexr.com/41dg9
-
-export function constructLegacyProfileUrl(server, playerId, region, name) {
-  const isValidServer = /(eu|us|kr)/gi;
-  const isValidPlayerId = /([0-9]*)/g;
-  const isValidRegion = /([0-9]{1})/g;
-  const isValidName = /([^/?\t\r\n]*)/gi;
-
-  const validServer = isValidPlayerId.test(playerId);
-  const validPlayerId = isValidServer.test(server);
-  const validRegion = isValidRegion.test(region);
-  const validName = isValidName.test(name);
-
-  isValidServer.lastIndex = 0;
-  isValidPlayerId.lastIndex = 0;
-  isValidRegion.lastIndex = 0;
-  isValidName.lastIndex = 0;
-
-  if (validServer && validPlayerId && validRegion && validName) {
-    const profileLang = server === 'kr' ? 'ko' : 'en';
-
-    return `http://${server.toLowerCase()}.battle.net/sc2/profile/${profileLang}/${playerId}/${region}/${name}/`;
-  }
-  return '';
-}
+const profileUrlRegex = /starcraft2\.com\/(?:[A-z]{2}-[A-z]{2})\/profile\/([0-9]{1})\/([0-9]{1})\/([0-9]*)/gi; // https://regexr.com/41dg9
 
 export function determineIdByServerName(server) {
   switch (server) {
@@ -54,83 +29,54 @@ export function determineServerNameById(server) {
   }
 }
 
-export function constructNewProfileUrl(server, playerId, region) {
-  const serverId = determineIdByServerName(server);
+export function determineRegionLang(regionId) {
+  switch (regionId) {
+    case 3:
+      return 'ko-kr';
+    default:
+      return 'en-us';
+  }
+}
 
+export function constructProfileUrl(regionId, realmId, playerId) {
   const isValidPlayerId = /([0-9]*)/g;
-  const isValidRegion = /([0-9]{1})/g;
+  const isValidRealmId = /([0-9]{1})/g;
 
   const validPlayerId = isValidPlayerId.test(playerId);
-  const validRegion = isValidRegion.test(region);
+  const validRealmId = isValidRealmId.test(realmId);
 
   isValidPlayerId.lastIndex = 0;
-  isValidRegion.lastIndex = 0;
+  isValidRealmId.lastIndex = 0;
 
-  if (validPlayerId && validRegion) {
-    const profileLang = serverId === 3 ? 'kr-kr' : 'en-us';
+  if (validPlayerId && validRealmId) {
+    const profileLang = determineRegionLang(regionId);
 
-    return `https://starcraft2.com/${profileLang}/profile/${serverId}/${region}/${playerId}/`;
+    return `https://starcraft2.com/${profileLang}/profile/${regionId}/${realmId}/${playerId}/`;
   }
   return '';
 }
 
-export function constructProfileUrl(server, playerId, region, name) {
-  return constructNewProfileUrl(server, playerId, region, name);
-}
-
-export function validateLegacyProfileUrl(url) {
-  const validationResult = legacyProfileUrlRegex.test(url);
-  legacyProfileUrlRegex.lastIndex = 0;
+export function validateProfileUrl(url) {
+  const validationResult = profileUrlRegex.test(url);
+  profileUrlRegex.lastIndex = 0;
   return validationResult;
 }
 
-export function validateNewProfileUrl(url) {
-  const validationResult = newProfileUrlRegex.test(url);
-  newProfileUrlRegex.lastIndex = 0;
-  return validationResult;
-}
-
-export function unpackLegacyProfileUrl(url) {
-  const urlIsValid = validateLegacyProfileUrl(url);
+export function unpackProfileUrl(url) {
+  const urlIsValid = validateProfileUrl(url);
   if (urlIsValid) {
-    const profileUrlString = url.match(legacyProfileUrlRegex);
-    const profileDataArray = legacyProfileUrlRegex.exec(profileUrlString);
-    legacyProfileUrlRegex.lastIndex = 0;
+    const profileUrlString = url.match(profileUrlRegex);
+    const profileDataArray = profileUrlRegex.exec(profileUrlString);
+    profileUrlRegex.lastIndex = 0;
     const unpackedConfig = {
-      server: profileDataArray[1],
-      playerid: profileDataArray[2],
-      region: profileDataArray[3],
-      name: profileDataArray[4],
-    };
-
-    return unpackedConfig;
-  }
-  return false;
-}
-
-
-export function unpackNewProfileUrl(url) {
-  const urlIsValid = validateNewProfileUrl(url);
-  if (urlIsValid) {
-    const profileUrlString = url.match(newProfileUrlRegex);
-    const profileDataArray = newProfileUrlRegex.exec(profileUrlString);
-    newProfileUrlRegex.lastIndex = 0;
-    const unpackedConfig = {
-      server: determineServerNameById(profileDataArray[1]),
-      region: profileDataArray[2],
+      regionId: profileDataArray[1],
+      realmId: profileDataArray[2],
       playerid: profileDataArray[3],
     };
 
     return unpackedConfig;
   }
   return false;
-}
-
-export function unpackProfileUrl(url) {
-  if (validateLegacyProfileUrl(url)) {
-    return unpackLegacyProfileUrl(url);
-  }
-  return unpackNewProfileUrl(url);
 }
 
 export async function getConfig(channelId, token) {
