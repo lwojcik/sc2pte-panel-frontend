@@ -22,14 +22,7 @@ PlayerHeader.propTypes = {
     }),
     server: PropTypes.oneOf(['', 'eu', 'us', 'kr']).isRequired,
     rank: PropTypes.string,
-    portrait: PropTypes.shape({
-      x: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-      y: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-      w: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-      h: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-      offset: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-      url: PropTypes.string.isRequired,
-    }).isRequired,
+    portrait: PropTypes.string.isRequired,
   }).isRequired,
 };
 

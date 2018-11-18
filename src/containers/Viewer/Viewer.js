@@ -23,14 +23,7 @@ class Viewer extends Component {
           tag: '',
         },
         rank: '',
-        portrait: {
-          x: 0,
-          y: 0,
-          w: 0,
-          h: 0,
-          offset: 0,
-          url: '',
-        },
+        portrait: '',
       },
       ladders: {
         '1v1': {
