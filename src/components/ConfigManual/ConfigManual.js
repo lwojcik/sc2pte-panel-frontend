@@ -45,8 +45,6 @@ class ConfigManual extends Component {
             <CardBody>
               <p>Your StarCraft II profile URL looks like this:</p>
               <p><i>https://starcraft2.com/en-us/profile/2/1/5593296/</i></p>
-              <p>or</p>
-              <p><i>http://eu.battle.net/sc2/en/profile/5593296/1/Lukem/</i></p>
               <p>How do I know my StarCraft II profile URL?</p>
               <p><b>Method 1 - StarCraft II homepage:</b></p>
               <ol>
