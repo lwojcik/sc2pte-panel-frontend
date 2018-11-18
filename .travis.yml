@@ -1,14 +1,8 @@
 language: node_js
 os:
 - linux
-- osx
 node_js:
-- node
 - lts/*
-- '7'
-- '8'
-- '9'
-- '10'
 install:
 - npm install
 script:
@@ -32,4 +26,3 @@ deploy:
   on:
     repo: lukemsc/sc2profile-twitch-extension-frontend
     branch: master
-    condition: $TRAVIS_NODE_VERSION = 8
