@@ -10,20 +10,20 @@ const calculatePercentage = (number, total) => {
   return checkIfZero(fraction) ? 0 : Math.round(fraction * 100);
 };
 
-const LadderWinRatioBar = ({ wins, ties, losses }) => {
-  const gamesOverall = wins + ties + losses;
+const LadderWinRatioBar = ({ wins, losses }) => {
+  const gamesOverall = wins + losses; // + ties;
 
   const winsPercentage = checkIfZero(wins) ? 0 : calculatePercentage(wins, gamesOverall);
-  const tiesPercentage = checkIfZero(ties) ? 0 : calculatePercentage(ties, gamesOverall);
-  const lossesPercentage = checkIfZero(losses) ? 0 : 100 - winsPercentage - tiesPercentage;
+  // const tiesPercentage = checkIfZero(ties) ? 0 : calculatePercentage(ties, gamesOverall);
+  const lossesPercentage = checkIfZero(losses) ? 0 : 100 - winsPercentage; // - tiesPercentage
 
   const BarWinsStyle = {
     width: `${winsPercentage}%`,
   };
 
-  const BarTiesStyle = {
-    width: `${tiesPercentage}%`,
-  };
+  // const BarTiesStyle = {
+  //   width: `${tiesPercentage}%`,
+  // };
 
   const BarLossesStyle = {
     width: `${lossesPercentage}%`,
@@ -33,7 +33,7 @@ const LadderWinRatioBar = ({ wins, ties, losses }) => {
     <div className="LadderWinRatioBar">
       <div className="bar-overall">
         <div className="bar bar-wins" style={BarWinsStyle} />
-        <div className="bar bar-ties" style={BarTiesStyle} />
+        {/* <div className="bar bar-ties" style={BarTiesStyle} /> */}
         <div className="bar bar-losses" style={BarLossesStyle} />
       </div>
     </div>
@@ -42,14 +42,14 @@ const LadderWinRatioBar = ({ wins, ties, losses }) => {
 
 LadderWinRatioBar.propTypes = {
   wins: PropTypes.number,
-  ties: PropTypes.number,
+  // ties: PropTypes.number,
   losses: PropTypes.number,
 
 };
 
 LadderWinRatioBar.defaultProps = {
   wins: 0,
-  ties: 0,
+  // ties: 0,
   losses: 0,
 };
 

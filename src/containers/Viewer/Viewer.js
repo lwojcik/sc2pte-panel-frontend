@@ -23,14 +23,7 @@ class Viewer extends Component {
           tag: '',
         },
         rank: '',
-        portrait: {
-          x: 0,
-          y: 0,
-          w: 0,
-          h: 0,
-          offset: 0,
-          url: '',
-        },
+        portrait: '',
       },
       ladders: {
         '1v1': {
@@ -153,28 +146,48 @@ class Viewer extends Component {
     }
   }
 
+
   getCachedData = (channelId) => {
-    const serializedCachedData = getFromLocalStorage(`sc2pte-${channelId}`);
-    if (serializedCachedData) {
-      const cachedDataObject = JSON.parse(serializedCachedData);
-      return cachedDataObject;
+    const isCacheEnabled = this.checkIfLocalStorageCacheIsOn();
+    if (isCacheEnabled) {
+      const serializedCachedData = getFromLocalStorage(`sc2pte-${channelId}`);
+      if (serializedCachedData) {
+        const cachedDataObject = JSON.parse(serializedCachedData);
+        return cachedDataObject;
+      }
+      return null;
     }
     return null;
   }
 
+  checkIfLocalStorageCacheIsOn = () => {
+    const enableLocalStorageCache = process.env.REACT_APP_ENABLE_LOCALSTORAGE_CACHE;
+    const isCacheEnabled = enableLocalStorageCache.toLowerCase() === 'true';
+    if (isCacheEnabled) {
+      return true;
+    }
+    return false;
+  }
+
   cacheStateToLocalStorage = (channelId, data) => {
-    saveToLocalStorage(`sc2pte-${channelId}`, data);
+    const isCacheEnabled = this.checkIfLocalStorageCacheIsOn();
+    if (isCacheEnabled) {
+      saveToLocalStorage(`sc2pte-${channelId}`, data);
+    }
   }
 
   populateStateWithCachedData(channelId) {
-    const cachedData = this.getCachedData(channelId);
-    if (cachedData) {
-      this.setState(cachedData);
-    } else {
-      this.setState({
-        isLoaded: false,
-        status: 'loading',
-      });
+    const isCacheEnabled = this.checkIfLocalStorageCacheIsOn();
+    if (isCacheEnabled) {
+      const cachedData = this.getCachedData(channelId);
+      if (cachedData) {
+        this.setState(cachedData);
+      } else {
+        this.setState({
+          isLoaded: false,
+          status: 'loading',
+        });
+      }
     }
   }
 

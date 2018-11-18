@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import './LadderWinLoseCount.css';
 
 
-const LadderWinLoseCount = ({ wins, ties, losses }) => {
-  if (wins !== 0 || ties !== 0 || losses !== 0) {
+const LadderWinLoseCount = ({ wins, losses }) => {
+  // if (wins !== 0 || ties !== 0 || losses !== 0) {
+  if (wins !== 0 || losses !== 0) {
     return (
       <span className="LadderWinLoseCount">
         <span className="countWins" title="Wins">
@@ -14,12 +15,12 @@ const LadderWinLoseCount = ({ wins, ties, losses }) => {
         <span className="separator">
           &nbsp;/&nbsp;
         </span>
-        <span className="countTies" title="Draws">
+        {/* <span className="countTies" title="Draws">
           {(ties < 10 ? `0${ties}` : ties)}
         </span>
         <span className="separator">
           &nbsp;/&nbsp;
-        </span>
+        </span> */}
         <span className="countLosses" title="Losses">
           {(losses < 10 ? `0${losses}` : losses)}
         </span>
@@ -29,7 +30,8 @@ const LadderWinLoseCount = ({ wins, ties, losses }) => {
   return (
     <span className="LadderWinLoseCount">
       <span className="noGames">
-        00 / 00 / 00
+        {/* 00 / 00 / 00 */}
+        00 / 00
       </span>
     </span>
   );
@@ -37,14 +39,14 @@ const LadderWinLoseCount = ({ wins, ties, losses }) => {
 
 LadderWinLoseCount.propTypes = {
   wins: PropTypes.number,
-  ties: PropTypes.number,
+  // ties: PropTypes.number,
   losses: PropTypes.number,
 
 };
 
 LadderWinLoseCount.defaultProps = {
   wins: 0,
-  ties: 0,
+  // ties: 0,
   losses: 0,
 };
 

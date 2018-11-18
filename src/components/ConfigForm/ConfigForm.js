@@ -14,7 +14,7 @@ import ConfigFormLabel from '../ConfigFormLabel/ConfigFormLabel';
 import ConfigFormError from '../ConfigFormError/ConfigFormError';
 import ConfigFormSubmitWrapper from '../ConfigFormSubmitWrapper/ConfigFormSubmitWrapper';
 
-import { validateNewProfileUrl, validateLegacyProfileUrl } from '../../helpers/config';
+import { validateProfileUrl } from '../../helpers/config';
 
 import './ConfigForm.css';
 
@@ -33,33 +33,16 @@ const validateFieldNotEmpty = (value) => {
     : null;
 };
 
-const validateNewBnetProfileUrl = (profileUrl) => {
-  return !validateNewProfileUrl(profileUrl) === true
+const validateBnetProfileUrl = (profileUrl) => {
+  return !validateProfileUrl(profileUrl) === true
     ? Phrases.en.config.validation.urlLooksInvalid
     : null;
 };
 
-const validateLegacyBnetProfileUrl = (profileUrl) => {
-  return !validateLegacyProfileUrl(profileUrl) === true
-    ? Phrases.en.config.validation.urlLooksInvalid
-    : null;
-};
-
-const validateProfileUrl = (value) => {
-  return (validateFieldNotEmpty(value) || validateFieldLength(value, 80))
-    && (validateLegacyBnetProfileUrl(value) || validateNewBnetProfileUrl(value));
-};
-
-// const validateLettersAndNumbers = (value) => {
-//   return (!value && value.match(/^[A-z0-9]+$/g))
-//     ? Phrases.en.config.validation.invalidCharacters
-//     : null;
-// };
-
-const validatePlayerName = (value) => {
-  const result = validateFieldNotEmpty(value)
-    || validateFieldLength(value, 12);
-  return result;
+const validateProfileUrlField = (value) => {
+  return (validateFieldNotEmpty(value)
+  || validateFieldLength(value, 80)
+  || validateBnetProfileUrl(value));
 };
 
 /* eslint-enable arrow-body-style */
@@ -71,7 +54,6 @@ const ConfigForm = ({
   onSubmit,
   submissionDisabled,
   profileUrl,
-  playerName,
 }) => (
   <Form className="ConfigForm" id="ConfigForm" onSubmit={onSubmit}>
     {({ formState }) => (
@@ -85,27 +67,11 @@ const ConfigForm = ({
             id="profileUrl"
             validateOnBlur
             validateOnChange
-            validate={validateProfileUrl}
+            validate={validateProfileUrlField}
             maxLength="80"
           />
           <ConfigFormError>
             {formState.errors.profileUrl}
-          </ConfigFormError>
-        </ConfigFormGroup>
-        <ConfigFormGroup>
-          <ConfigFormLabel text={phrases.fields.playerName.label} fieldName="playerName" />
-          <Text
-            placeholder={playerName}
-            className={cx(formState.errors.playerName)}
-            field="playerName"
-            id="playerName"
-            validateOnBlur
-            validateOnChange
-            validate={validatePlayerName}
-            maxLength="12"
-          />
-          <ConfigFormError>
-            {formState.errors.playerName}
           </ConfigFormError>
         </ConfigFormGroup>
         <ConfigFormSubmitWrapper>
@@ -122,13 +88,11 @@ ConfigForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   submissionDisabled: PropTypes.bool,
   profileUrl: PropTypes.string,
-  playerName: PropTypes.string,
 };
 
 ConfigForm.defaultProps = {
   submissionDisabled: true,
   profileUrl: '',
-  playerName: '',
 };
 
 export default ConfigForm;
