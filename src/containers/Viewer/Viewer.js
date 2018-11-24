@@ -8,6 +8,10 @@ import ViewerPanel from '../../components/ViewerPanel/ViewerPanel';
 import ViewerPanelWrapper from '../../components/ViewerPanelWrapper/ViewerPanelWrapper';
 import ViewerPanelMessage from '../../components/ViewerPanelMessage/ViewerPanelMessage';
 
+const localStorageId = process.env.REACT_APP_LOCALSTORAGE_ID;
+
+const getUniqueLocalStorageId = channelId => `${localStorageId}-${channelId}`;
+
 class Viewer extends Component {
   constructor(props) {
     super(props);
@@ -149,8 +153,10 @@ class Viewer extends Component {
 
   getCachedData = (channelId) => {
     const isCacheEnabled = this.checkIfLocalStorageCacheIsOn();
+    const uniqueLocalStorageId = getUniqueLocalStorageId(channelId);
+
     if (isCacheEnabled) {
-      const serializedCachedData = getFromLocalStorage(`sc2pte-${channelId}`);
+      const serializedCachedData = getFromLocalStorage(uniqueLocalStorageId);
       if (serializedCachedData) {
         const cachedDataObject = JSON.parse(serializedCachedData);
         return cachedDataObject;
@@ -171,8 +177,9 @@ class Viewer extends Component {
 
   cacheStateToLocalStorage = (channelId, data) => {
     const isCacheEnabled = this.checkIfLocalStorageCacheIsOn();
+    const uniqueLocalStorageId = getUniqueLocalStorageId(channelId);
     if (isCacheEnabled) {
-      saveToLocalStorage(`sc2pte-${channelId}`, data);
+      saveToLocalStorage(uniqueLocalStorageId, data);
     }
   }
 
