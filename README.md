@@ -2,8 +2,8 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/lukemnet/sc2profile-twitch-extension-frontend.svg)](https://greenkeeper.io/)
 [![Travis Build Status](https://travis-ci.org/lukemnet/sc2profile-twitch-extension-frontend.svg?branch=master)](https://travis-ci.org/lukemnet/sc2profile-twitch-extension-frontend)
 [![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/a2glv7bbciua61g6?svg=true)](https://ci.appveyor.com/project/lukemnet/sc2profile-twitch-extension-frontend)
-[![Maintainability](https://api.codeclimate.com/v1/badges/613ab5f8144a72e939c5/maintainability)](https://codeclimate.com/github/lukemnet/sc2profile-twitch-extension-frontend/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/613ab5f8144a72e939c5/test_coverage)](https://codeclimate.com/github/lukemnet/sc2profile-twitch-extension-frontend/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/1d07756107689896c1e9/maintainability)](https://codeclimate.com/github/lukemnet/sc2profile-twitch-extension-frontend/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/1d07756107689896c1e9/test_coverage)](https://codeclimate.com/github/lukemnet/sc2profile-twitch-extension-frontend/test_coverage)
 
 This is an official repository of [StarCraft II Profile Twitch Extension](https://sc2pte.lukem.net/).
 
