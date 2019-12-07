@@ -1,4 +1,4 @@
-export type FetchMethod = "GET" | "POST";
+export type FetchMethod = 'GET' | 'POST';
 
 interface FetchHeaders {
   [key: string]: string;
@@ -13,7 +13,7 @@ interface FetchParams {
 const fetchData = async ({ url, method, headers }: FetchParams) => {
   try {
     const response = await fetch(url, {
-      method: method || "GET",
+      method: method || 'GET',
       headers,
     });
     return await response.json();
