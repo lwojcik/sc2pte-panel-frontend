@@ -1,10 +1,9 @@
 environment:
   matrix:
-    - nodejs_version: 'lts'
-    - nodejs_version: 'Current'
+    - nodejs_version: '8'
+    - nodejs_version: '10'
 
 platform:
-  - x86
   - x64
 
 install:
