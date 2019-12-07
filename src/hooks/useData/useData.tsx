@@ -1,6 +1,7 @@
 import useSWR from 'swr'
 import fetchData from 'src/helpers/fetchData/fetchData';
-export type FetchMethod = "GET" | "POST";
+
+export type FetchMethod = 'GET' | 'POST';
 
 interface UseDataParams {
   url: string;
@@ -21,7 +22,7 @@ const useData = ({
     url,
     () => fetchData({ url, method, headers }),
     {
-      refreshInterval: refreshInterval ?? 0,
+      refreshInterval: refreshInterval || 0,
       revalidateOnFocus: false,
       shouldRetryOnError: false,
       suspense: true,

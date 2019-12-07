@@ -9,7 +9,7 @@ const SubmitButton = ({ disabled }: SubmitButtonProps) => (
   <button
     className={styles.SubmitButton}
     disabled={disabled}
-    type="submit"
+    type='submit'
   >
     {disabled ? 'Disabled' : 'Submit' }
   </button>

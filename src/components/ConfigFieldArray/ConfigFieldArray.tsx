@@ -16,7 +16,7 @@ interface ConfigFieldArrayProps {
 
 const ConfigFieldArray = ({ profiles, disableDragDrop, errors }: ConfigFieldArrayProps) => (
   <FieldArray
-    name="profiles"
+    name='profiles'
     render={arrayHelpers => (
       <>
         {(!Boolean(profiles) && (
@@ -26,8 +26,8 @@ const ConfigFieldArray = ({ profiles, disableDragDrop, errors }: ConfigFieldArra
           <DragAndDrop
             dragEndFn={arrayHelpers.swap}
             disabled={disableDragDrop}
-            droppableId="droppable"
-            draggableId="profile"
+            droppableId='droppable'
+            draggableId='profile'
             draggableCssClass={styles.ConfigFieldArrayItem}
             isDraggingCssClass={styles.isDragging}
             droppableDraggingOverCssClass={styles.droppableDraggingOver}

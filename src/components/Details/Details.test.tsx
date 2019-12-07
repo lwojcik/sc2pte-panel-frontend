@@ -8,11 +8,11 @@ import { ResultType } from 'src/components/Result/Result';
 const testObject = {
   snapshot: [
     {
-      mode: "1v1",
-      rank: "silver" as Rank,
+      mode: '1v1',
+      rank: 'silver' as Rank,
       wins: 101,
       losses: 100,
-      race: "random" as Race,
+      race: 'random' as Race,
       mmr: 3655,
       divisionRank: 3,
     },
@@ -20,14 +20,14 @@ const testObject = {
   stats: {
     totalGames: 100,
     bonusPool: 24,
-    highestSoloRank: "silver" as Rank,
-    highestTeamRank: "" as Rank,
+    highestSoloRank: 'silver' as Rank,
+    highestTeamRank: '' as Rank,
   },
   history: [
     {
-      mapName: "Kairos Junction LE",
-      mode: "1v1",
-      result: "win" as ResultType,
+      mapName: 'Kairos Junction LE',
+      mode: '1v1',
+      result: 'win' as ResultType,
       date: 1562164424000,
     },
   ],

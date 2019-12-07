@@ -6,7 +6,7 @@ interface PortraitImageProps {
 }
 
 const PortraitImage = ({ url }: PortraitImageProps) => (
-  <img className={styles.PortraitFrame} src={url} alt="" />
+  <img className={styles.PortraitFrame} src={url} alt='' />
 );
 
 export default PortraitImage;

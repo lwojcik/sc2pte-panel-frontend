@@ -9,7 +9,7 @@ interface HighestSoloRankProps {
 }
 
 const HighestSoloRank = ({ className, rank }: HighestSoloRankProps) => (
-  <HighestRank className={className} type="solo" rank={rank} />
+  <HighestRank className={className} type='solo' rank={rank} />
 );
 
 export default HighestSoloRank;

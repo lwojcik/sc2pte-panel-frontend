@@ -9,7 +9,7 @@ const getHashParam = (paramName: string) => {
     }, {}) as { [key: string]: string };
     return result[paramName];
   }
-  return "";
+  return '';
 }
 
 export default getHashParam;

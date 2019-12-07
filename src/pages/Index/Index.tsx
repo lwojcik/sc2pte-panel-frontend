@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 const Index = () => (
   <ul>
     <li>
-      <Link to="/viewer">
+      <Link to='/viewer'>
         Viewer
       </Link>
     </li>
     <li>
-      <Link to="/config">
+      <Link to='/config'>
         Config
       </Link>
     </li>

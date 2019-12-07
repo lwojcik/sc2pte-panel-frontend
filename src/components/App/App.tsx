@@ -10,9 +10,9 @@ const App = () => (
   <Router>
     <Suspense fallback={<LoadingScreen />}>
       <Switch>
-        <Route exact path="/" component={Index} />
-        <Route path="/viewer" component={Viewer} />
-        <Route path="/config" component={Config} />
+        <Route exact path='/' component={Index} />
+        <Route path='/viewer' component={Viewer} />
+        <Route path='/config' component={Config} />
       </Switch>
     </Suspense>
   </Router>

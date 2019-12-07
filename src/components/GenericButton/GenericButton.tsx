@@ -14,7 +14,7 @@ const GenericButton = ({
   children
 }: GenericButtonProps) => (
   <button
-    type="button"
+    type='button'
     disabled={disabled}
     className={className}
     onClick={onClick}
