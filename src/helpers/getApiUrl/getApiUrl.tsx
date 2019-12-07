@@ -15,7 +15,7 @@ const getApiUrl = ({ channelId, type, activity }: GetApiUrlParams) => {
   const endpointByActivity = (type === 'config')
     ? endpoints.config[activity]
     : endpoints.viewer.get;
-  const apiUrl = `${url}/${version ? `${version}/` : ''}${endpointByActivity.url}/${channelId}`;
+  const apiUrl = `${url}/${version}/${endpointByActivity.url}/${channelId}`;
   const method = endpointByActivity.method as FetchMethod;
   return { url: apiUrl, method };
 }

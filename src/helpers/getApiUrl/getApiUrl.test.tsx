@@ -23,3 +23,23 @@ it('returns correct API url', () => {
     )
   );
 });
+
+it('returns correct API url when no API version is provided', () => {
+  jest.mock('src/config/api', () => {
+    return jest.fn().mockImplementation(() => ({
+      version: '',
+    }));
+  });
+
+  types.map(type =>
+    activities.map(activity =>
+      expect(
+        getApiUrl({
+          channelId: '123',
+          type,
+          activity,
+        })
+      ).toMatchSnapshot()
+    )
+  );
+});
