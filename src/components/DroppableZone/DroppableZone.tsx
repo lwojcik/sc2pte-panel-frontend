@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { Droppable } from "react-beautiful-dnd";
+import { Droppable } from 'react-beautiful-dnd';
 
 interface DroppableZoneProviderProps {
   disabled: boolean,
