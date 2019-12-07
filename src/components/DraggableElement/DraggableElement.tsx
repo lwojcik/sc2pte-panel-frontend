@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { Draggable } from "react-beautiful-dnd";
+import { Draggable } from 'react-beautiful-dnd';
 
 interface DraggableElementProviderProps {
   index: number,
