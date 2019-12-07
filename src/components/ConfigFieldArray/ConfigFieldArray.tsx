@@ -48,7 +48,7 @@ const ConfigFieldArray = ({ profiles, disableDragDrop, errors }: ConfigFieldArra
           <p>No profiles yet! Add one with a button below</p>
         )}
         {profiles.length < 5 && !(typeof errors.profiles === 'string' && errors.profiles) && (
-          <AddProfileButton onClick={() => arrayHelpers.push("")} />
+          <AddProfileButton onClick={() => arrayHelpers.push('')} />
         )}
       </>
     )}

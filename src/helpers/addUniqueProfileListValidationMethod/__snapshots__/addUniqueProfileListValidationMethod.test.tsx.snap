@@ -1,22 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`adds validation method correctly 1`] = `
-Object {
-  "ValidationError": [Function],
-  "__esModule": true,
-  "addMethod": [Function],
-  "array": [Function],
-  "bool": [Function],
-  "boolean": [Function],
-  "date": [Function],
-  "isSchema": [Function],
-  "lazy": [Function],
-  "mixed": [Function],
-  "number": [Function],
-  "object": [Function],
-  "reach": [Function],
-  "ref": [Function],
-  "setLocale": [Function],
-  "string": [Function],
+ArraySchema {
+  "_blacklist": RefSet {
+    "list": Set {},
+    "refs": Map {},
+  },
+  "_conditions": Array [],
+  "_deps": Array [],
+  "_exclusive": Object {
+    "unique": false,
+  },
+  "_mutate": undefined,
+  "_options": Object {
+    "abortEarly": true,
+    "recursive": true,
+  },
+  "_subType": StringSchema {
+    "_blacklist": RefSet {
+      "list": Set {},
+      "refs": Map {},
+    },
+    "_conditions": Array [],
+    "_deps": Array [],
+    "_exclusive": Object {},
+    "_mutate": undefined,
+    "_options": Object {
+      "abortEarly": true,
+      "recursive": true,
+    },
+    "_type": "string",
+    "_typeError": [Function],
+    "_whitelist": RefSet {
+      "list": Set {},
+      "refs": Map {},
+    },
+    "tests": Array [],
+    "transforms": Array [
+      [Function],
+    ],
+  },
+  "_type": "array",
+  "_typeError": [Function],
+  "_whitelist": RefSet {
+    "list": Set {},
+    "refs": Map {},
+  },
+  "tests": Array [
+    [Function],
+  ],
+  "transforms": Array [
+    [Function],
+  ],
 }
 `;

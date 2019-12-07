@@ -1,5 +1,5 @@
 import { FetchMethod } from 'src/helpers/fetchData/fetchData';
-import apiConfig from 'src/config/api';
+import api from 'src/config/api';
 
 export type ApiUrlType = 'config' | 'viewer';
 export type ApiActivity = 'get' | 'save';
@@ -11,7 +11,7 @@ interface GetApiUrlParams {
 }
 
 const getApiUrl = ({ channelId, type, activity }: GetApiUrlParams) => {
-  const { url, version, endpoints } = apiConfig;
+  const { url, version, endpoints } = api;
   const endpointByActivity = (type === 'config')
     ? endpoints.config[activity]
     : endpoints.viewer.get;

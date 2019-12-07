@@ -8,7 +8,7 @@ const addUniqueProfileListValidationMethod = (yupInstance: YupInstance) =>
     schemaType: 'array',
     name: 'unique',
     method: function (message) {
-      return this.test('unique', message, (list) => isProfileListUnique(list));
+      return this.test('unique', message, isProfileListUnique);
     },
   });
 

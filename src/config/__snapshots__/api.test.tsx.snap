@@ -21,6 +21,6 @@ Object {
     },
   },
   "url": "https://localhost:8883",
-  "version": "",
+  "version": "v2",
 }
 `;

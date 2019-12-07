@@ -21,10 +21,10 @@ const Config = () => {
 
   return error
     ? (
-        <div className={styles.config}>
-          <ConfigConnectionError />
-        </div>
-      )
+      <div className={styles.config}>
+        <ConfigConnectionError />
+      </div>
+    )
     : (
       <div className={styles.config}>
         <FormikWrapper

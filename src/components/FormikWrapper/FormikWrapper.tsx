@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { Formik, FormikProps, FormikHelpers, FormikValues } from "formik";
+import { Formik, FormikProps, FormikHelpers, FormikValues } from 'formik';
 import * as Yup from 'yup';
 
 interface FormStateProviderProps {

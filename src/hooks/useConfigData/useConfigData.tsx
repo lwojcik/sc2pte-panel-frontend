@@ -15,7 +15,7 @@ const useConfigData = (channelId: string, token: string) => {
   return !data.error
     ? {
       data: {
-        profiles: data.profiles.length > 0
+        profiles: data.profiles?.length > 0
           ? constructProfileUrls(data.profiles)
           : [],
       },
