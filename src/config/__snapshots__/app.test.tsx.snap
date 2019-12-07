@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`exports app config object 1`] = `
+Object {
+  "defaultLanguage": "en",
+  "enableLocalStorageCache": false,
+  "enableTwitchAuth": false,
+  "localStorageCacheKey": "sc2pte20test",
+  "updateInterval": 5000,
+}
+`;

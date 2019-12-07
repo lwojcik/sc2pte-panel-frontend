@@ -1,0 +1,7 @@
+.DeleteProfileButton {
+  background: pink;
+
+  &[disabled] {
+    background: #999;
+  }
+}

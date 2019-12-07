@@ -1,0 +1,7 @@
+.SubmitButton {
+  background: purple;
+
+  &[disabled] {
+    background: #999;
+  }
+}

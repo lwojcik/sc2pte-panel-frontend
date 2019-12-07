@@ -1,0 +1,21 @@
+.RaceImage {
+  width: 17px;
+  height: 17px;
+  background: url('images/races.png');
+}
+
+.terran {
+  background-position: 0 0;
+}
+
+.zerg {
+  background-position: -17px 0;
+}
+
+.protoss {
+  background-position: -34px 0;
+}
+
+.random {
+  background-position: -51px 0;
+}

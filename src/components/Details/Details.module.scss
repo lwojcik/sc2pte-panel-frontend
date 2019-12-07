@@ -1,0 +1,31 @@
+@mixin visible {
+  height: calc(100% - 123px);
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+@mixin hidden {
+  height: 0;
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+@mixin transition {
+  transform-origin: bottom;
+  transition-property: height, opacity, transform;
+  transition-duration: 200ms;
+}
+
+.Details {
+  width: 100%;
+  padding: 0 0.75rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  @include transition;
+  @include hidden;
+
+  &.visible {
+    @include visible;
+  }
+}

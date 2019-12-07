@@ -1,0 +1,10 @@
+.ProfileList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: calc(100vh - 2px);
+
+  // &.expanded {
+  //   background: yellow;
+  // }
+}

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`exports api object 1`] = `
+Object {
+  "endpoints": Object {
+    "config": Object {
+      "get": Object {
+        "method": "GET",
+        "url": "config",
+      },
+      "save": Object {
+        "method": "POST",
+        "url": "config",
+      },
+    },
+    "viewer": Object {
+      "get": Object {
+        "method": "GET",
+        "url": "viewer",
+      },
+    },
+  },
+  "url": "https://localhost:8883",
+  "version": "",
+}
+`;

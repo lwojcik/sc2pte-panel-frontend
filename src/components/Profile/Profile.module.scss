@@ -1,0 +1,74 @@
+@mixin inactive {
+  opacity: 0;
+  height: 0;
+  transform: scaleY(0);
+  border-bottom: 1px solid transparent;
+}
+
+@mixin active {
+  opacity: 1;
+  height: 100%;
+  transform: scaleY(1);
+}
+
+$transitions: height, transform, opacity;
+$transitionDuration: 200ms;
+
+@mixin transition {
+  transition-property: $transitions;
+  transition-duration: $transitionDuration;
+}
+
+@mixin hover {
+  background-color: #0e3d6c;
+  box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.2);
+}
+
+@mixin noHover {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+@mixin hoverTransition {
+  transition-property: background-color, box-shadow, $transitions;
+  transition-duration: $transitionDuration;
+}
+
+.Profile {
+  display: flex;
+  overflow: hidden;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  border-bottom:1px solid #1c6bb2;
+  flex-direction: column;
+  user-select: none;
+  @include transition;
+  @include active;
+
+  &.listActive {
+    @include inactive;
+
+    &.active {
+      @include active;
+
+      &:hover,
+      &:focus {
+        @include noHover;
+      }
+    }
+  }
+
+  &:not(.single) {
+    @include hoverTransition;
+
+    &:hover,
+    &:focus {
+      @include hover;
+    }
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}

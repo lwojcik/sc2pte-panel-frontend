@@ -1,0 +1,30 @@
+@mixin inactive {
+  height: 100%;
+}
+
+@mixin active {
+  height: 123px;
+}
+
+@mixin transition {
+  transition-property: height;
+  transition-duration: 200ms;
+}
+
+.Heading {
+  width: 100%;
+  padding: 0 0.75rem;
+  display: flex;
+  align-items: center;
+  cursor: default;
+  @include transition;
+  @include inactive;
+
+  &.active {
+    @include active;
+  }
+
+  &.clickable {
+    cursor: pointer;
+  }
+}
