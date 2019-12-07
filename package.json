@@ -58,8 +58,9 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "npm test; node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "build": "npm test && node scripts/build.js",
+    "test": "echo 'No tests specified'",
+    "test:watch": "node scripts/test.js --env=jsdom"
   },
   "jest": {
     "collectCoverageFrom": [
