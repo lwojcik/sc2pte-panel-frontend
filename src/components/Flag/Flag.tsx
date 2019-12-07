@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames/bind';
 import styles from './Flag.module.scss';
 
-export type ServerLocale = "us" | "eu" | "kr" | "cn";
+export type ServerLocale = 'us' | 'eu' | 'kr' | 'cn';
 
 interface FlagProps {
   code: ServerLocale;

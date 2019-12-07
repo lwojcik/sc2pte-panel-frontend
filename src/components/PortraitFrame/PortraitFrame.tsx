@@ -1,9 +1,10 @@
 import React, { ReactElement } from 'react';
 import classnames from 'classnames/bind';
+import { Rank } from 'src/components/RankImage/RankImage';
 import styles from './PortraitFrame.module.scss';
 
 interface PortraitFrameProps {
-  rank: string;
+  rank: Rank;
   children: ReactElement;
 }
 

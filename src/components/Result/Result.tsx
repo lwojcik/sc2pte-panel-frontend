@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames/bind';
 import styles from './Result.module.scss';
 
-export type ResultType = "win" | "loss";
+export type ResultType = 'win' | 'loss';
 
 interface ResultProps {
   type: ResultType;

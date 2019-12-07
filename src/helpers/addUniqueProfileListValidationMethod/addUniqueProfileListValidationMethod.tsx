@@ -5,8 +5,8 @@ import addValidationMethod from 'src/helpers/addValidationMethod/addValidationMe
 const addUniqueProfileListValidationMethod = (yupInstance: YupInstance) =>
   addValidationMethod({
     validator: yupInstance,
-    schemaType: "array",
-    name: "unique",
+    schemaType: 'array',
+    name: 'unique',
     method: function (message) {
       return this.test('unique', message, (list) => isProfileListUnique(list));
     },

@@ -1,14 +1,14 @@
 import { YupInstance, Schema } from 'yup';
 
 type SchemaType =
-  "mixed"
-  | "string"
-  | "number"
-  | "boolean"
-  | "bool"
-  | "date"
-  | "array"
-  | "object"; 
+  'mixed'
+  | 'string'
+  | 'number'
+  | 'boolean'
+  | 'bool'
+  | 'date'
+  | 'array'
+  | 'object'; 
 
 interface addValidationMethodParams {
   validator: YupInstance;

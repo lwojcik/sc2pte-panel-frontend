@@ -4,8 +4,8 @@ import RankImage, { Rank } from 'src/components/RankImage/RankImage';
 import styles from './HighestRank.module.scss';
 
 interface HighestRankProps {
-  className: string | undefined;
-  type: "solo" | "team";
+  className?: string;
+  type: 'solo' | 'team';
   rank: Rank;
 }
 
