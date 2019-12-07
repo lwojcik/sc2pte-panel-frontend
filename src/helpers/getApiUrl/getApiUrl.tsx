@@ -1,9 +1,12 @@
 import { FetchMethod } from 'src/helpers/fetchData/fetchData';
 import apiConfig from 'src/config/api';
 
+export type ApiUrlType = 'config' | 'viewer';
+export type ApiActivity = 'get' | 'save';
+
 interface GetApiUrlParams {
-  type: 'config' | 'viewer';
-  activity: 'get' | 'save';
+  type: ApiUrlType;
+  activity: ApiActivity;
   channelId: string;
 }
 

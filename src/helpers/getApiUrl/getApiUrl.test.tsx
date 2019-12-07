@@ -1,4 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import getApiUrl, { ApiUrlType, ApiActivity } from './getApiUrl';
 
-it('renders correctly', () => {});
+const types = [
+  'config',
+  'viewer',
+] as ApiUrlType[];
+
+const activities = [
+  'get',
+  'save',
+] as ApiActivity[];
+
+it('returns correct API url', () => {
+  types.map(type =>
+    activities.map(activity =>
+      expect(
+        getApiUrl({
+          channelId: '123',
+          type,
+          activity,
+        })
+      ).toMatchSnapshot()
+    )
+  );
+});

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`returns correct API url 1`] = `
+Object {
+  "method": "GET",
+  "url": "https://localhost:8883/config/123",
+}
+`;
+
+exports[`returns correct API url 2`] = `
+Object {
+  "method": "POST",
+  "url": "https://localhost:8883/config/123",
+}
+`;
+
+exports[`returns correct API url 3`] = `
+Object {
+  "method": "GET",
+  "url": "https://localhost:8883/viewer/123",
+}
+`;
+
+exports[`returns correct API url 4`] = `
+Object {
+  "method": "GET",
+  "url": "https://localhost:8883/viewer/123",
+}
+`;
