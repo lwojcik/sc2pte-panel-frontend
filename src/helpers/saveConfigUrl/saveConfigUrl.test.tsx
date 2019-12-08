@@ -1,7 +1,7 @@
 import saveConfigUrl from 'src/helpers/saveConfigUrl/saveConfigUrl';
 
 jest.mock('src/helpers/getApiUrl/getApiUrl', () =>
-  jest.fn().mockImplementation(() => ({
+  jest.fn().mockImplementationOnce(() => ({
     url: 'testSaveConfigUrl',
     method: 'TEST_SAVE_CONFIG_METHOD',
   })));

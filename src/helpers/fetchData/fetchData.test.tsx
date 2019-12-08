@@ -16,6 +16,7 @@ it('fetches data correctly when no method is provided', async () => {
 
   expect(response).toMatchSnapshot();
 });
+
 it('fetches data correctly for "GET" request', async () => {
   global.fetch.mockResponseOnce(JSON.stringify({
     status: 200,

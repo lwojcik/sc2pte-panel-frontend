@@ -26,7 +26,7 @@ it('returns correct API url', () => {
 
 it('returns correct API url when no API version is provided', () => {
   jest.mock('src/config/api', () => {
-    return jest.fn().mockImplementation(() => ({
+    return jest.fn().mockImplementationOnce(() => ({
       version: '',
     }));
   });

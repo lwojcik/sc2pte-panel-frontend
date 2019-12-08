@@ -1,4 +1,4 @@
-import useSWR from 'swr'
+import useSWR from 'swr';
 import fetchData from 'src/helpers/fetchData/fetchData';
 
 export type FetchMethod = 'GET' | 'POST';
@@ -20,6 +20,7 @@ const useData = ({
 }: UseDataParams) => {
   const { data } = useSWR(
     url,
+    // istanbul ignore next
     () => fetchData({ url, method, headers }),
     {
       refreshInterval: refreshInterval || 0,
