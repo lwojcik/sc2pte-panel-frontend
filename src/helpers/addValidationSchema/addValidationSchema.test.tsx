@@ -1,4 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import addValidator from '../addValidator/addValidator';
+import addValidationSchema from './addValidationSchema';
 
-it('renders correctly', () => {});
+it('returns valid validation schema', () => {
+  const validator = addValidator();
+  const validationSchema = addValidationSchema(validator);
+  expect(validationSchema).toMatchSnapshot();
+});

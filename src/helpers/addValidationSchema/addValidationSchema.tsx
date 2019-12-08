@@ -1,4 +1,5 @@
 import { YupInstance } from 'yup';
+import isProfileListUnique from 'src/helpers/isProfileListUnique/isProfileListUnique';
 import StarCraft2API from 'starcraft2-api';
 
 const addValidationSchema = (yup: YupInstance) => ({
@@ -14,7 +15,7 @@ const addValidationSchema = (yup: YupInstance) => ({
           },
         )
     )
-    .unique('duplicate phone', (a: string) => a),
+    .unique('duplicate phone', isProfileListUnique),
 });
 
 export default addValidationSchema;

@@ -1,11 +1,10 @@
 import getConfigUrl from 'src/helpers/getConfigUrl/getConfigUrl';
 
-jest.mock('src/helpers/getApiUrl/getApiUrl', () => {
-  return jest.fn().mockImplementation(() => ({
+jest.mock('src/helpers/getApiUrl/getApiUrl', () =>
+  jest.fn().mockImplementation(() => ({
     url: 'testConfigUrl',
     method: 'TEST_CONFIG_METHOD',
-  }));
-});
+  })));
 
 
 it('returns correct config API URL', () => {

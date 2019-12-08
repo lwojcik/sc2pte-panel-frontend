@@ -1,6 +1,7 @@
 const getHashParam = (paramName: string) => {
   const { href } = window.location;
   const params = href.split('?')[1];
+  console.log(params);
   if (params && params !== '') {
     const result = params.split('&').reduce((res, item) => {
       const parts = item.split('=');
