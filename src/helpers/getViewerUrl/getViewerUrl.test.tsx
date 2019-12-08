@@ -1,4 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import getViewerUrl from 'src/helpers/getViewerUrl/getViewerUrl';
 
-it('renders correctly', () => {});
+jest.mock('src/helpers/getApiUrl/getApiUrl', () => {
+  return jest.fn().mockImplementation(() => ({
+    url: 'testViewerUrl',
+    method: 'TEST_VIEWER_METHOD',
+  }));
+});
+
+
+it('returns correct viewer API URL', () => {
+  expect(getViewerUrl('123')).toMatchSnapshot();
+});
+
