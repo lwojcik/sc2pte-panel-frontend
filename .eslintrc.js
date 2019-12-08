@@ -3,6 +3,7 @@ module.exports = {
   "extends": "react-app",
   "rules": {
     "quotes": ["error", "single", { "avoidEscape": true }],
-    "indent": ["error", 2]
+    "indent": ["error", 2],
+    "no-console": ["error"],
   }
 }

@@ -14,7 +14,6 @@ const useViewerData = (channelId: string, token: string) => {
   const { url, method } = getViewerUrl(channelId);
   const headers = { channelId, token };
   const { data, error } = useData({ url, method, headers }) as ViewerData;
-  console.log(data);
   return error
     ? {
       channelId,
