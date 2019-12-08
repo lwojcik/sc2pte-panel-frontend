@@ -4,7 +4,7 @@ interface FetchHeaders {
   [key: string]: string;
 };
 
-interface FetchParams {
+export interface FetchParams {
   url: string;
   method?: FetchMethod;
   headers?: FetchHeaders;

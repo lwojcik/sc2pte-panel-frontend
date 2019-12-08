@@ -13,9 +13,9 @@ export interface ViewerData {
 const useViewerData = (channelId: string, token: string) => {
   const { url, method } = getViewerUrl(channelId);
   const headers = { channelId, token };
-  const data = useData({ url, method, headers }) as ViewerData;
-
-  return data.error
+  const { data, error } = useData({ url, method, headers }) as ViewerData;
+  console.log(data);
+  return error
     ? {
       channelId,
       error: true,

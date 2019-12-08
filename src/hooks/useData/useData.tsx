@@ -17,8 +17,8 @@ const useData = ({
   method,
   headers,
   refreshInterval,
-}: UseDataParams) => {
-  const { data } = useSWR(
+}: UseDataParams) =>
+  useSWR(
     url,
     // istanbul ignore next
     () => fetchData({ url, method, headers }),
@@ -27,8 +27,7 @@ const useData = ({
       revalidateOnFocus: false,
       shouldRetryOnError: false,
       suspense: true,
-    });
-  return data as unknown;
-}
+    }) as unknown;
+
 
 export default useData;

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { render } from '@testing-library/react';
 import useData, { FetchMethod } from './useData';
 
@@ -24,15 +24,13 @@ jest.mock('swr', () => {
 
 
 const TestElement = () => {
-  const data = useData(testParams);
+  const { data } = useData(testParams) as { data: object };
   return (
     <div>TestElement {JSON.stringify(data)}</div>
   );
 }
 
 it('renders correctly', async () => {
-  
   const { container } = render(<TestElement />);
-
   expect(container).toMatchSnapshot();
 });

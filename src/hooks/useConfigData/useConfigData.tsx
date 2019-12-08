@@ -4,15 +4,16 @@ import constructProfileUrls, { Sc2ProfileObject } from 'src/helpers/constructPro
 
 interface InitialConfigObject {
   error: null | undefined;
-  profiles: Sc2ProfileObject[] | [];
+  data: {
+    profiles: Sc2ProfileObject[] | [];
+  }
 }
 
 const useConfigData = (channelId: string, token: string) => {
   const { url, method } = getConfigUrl(channelId);
   const headers = { channelId, token };
-  const data = useData({ url, method, headers }) as InitialConfigObject;
-  
-  return !data.error
+  const { error, data } = useData({ url, method, headers }) as InitialConfigObject;
+  return !error && data && data.profiles
     ? {
       data: {
         profiles: data.profiles?.length > 0

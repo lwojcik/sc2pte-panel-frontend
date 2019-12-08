@@ -7,7 +7,8 @@ import styles from './Viewer.module.scss';
 
 const Viewer = () => {
   const { authorized, channelId, token } = useTwitchAuth();
-  const { error, data } = useViewerData(channelId, token) 
+  const { error, data } = useViewerData(channelId, token) as any;
+  console.log({ error, data });
   return authorized
     ? (
       <div className={styles.Viewer}>
