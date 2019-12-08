@@ -6,7 +6,6 @@ jest.mock('src/helpers/getApiUrl/getApiUrl', () =>
     method: 'TEST_CONFIG_METHOD',
   })));
 
-
 it('returns correct config API URL', () => {
   expect(getConfigUrl('123')).toMatchSnapshot();
 });
