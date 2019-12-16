@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames/bind';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Snapshot from 'src/components/Snapshot/Snapshot';
 import History from 'src/components/History/History';
 import { LadderObject } from 'src/components/Ladder/Ladder';
@@ -22,9 +23,28 @@ const cx = classnames.bind(styles);
 
 const Details = ({ visible, data }: DetailsProps) => (
   <div className={cx('Details', { visible })}>
-    <Snapshot data={data.snapshot} />
-    <Stats data={data.stats} />
-    <History data={data.history} />
+    <Tabs
+      selectedTabClassName={cx('TabSelected')}
+      selectedTabPanelClassName={cx('TabPanelSelected')}
+    >
+      <TabList className={cx('TabList')}>
+        <Tab className={cx('Tab')}>Snapshot</Tab>
+        <Tab className={cx('Tab')}>Stats</Tab>
+        <Tab className={cx('Tab')}>History</Tab>
+      </TabList>
+
+      <TabPanel className={cx('TabPanel')}>
+        <Snapshot data={data.snapshot} />
+      </TabPanel>
+
+      <TabPanel className={cx('TabPanel')}>
+        <Stats data={data.stats} />
+      </TabPanel>
+
+      <TabPanel className={cx('TabPanel')}>
+        <History data={data.history} />
+      </TabPanel>
+    </Tabs>
   </div>
 )
 

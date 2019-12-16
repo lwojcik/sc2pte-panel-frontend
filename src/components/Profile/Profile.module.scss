@@ -42,7 +42,6 @@ $transitionDuration: 200ms;
   justify-content: center;
   border-bottom:1px solid #1c6bb2;
   flex-direction: column;
-  user-select: none;
   @include transition;
   @include active;
 

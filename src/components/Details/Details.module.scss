@@ -1,5 +1,4 @@
 @mixin visible {
-  height: calc(100% - 123px);
   opacity: 1;
   transform: scaleY(1);
 }
@@ -10,22 +9,67 @@
   transform: scaleY(0);
 }
 
-@mixin transition {
-  transform-origin: bottom;
+@mixin transition($origin: bottom) {
+  transform-origin: $origin;
   transition-property: height, opacity, transform;
   transition-duration: 200ms;
 }
 
 .Details {
   width: 100%;
-  padding: 0 0.75rem;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   @include transition;
   @include hidden;
 
   &.visible {
+    height: calc(100% - 123px);
     @include visible;
   }
+}
+
+.TabList {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.Tab {
+  flex-basis: 0;
+  flex-grow: 1;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:not(:last-child) {
+    border-right: 1px solid #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background: blue;
+    color: yellow;
+  }
+}
+
+.TabSelected,
+.TabSelected:hover,
+.TabSelected:focus {
+  background: #fff;
+  color: #000;
+}
+
+.TabPanel {
+  @include hidden;
+  @include transition(top);
+}
+
+.TabPanelSelected {
+  @include visible;
+  height: 100%;
+  padding: 0.75rem;
 }
