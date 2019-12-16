@@ -25,7 +25,7 @@ const Details = ({ visible, data }: DetailsProps) => (
   <div className={cx('Details', { visible })}>
     <Tabs
       selectedTabClassName={cx('TabSelected')}
-      selectedTabPanelClassName={cx('TabPanelSelected')}
+      selectedTabPanelClassName={cx('TabPanelVisible')}
     >
       <TabList className={cx('TabList')}>
         <Tab className={cx('Tab')}>Snapshot</Tab>
