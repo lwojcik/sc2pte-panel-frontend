@@ -4,8 +4,12 @@ import styles from './Scrollbar.module.scss';
 
 const cx = classnames.bind(styles);
 
-const Scrollbar = () => (
-  <div className={cx('Scrollbar')}></div>
+interface ScrollbarProps {
+  visible: boolean;
+}
+
+const Scrollbar = ({ visible }: ScrollbarProps) => (
+  <div className={cx('Scrollbar', { visible })}></div>
 );
 
 export default Scrollbar;

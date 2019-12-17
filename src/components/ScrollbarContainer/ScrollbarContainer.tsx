@@ -1,15 +1,19 @@
 import React, { ReactElement } from 'react';
 import { StrollableContainer } from 'react-stroller';
+
 import Scrollbar from 'src/components/Scrollbar/Scrollbar';
 
 interface ScrollbarContainerProps {
+  visible?: boolean;
   children: ReactElement;
 }
 
-const ScrollbarContainer = ({ children }: ScrollbarContainerProps) => (
-  <StrollableContainer draggable gap={20} bar={Scrollbar}>
-    {children}
-  </StrollableContainer>
-);
+const ScrollbarContainer = ({ visible, children }: ScrollbarContainerProps) => {
+  return (
+    <StrollableContainer draggable gap={20} bar={() => <Scrollbar visible={visible ?? true} />}>
+      {children}
+    </StrollableContainer>
+  );
+}
 
 export default ScrollbarContainer;
