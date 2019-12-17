@@ -1,0 +1,5 @@
+@mixin transition($origin: bottom) {
+  transform-origin: $origin;
+  transition-property: height, opacity, transform;
+  transition-duration: 200ms;
+}

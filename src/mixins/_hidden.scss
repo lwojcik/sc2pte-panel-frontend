@@ -1,0 +1,5 @@
+@mixin hidden {
+  height: 0;
+  opacity: 0;
+  transform: scaleY(0);
+}
