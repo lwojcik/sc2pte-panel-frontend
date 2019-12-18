@@ -30,15 +30,15 @@
 
   &:hover,
   &:focus {
-    background: #01122d;
+    background: #0c1723;
   }
 }
 
 .TabSelected,
 .TabSelected:hover,
 .TabSelected:focus {
-  background: #01122d;
-  border-bottom: 1px solid #01122d;
+  background: #0c1723;
+  border-bottom: 1px solid #0c1723;
 
 }
 
@@ -49,5 +49,5 @@
 
 .TabPanelVisible {
   @include visible;
-  height: calc(100vh - 25px - 123px);
+  height: calc(100vh - 20px - 123px);
 }

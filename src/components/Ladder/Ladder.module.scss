@@ -1,3 +1,34 @@
-.ClanTag {
-  font-weight: bold;
+.Ladder {
+  border-bottom: 1px solid #163757;
+  position: relative;
+  overflow: hidden;
+  height: 111px;
+
+  &:after {
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  &.terran:after {
+    background: url('./images/terran.png');
+  }
+
+  &.zerg:after {
+    background: url('./images/zerg.png');
+  }
+
+  &.protoss:after {
+    background: url('./images/protoss.png');
+  }
+
+  &.random:after {
+    background-image: url('./images/random.png');
+  }
 }
