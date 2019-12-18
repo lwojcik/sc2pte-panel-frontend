@@ -9,7 +9,7 @@ interface ScrollbarProps {
 }
 
 const Scrollbar = ({ visible }: ScrollbarProps) => (
-  <div className={cx('Scrollbar', { visible })}></div>
+  <div className={cx('Scrollbar', visible ? 'visible' : '')}></div>
 );
 
 export default Scrollbar;

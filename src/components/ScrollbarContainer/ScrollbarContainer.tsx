@@ -10,7 +10,8 @@ interface ScrollbarContainerProps {
 const ScrollbarContainer = ({ visible, children }: ScrollbarContainerProps) => (
   <StrollableContainer
     draggable
-    gap={20}
+    gap={0}
+    passive={true}
     bar={() => <Scrollbar visible={visible ?? true} />}
   >
     {children}

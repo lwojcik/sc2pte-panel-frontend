@@ -1,4 +1,5 @@
 import React from 'react';
+import MapName from 'src/components/MapName/MapName';
 import Separator from 'src/components/Separator/Separator';
 import Result, { ResultType } from 'src/components/Result/Result';
 import Date from 'src/components/Date/Date';
@@ -17,7 +18,7 @@ interface MatchProps {
 
 const Match = ({ match }: MatchProps) => (
   <div className={styles.Match}>
-    {match.mapName} <Separator /> {match.mode}<br />
+    <MapName name={match.mapName} /> <Separator /> {match.mode}<br />
     <Result type={match.result} /> <Separator /> <Date date={match.date} />
   </div>
 );
