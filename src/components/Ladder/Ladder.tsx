@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import LadderMode from 'src/components/LadderMode/LadderMode';
+import LadderMode, { LadderGameMode } from 'src/components/LadderMode/LadderMode';
 import MMR from 'src/components/MMR/MMR';
 import DivisionRank from 'src/components/DivisionRank/DivisionRank';
 import RankImage, { Rank } from 'src/components/RankImage/RankImage';
@@ -9,7 +9,7 @@ import WinLoseRatio from 'src/components/WinLoseRatio/WinLoseRatio';
 import styles from './Ladder.module.scss';
 
 export interface LadderObject {
-  mode: string;
+  mode: LadderGameMode;
   rank: Rank;
   wins: number;
   losses: number;
