@@ -1,33 +1,23 @@
 import React from 'react';
-import useToggle from 'src/hooks/useToggle/useToggle';
-import ScrollbarContainer from 'src/components/ScrollbarContainer/ScrollbarContainer'
+import classnames from 'classnames/bind';
 import Match, { MatchObject } from 'src/components/Match/Match';
+import HoverableScrollArea from 'src/components/HoverableScrollArea/HoverableScrollArea';
 import styles from './History.module.scss';
 
 interface HistoryProps {
   data: MatchObject[];
 }
 
-const History = ({ data }: HistoryProps) => {
-  const { state, toggleState } = useToggle(false);
+const cx = classnames.bind(styles);
 
-  return (
-    <div
-      className={styles.History}
-      onMouseEnter={toggleState}
-      onMouseLeave={toggleState}
-      onTouchStartCapture={toggleState}
-      onTouchEndCapture={toggleState}
-    >
-      <ScrollbarContainer visible={state}>
-        <>
-          {data.map((match, key) => (
-            <Match key={key} match={match} />
-          ))}
-        </>
-      </ScrollbarContainer>
-    </div>
-  );
-}
+const History = ({ data }: HistoryProps) => (
+  <HoverableScrollArea className={cx('History')}>
+    <>
+      {data.map((match, key) => (
+        <Match key={key} match={match} />
+      ))}
+    </>
+  </HoverableScrollArea>
+);
 
 export default History;
