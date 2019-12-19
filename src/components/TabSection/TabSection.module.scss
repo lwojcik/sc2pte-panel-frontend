@@ -1,7 +1,13 @@
 @import 'src/mixins/hidden';
 @import 'src/mixins/visible';
 @import 'src/mixins/transition';
-@import 'src/mixins/tabContainerHeight';
+@import 'src/mixins/variables';
+
+$borderColor: #1f598e;
+$tabBgColor: #3b3c3c;
+$tabTextColor: #cfffff;
+$tabSelectedBgColor: #0c1723;
+$tabBorder: 1px solid $borderColor;
 
 .TabList {
   display: flex;
@@ -9,37 +15,38 @@
   padding: 0;
   list-style: none;
   width: 100%;
-  border-top: 1px solid #1f598e;
+  height: $tabSectionHeight;
+  border-top: $tabBorder;
 }
 
 .Tab {
   flex-basis: 0;
   flex-grow: 1;
-  background: #3b3c3c;
-  color: #cfffff;
+  background: $tabBgColor;
+  color: $tabTextColor;
   font-size: 12px;
   padding: 2px 0;
   cursor: pointer;
   text-align: center;
   text-transform: uppercase;
-  border-bottom: 1px solid #1f598e;
-  transition: background-color 200ms;
+  border-bottom: $tabBorder;
+  transition: background-color $transitionDuration;
 
   &:not(:last-child) {
-    border-right: 1px solid #1f598e;
+    border-right: 1px solid $borderColor;
   }
 
   &:hover,
   &:focus {
-    background: #0c1723;
+    background: $tabSelectedBgColor;
   }
 }
 
 .TabSelected,
 .TabSelected:hover,
 .TabSelected:focus {
-  background: #0c1723;
-  border-bottom: 1px solid #0c1723;
+  background: $tabSelectedBgColor;
+  border-bottom: 1px solid $tabSelectedBgColor;
 
 }
 

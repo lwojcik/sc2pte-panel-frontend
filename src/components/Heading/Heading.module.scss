@@ -1,19 +1,21 @@
+@import 'src/mixins/variables';
+
 @mixin inactive {
   height: 100%;
 }
 
 @mixin active {
-  height: 123px;
+  height: $headerHeight;
 }
 
 @mixin transition {
   transition-property: height;
-  transition-duration: 200ms;
+  transition-duration: $transitionDuration;
 }
 
 .Heading {
   width: 100%;
-  padding: 0 0.75rem;
+  padding: 0 $edgePadding;
   display: flex;
   align-items: center;
   cursor: default;

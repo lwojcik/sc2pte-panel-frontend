@@ -1,3 +1,8 @@
+@import 'src/mixins/variables';
+
+$transitions: height, transform, opacity;
+$hoverTransitions: background-color, box-shadow;
+
 @mixin inactive {
   opacity: 0;
   height: 0;
@@ -10,9 +15,6 @@
   height: 100%;
   transform: scaleY(1);
 }
-
-$transitions: height, transform, opacity;
-$transitionDuration: 200ms;
 
 @mixin transition {
   transition-property: $transitions;
@@ -30,7 +32,7 @@ $transitionDuration: 200ms;
 }
 
 @mixin hoverTransition {
-  transition-property: background-color, box-shadow, $transitions;
+  transition-property: $hoverTransitions, $transitions;
   transition-duration: $transitionDuration;
 }
 
