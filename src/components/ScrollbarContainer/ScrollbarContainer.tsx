@@ -3,7 +3,7 @@ import { StrollableContainer } from 'react-stroller';
 import Scrollbar from 'src/components/Scrollbar/Scrollbar';
 
 interface ScrollbarContainerProps {
-  visible?: boolean;
+  visible: boolean;
   children: ReactElement;
 }
 
@@ -12,7 +12,7 @@ const ScrollbarContainer = ({ visible, children }: ScrollbarContainerProps) => (
     draggable
     gap={0}
     passive={true}
-    bar={() => <Scrollbar visible={visible ?? true} />}
+    bar={() => <Scrollbar visible={visible} />}
   >
     {children}
   </StrollableContainer>
