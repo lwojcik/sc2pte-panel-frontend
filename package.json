@@ -94,6 +94,9 @@
     "test": "jest",
     "test:watch": "node scripts/test.js"
   },
+  "pre-commit": [
+    "test"
+  ],
   "eslintConfig": {
     "extends": "react-app",
     "rules": {
@@ -187,5 +190,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "pre-commit": "1.2.2"
   }
 }

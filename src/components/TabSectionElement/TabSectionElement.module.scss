@@ -1,3 +1,4 @@
+@import 'src/mixins/variables';
 @import 'src/mixins/hidden';
 @import 'src/mixins/visible';
 @import 'src/mixins/transition';
@@ -44,5 +45,5 @@
 
 .TabPanelVisible {
   @include visible;
-  height: calc(100vh - 25px - 123px);
+  height: $tabContainerHeight;
 }
