@@ -8,7 +8,7 @@ const RefreshPageButton = () => {
   const reload = () => {
     setDisabled(true);
     window.location.reload(true);
-  }
+  };
 
   return (
     <GenericButton
@@ -19,6 +19,6 @@ const RefreshPageButton = () => {
       Refresh page?
     </GenericButton>
   );
-}
+};
 
 export default RefreshPageButton;
