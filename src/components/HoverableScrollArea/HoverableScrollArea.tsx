@@ -27,6 +27,6 @@ const HoverableScrollArea = ({ className, children }: HoverableScrollAreaProps) 
       </ScrollbarContainer>
     </div>
   );
-}
+};
 
 export default HoverableScrollArea;

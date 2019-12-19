@@ -36,6 +36,6 @@ const Details = ({ visible, data }: DetailsProps) => (
       </TabSectionElement>
     </TabSection>
   </div>
-)
+);
 
 export default Details;

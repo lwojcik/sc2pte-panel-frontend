@@ -1,6 +1,6 @@
 import getViewerUrl from 'src/helpers/getViewerUrl/getViewerUrl';
 
-jest.mock('src/helpers/getApiUrl/getApiUrl', () => 
+jest.mock('src/helpers/getApiUrl/getApiUrl', () =>
   jest.fn().mockImplementationOnce(() => ({
     url: 'testViewerUrl',
     method: 'TEST_VIEWER_METHOD',

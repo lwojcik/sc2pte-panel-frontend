@@ -49,6 +49,6 @@ const ConfigForm = ({
       </div>
     </Form>
   );
-}
+};
 
 export default ConfigForm;

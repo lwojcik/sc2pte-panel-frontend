@@ -1,6 +1,6 @@
 import domRender from 'src/testUtils/domRender';
 import Details from './Details';
-import { Rank } from 'src/components/RankImage/RankImage'
+import { Rank } from 'src/components/RankImage/RankImage';
 import { Race } from 'src/components/RaceImage/RaceImage';
 import { ResultType } from 'src/components/Result/Result';
 

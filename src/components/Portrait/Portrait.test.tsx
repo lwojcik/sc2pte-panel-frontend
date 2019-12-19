@@ -6,7 +6,7 @@ import { Rank } from 'src/components/RankImage/RankImage';
 const testObject = {
   url: 'sampleUrl',
   frame: 'silver' as Rank,
-}
+};
 
 it('renders correctly', () => {
   const div = document.createElement('div');

@@ -16,7 +16,7 @@ const ranks = [
 const testObject = {
   rank: 'silver' as Rank,
   children: <p>TestElement</p>,
-}
+};
 
 it('renders correctly for all ranks', () => {
   const div = document.createElement('div');

@@ -14,7 +14,7 @@ const ProfileList = ({ data }: ProfileListProps) => {
 
   const onClick = () => {
     setExpanded(!expanded);
-  }
+  };
 
   return (
     <div className={cx('ProfileList', { expanded })}>
@@ -28,6 +28,6 @@ const ProfileList = ({ data }: ProfileListProps) => {
       ))}
     </div>
   );
-}
+};
 
 export default ProfileList;

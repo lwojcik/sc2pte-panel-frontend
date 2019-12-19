@@ -7,6 +7,6 @@ const domRender = (Element: TestElement, testData?: unknown) => {
   const div = document.createElement('div');
   ReactDOM.render(<Element {...testData} />, div);
   ReactDOM.unmountComponentAtNode(div);
-}
+};
 
 export default domRender;

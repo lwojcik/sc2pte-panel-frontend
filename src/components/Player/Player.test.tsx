@@ -9,7 +9,7 @@ const testObject = {
   },
   name: 'testName',
   server: 'eu' as ServerLocale,
-}
+};
 
 it('renders correctly', () => {
   const div = document.createElement('div');

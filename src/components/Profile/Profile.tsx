@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import classnames from 'classnames/bind';
 import Heading, { HeadingObject } from 'src/components/Heading/Heading';
-import Details, { DetailsObject } from 'src/components/Details/Details'; 
+import Details, { DetailsObject } from 'src/components/Details/Details';
 import styles from './Profile.module.scss';
 
 export interface ProfileObject {
@@ -33,7 +33,7 @@ const Profile = ({
   const handleOnClick = () => {
     onClick && onClick();
     setActive(!active);
-  }
+  };
 
   const onClickFn = single
     ? undefined
@@ -52,6 +52,6 @@ const Profile = ({
       />
     </div>
   );
-}
+};
 
 export default Profile;

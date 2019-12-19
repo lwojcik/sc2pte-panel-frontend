@@ -12,7 +12,7 @@ interface FormStateProviderProps {
 const initialStatus = {
   success: false,
   msg: '',
-}
+};
 
 const FormikWrapper = ({
   initialValues,

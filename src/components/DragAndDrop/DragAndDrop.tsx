@@ -30,7 +30,7 @@ const onDragEnd = (result: DragResult, dragEndFn: SwapElementsFunction) => {
   if (result.source && result.destination) {
     dragEndFn(result.source.index, result.destination.index);
   }
-}
+};
 
 const DrapAndDropProvider = ({
   dragEndFn,
