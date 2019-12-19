@@ -4,6 +4,6 @@ import isStringArrayUnique from 'src/helpers/isStringArrayUnique/isStringArrayUn
 const isProfileListUnique = (list: string[]) => {
   const configObjectsWithoutLocale = stringifyProfiles(list, false);
   return isStringArrayUnique(configObjectsWithoutLocale);
-}
+};
 
 export default isProfileListUnique;

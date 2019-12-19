@@ -6,7 +6,6 @@ jest.mock('src/helpers/getApiUrl/getApiUrl', () =>
     method: 'TEST_SAVE_CONFIG_METHOD',
   })));
 
-
 it('returns correct save config API URL', () => {
   expect(saveConfigUrl('123')).toMatchSnapshot();
 });

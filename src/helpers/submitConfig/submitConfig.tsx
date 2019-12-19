@@ -21,15 +21,15 @@ interface ResetFormParams {
   actions: FormikHelpers<FormikValues>;
 }
 
-const resetFormWithStatus = ({ 
+const resetFormWithStatus = ({
   status,
-  values, 
+  values,
   actions,
 }: ResetFormParams) => {
   actions.setSubmitting(false);
   actions.resetForm({ values });
   actions.setStatus(status);
-}
+};
 
 const handleSuccess = (values: ConfigFormValues, actions: FormikHelpers<FormikValues>) => {
   resetFormWithStatus({
@@ -40,18 +40,18 @@ const handleSuccess = (values: ConfigFormValues, actions: FormikHelpers<FormikVa
     values,
     actions,
   });
-}
+};
 
 const handleFailure = (values: ConfigFormValues, actions: FormikHelpers<FormikValues>) => {
   resetFormWithStatus({
     status: {
       success: false,
       msg: 'Something went wrong!',
-    }, 
+    },
     values,
     actions,
   });
-}
+};
 
 const handleResponseObject = (responseObject: ResponseObject, values: ConfigFormValues, actions: FormikHelpers<FormikValues>) => {
   if (responseObject?.status === 200) {
@@ -59,7 +59,7 @@ const handleResponseObject = (responseObject: ResponseObject, values: ConfigForm
   } else {
     handleFailure(values, actions);
   }
-}
+};
 
 const submitConfig = (channelId: string, token: string) => {
   const { url, method } = saveConfigUrl(channelId);
@@ -80,7 +80,7 @@ const submitConfig = (channelId: string, token: string) => {
     } catch (error) {
       handleFailure(values, actions);
     }
-  }
-}
+  };
+};
 
 export default submitConfig;

@@ -10,6 +10,6 @@ const getHashParam = (paramName: string) => {
     return result[paramName];
   }
   return '';
-}
+};
 
 export default getHashParam;

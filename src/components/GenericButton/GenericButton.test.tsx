@@ -1,9 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import GenericButton from './GenericButton';
 
+const testData = {
+  onClick: () => null,
+  className: 'testClassName',
+};
+
 it('renders correctly', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<GenericButton onClick={() => null} className='testClassName'>test</GenericButton>, div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(GenericButton, testData);
 });

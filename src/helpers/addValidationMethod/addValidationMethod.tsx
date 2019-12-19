@@ -8,7 +8,7 @@ type SchemaType =
   | 'bool'
   | 'date'
   | 'array'
-  | 'object'; 
+  | 'object';
 
 interface addValidationMethodParams {
   validator: YupInstance;
@@ -26,6 +26,6 @@ const addValidationMethod = ({
 }: addValidationMethodParams) => {
   validator.addMethod(validator[schemaType], name, method);
   return validator;
-}
+};
 
 export default addValidationMethod;

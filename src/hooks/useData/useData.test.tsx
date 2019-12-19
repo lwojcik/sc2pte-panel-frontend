@@ -5,8 +5,7 @@ import useData, { FetchMethod } from './useData';
 const testParams = {
   url: 'http://testurl',
   method: 'GET' as FetchMethod,
-}
-
+};
 
 jest.mock('src/helpers/fetchData/fetchData', () => {
   return jest.fn().mockImplementation(() => ({
@@ -22,13 +21,12 @@ jest.mock('swr', () => {
   }));
 });
 
-
 const TestElement = () => {
   const { data } = useData(testParams) as { data: object };
   return (
     <div>TestElement {JSON.stringify(data)}</div>
   );
-}
+};
 
 it('renders correctly', async () => {
   const { container } = render(<TestElement />);

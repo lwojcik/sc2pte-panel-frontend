@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import BonusPool from './BonusPool';
 
+const testData = {
+  count: 1,
+};
+
 it('renders correctly', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<BonusPool count={1} />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(BonusPool, testData);
 });

@@ -26,7 +26,7 @@ const useConfigData = (channelId: string, token: string) => {
       data: {
         profiles: [],
       },
-    }
-}
+    };
+};
 
 export default useConfigData;

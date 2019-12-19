@@ -9,4 +9,3 @@ jest.mock('src/helpers/getApiUrl/getApiUrl', () =>
 it('returns correct viewer API URL', () => {
   expect(getViewerUrl('123')).toMatchSnapshot();
 });
-

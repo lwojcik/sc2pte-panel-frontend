@@ -1,9 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import WinLoseBar from './WinLoseBar';
 
+const testData = {
+  wins: 999,
+  losses: 999,
+};
+
 it('renders correctly', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<WinLoseBar wins={999} losses={999} />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(WinLoseBar, testData);
 });

@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import Date from './Date';
 
+const testData = {
+  date: 1562164424000,
+};
+
 it('renders correctly', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Date date={1562164424000} />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(Date, testData);
 });

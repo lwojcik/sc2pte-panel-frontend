@@ -4,6 +4,6 @@ import addUniqueProfileListValidationMethod from 'src/helpers/addUniqueProfileLi
 const addValidator = () => {
   const validatorInstance = getValidatorInstance();
   return addUniqueProfileListValidationMethod(validatorInstance);
-}
+};
 
 export default addValidator;

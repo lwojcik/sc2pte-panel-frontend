@@ -42,6 +42,6 @@ const Config = () => {
         </FormikWrapper>
       </div>
     );
-}
+};
 
 export default Config;

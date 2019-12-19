@@ -8,6 +8,6 @@ const useLanguage = (defaultLanguage = '') => {
   return (language.length > 0 && language !== defaultLanguage)
     ? language
     : languageFromQueryHash;
-}
+};
 
 export default useLanguage;

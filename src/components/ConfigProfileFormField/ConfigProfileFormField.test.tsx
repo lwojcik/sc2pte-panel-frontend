@@ -4,7 +4,6 @@ import React from 'react';
 
 it('renders correctly', () => {});
 
-
 // it('renders correctly', () => {
 //   const div = document.createElement('div');
 //   ReactDOM.render(<LoadingScreen />, div);

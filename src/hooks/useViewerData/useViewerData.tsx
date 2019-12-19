@@ -23,6 +23,6 @@ const useViewerData = (channelId: string, token: string) => {
       },
     }
     : data;
-}
+};
 
 export default useViewerData;

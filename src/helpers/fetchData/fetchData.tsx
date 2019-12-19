@@ -2,7 +2,7 @@ export type FetchMethod = 'GET' | 'POST';
 
 interface FetchHeaders {
   [key: string]: string;
-};
+}
 
 export interface FetchParams {
   url: string;
@@ -22,6 +22,6 @@ const fetchData = async ({ url, method, headers }: FetchParams) => {
       error: true,
     };
   }
-}
+};
 
 export default fetchData;

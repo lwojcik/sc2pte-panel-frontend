@@ -10,6 +10,6 @@ const useQueryHash = (paramName: string, defaultValue = '') => {
   }, [paramName, defaultValue]);
 
   return paramValue[paramName];
-}
+};
 
 export default useQueryHash;

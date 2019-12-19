@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import ClanName from './ClanName';
 
+const testData = {
+  name: 'Test Clan',
+};
+
 it('renders correctly', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<ClanName name='Test Clan' />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(ClanName, testData);
 });

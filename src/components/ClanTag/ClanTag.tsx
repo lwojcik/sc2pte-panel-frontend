@@ -5,14 +5,13 @@ interface ClanTagProps {
   tag?: string;
 }
 
-const ClanTag = ({ tag }: ClanTagProps) => {
-  return tag && tag.length > 0
+const ClanTag = ({ tag }: ClanTagProps) =>
+  tag && tag.length > 0
     ? (
       <span className={styles.ClanTag}>
         [{tag}]
       </span>
     )
     : null;
-}
 
 export default ClanTag;

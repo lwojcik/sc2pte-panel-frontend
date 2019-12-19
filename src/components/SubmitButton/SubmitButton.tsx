@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './SubmitButton.module.scss';
 
 interface SubmitButtonProps {
-  disabled: boolean;
+  disabled?: boolean;
 }
 
 const SubmitButton = ({ disabled }: SubmitButtonProps) => (

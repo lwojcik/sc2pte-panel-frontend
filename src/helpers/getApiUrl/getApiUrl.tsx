@@ -18,6 +18,6 @@ const getApiUrl = ({ channelId, type, activity }: GetApiUrlParams) => {
   const apiUrl = `${url}/${version}/${endpointByActivity.url}/${channelId}`;
   const method = endpointByActivity.method as FetchMethod;
   return { url: apiUrl, method };
-}
+};
 
 export default getApiUrl;

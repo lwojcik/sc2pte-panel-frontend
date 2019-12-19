@@ -29,5 +29,4 @@ const useData = ({
       suspense: true,
     }) as unknown;
 
-
 export default useData;

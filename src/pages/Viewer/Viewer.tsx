@@ -15,6 +15,6 @@ const Viewer = () => {
       </div>
     )
     : <Unauthorized />;
-}
+};
 
 export default Viewer;

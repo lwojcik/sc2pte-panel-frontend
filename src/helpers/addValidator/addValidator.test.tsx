@@ -11,4 +11,4 @@ it('returns validator with unique array validation method', () => {
   const validator = addValidator();
   const uniqueMethod = validator.array().of(addValidator().string() as any).unique;
   expect(typeof uniqueMethod).toBe('function');
-})
+});

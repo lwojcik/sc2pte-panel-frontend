@@ -1,15 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import ClanTag from './ClanTag';
 
+const testData = {
+  tag: 'Test',
+};
+
+const emptyTestData = {
+  tag: '',
+};
+
 it('renders correctly when clan tag is provided', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<ClanTag tag='Test' />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(ClanTag, testData);
 });
 
 it('renders correctly when no clan tag is provided', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<ClanTag tag='' />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(ClanTag, emptyTestData);
 });
