@@ -38,7 +38,7 @@ class Config extends Component {
       getTwitchAuth(async (auth) => {
         const { channelId, token } = auth;
         const playerConfig = await getConfig(channelId, token);
-        console.log(playerConfig);
+
         if (playerConfig.status === 404) {
           this.setState({
             channelId,
