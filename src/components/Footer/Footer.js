@@ -11,7 +11,7 @@ const Footer = () => (
       </a>
     </p>
     <p>
-      Created by <a href="https://twitter.com/lukem_sc" target="_blank" rel="noopener noreferrer">@Lukem_sc</a> &ndash; <a href="https://lukem.net" target="_blank" rel="noopener noreferrer">Lukem.net</a><br />
+      Created by <a href="https://twitter.com/lukemsc" target="_blank" rel="noopener noreferrer">@Lukemsc</a> &ndash; <a href="https://lukem.net" target="_blank" rel="noopener noreferrer">Lukem.net</a><br />
       Design by <a href="https://twitter.com/lexgrizzly" target="_blank" rel="noopener noreferrer">@LexGrizzly</a> &ndash; <a href="https://grizzlygamingmx.wordpress.com/" target="_blank" rel="noopener noreferrer">GrizzlyGaming</a>
     </p>
   </div>

@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, { Fragment, Component } from 'react';
 
 import StatusMessage from '../../components/StatusMessage/StatusMessage';
 import ConfigForm from '../../components/ConfigForm/ConfigForm';
 import ConfigManual from '../../components/ConfigManual/ConfigManual';
 import ConfigWrapper from '../../components/ConfigWrapper/ConfigWrapper';
+import January2020BlackDownNotice from '../../components/January2020BlackDownNotice/January2020BlackDownNotice';
 import Footer from '../../components/Footer/Footer';
 
 import { getTwitchAuth, determineLanguage } from '../../helpers/shared';
@@ -26,6 +27,7 @@ class Config extends Component {
         throbberVisible: true,
       },
       submissionDisabled: true,
+      apiDisabledJanuary2020: false,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -46,6 +48,7 @@ class Config extends Component {
               message: 'config_get_no_config_found_warning',
               throbberVisible: false,
             },
+            apiDisabledJanuary2020: playerConfig.apiDisabledJanuary2020,
             submissionDisabled: false,
           });
         } else if (playerConfig.status === 200) {
@@ -53,6 +56,7 @@ class Config extends Component {
             regionId,
             realmId,
             playerId,
+            apiDisabledJanuary2020,
           } = playerConfig;
 
           const profileUrl = constructProfileUrl(regionId, realmId, playerId);
@@ -62,6 +66,7 @@ class Config extends Component {
             token,
             profileUrl,
             ...playerConfig,
+            apiDisabledJanuary2020,
             status: {
               type: 'success',
               message: 'config_get_success',
@@ -150,22 +155,33 @@ class Config extends Component {
       status,
       profileUrl,
       submissionDisabled,
+      apiDisabledJanuary2020,
     } = this.state;
+
+    // console.log(apiDisabledJanuary2020);
+    // console.log(status.message);
 
     return (
       <ConfigWrapper>
-        <StatusMessage
-          type={status.type}
-          content={Phrases[lang].config.messages[status.message]}
-          throbberVisible={status.throbberVisible}
-        />
-        <ConfigForm
-          phrases={Phrases[lang].config}
-          onSubmit={this.handleSubmit}
-          profileUrl={profileUrl}
-          submissionDisabled={submissionDisabled}
-        />
-        <ConfigManual phrases={Phrases[lang].config.manual} />
+        {apiDisabledJanuary2020 && (
+          <January2020BlackDownNotice />
+        )}
+        {(((apiDisabledJanuary2020 && status.message !== 'config_get_no_config_found_warning') || (!apiDisabledJanuary2020)) && (
+          <Fragment>
+            <StatusMessage
+              type={status.type}
+              content={Phrases[lang].config.messages[status.message]}
+              throbberVisible={status.throbberVisible}
+            />
+            <ConfigForm
+              phrases={Phrases[lang].config}
+              onSubmit={this.handleSubmit}
+              profileUrl={profileUrl}
+              submissionDisabled={submissionDisabled}
+            />
+            <ConfigManual phrases={Phrases[lang].config.manual} />
+          </Fragment>
+        ))}
         <Footer />
       </ConfigWrapper>
     );
