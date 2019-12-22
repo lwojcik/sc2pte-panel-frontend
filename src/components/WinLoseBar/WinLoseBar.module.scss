@@ -1,4 +1,29 @@
+@import 'src/mixins/variables';
+
+$emptyColor: #03101e;
+$winColor: #5cea00;
+$lossColor: #f44242;
+
 .WinLoseBar {
   width: 100%;
-  background: purple;
+  height: 8px;
+  background: $emptyColor;
+  position: relative;
+
+  .wins,
+  .losses {
+    float: left;
+    height: 100%;
+    transition: width $transitionDuration;
+  }
+
+  .wins {
+    background: $winColor;
+  }
+
+  .losses {
+    background: $lossColor;
+  }
+
+
 }
