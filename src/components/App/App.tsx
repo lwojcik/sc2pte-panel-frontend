@@ -2,8 +2,11 @@ import React, { Suspense, lazy } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import LoadingScreen from 'src/components/LoadingScreen/LoadingScreen';
 
+/* istanbul ignore next */
 const Index = lazy(() => import('src/pages/Index/Index'));
+/* istanbul ignore next */
 const Viewer = lazy(() => import('src/pages/Viewer/Viewer'));
+/* istanbul ignore next */
 const Config = lazy(() => import('src/pages/Config/Config'));
 
 const App = () => (
