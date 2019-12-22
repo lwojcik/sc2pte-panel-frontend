@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import Win from './Win';
 
+const testData = {
+  count: 999,
+};
+
 it('renders correctly', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Win count={999} />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(Win, testData);
 });

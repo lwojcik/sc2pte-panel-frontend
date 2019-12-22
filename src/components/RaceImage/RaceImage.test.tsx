@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import RaceImage from './RaceImage';
 
+const testData = {
+  race: 'terran',
+};
+
 it('renders correctly', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<RaceImage race='terran' />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(RaceImage, testData);
 });

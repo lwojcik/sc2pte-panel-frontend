@@ -1,9 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import WinLoseRatio from './WinLoseRatio';
 
+const testData = {
+  wins: 1,
+  losses: 2,
+};
+
 it('renders correctly', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<WinLoseRatio wins={1} losses={2} />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(WinLoseRatio, testData);
 });

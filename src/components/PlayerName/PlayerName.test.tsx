@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import PlayerName from './PlayerName';
 
+const testData = {
+  name: 'Test',
+};
+
 it('renders correctly', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<PlayerName name='Test' />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(PlayerName, testData);
 });

@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import MapName from './MapName';
 
+const testData = {
+  name: 'Test',
+};
+
 it('renders correctly', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<MapName name='Test' />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(MapName, testData);
 });

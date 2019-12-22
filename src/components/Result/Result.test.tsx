@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import Result from './Result';
 
+const testData = {
+  type: 'win',
+};
+
 it('renders correctly', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Result type='win' />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(Result, testData);
 });

@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import AddProfileButton from 'src/components/AddProfileButton/AddProfileButton';
 
+const testData = {
+  onClick: () => null,
+};
+
 it('renders correctly', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<AddProfileButton onClick={() => null} />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(AddProfileButton, testData);
 });

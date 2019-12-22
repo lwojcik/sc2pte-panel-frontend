@@ -1,10 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import { MemoryRouter } from 'react-router';
 import Index from './Index';
 
+const TestElement = () => (
+  <MemoryRouter>
+    <Index />
+  </MemoryRouter>
+);
+
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<MemoryRouter><Index /></MemoryRouter>, div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(TestElement);
 });

@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import RankImage from './RankImage';
 
+const testData = {
+  rank: 'silver',
+};
+
 it('renders correctly', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<RankImage rank='silver' />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(RankImage, testData);
 });

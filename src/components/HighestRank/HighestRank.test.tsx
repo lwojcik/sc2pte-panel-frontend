@@ -1,15 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import HighestRank from './HighestRank';
 
+const testData = {
+  className: 'test',
+  type: 'solo',
+  rank: 'bronze',
+};
+
 it('renders correctly', () => {
-  const div = document.createElement('div');
-  ReactDOM.render((
-    <HighestRank
-      className='test'
-      type='solo'
-      rank='bronze'
-    />
-  ), div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(HighestRank, testData);
 });

@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import PortraitImage from './PortraitImage';
 
+const testData = {
+  url: 'testUrl',
+};
+
 it('renders correctly', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<PortraitImage url='testUrl' />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(PortraitImage, testData);
 });

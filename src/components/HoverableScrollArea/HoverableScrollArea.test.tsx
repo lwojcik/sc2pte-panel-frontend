@@ -1,13 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import HoverableScrollArea from './HoverableScrollArea';
 
+const testData = {
+  className: 'test',
+};
+
+const testChild = (
+  <p>Test</p>
+);
+
 it('renders correctly', () => {
-  const div = document.createElement('div');
-  ReactDOM.render((
-    <HoverableScrollArea className='test'>
-      <p>Test</p>
-    </HoverableScrollArea>
-  ), div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(HoverableScrollArea, testData, testChild);
 });

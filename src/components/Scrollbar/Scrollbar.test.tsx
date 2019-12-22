@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import Scrollbar from './Scrollbar';
 
+const testData = {
+  visible: true,
+};
+
 it('renders correctly', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Scrollbar visible={true} />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(Scrollbar, testData);
 });

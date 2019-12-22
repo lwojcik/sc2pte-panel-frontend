@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import TotalGames from './TotalGames';
 
+const testData = {
+  count: 999,
+};
+
 it('renders correctly', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<TotalGames count={999} />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(TotalGames, testData);
 });

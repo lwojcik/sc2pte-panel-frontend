@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import domRender from 'src/testUtils/domRender';
 import HighestSoloRank from './HighestSoloRank';
 
+const testData = {
+  rank: 'bronze',
+};
+
 it('renders correctly', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<HighestSoloRank rank='bronze' />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  domRender(HighestSoloRank, testData);
 });
