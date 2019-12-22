@@ -12,7 +12,7 @@ interface HoverableScrollAreaProps {
 const cx = classnames.bind(styles);
 
 const HoverableScrollArea = ({ className, children }: HoverableScrollAreaProps) => {
-  const { state, toggleState } = useToggle(false);
+  const [state, toggleState] = useToggle(false);
 
   return (
     <div

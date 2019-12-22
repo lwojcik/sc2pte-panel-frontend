@@ -1,5 +1,6 @@
 $headerHeight: 123px;
 $tabSectionHeight: 20px;
 $edgePadding: 0.75rem;
-$tabContainerHeight: calc(100vh - #{$headerHeight} - #{$tabSectionHeight});
+$detailsHeight: calc(100vh - #{$headerHeight});
+$tabContainerHeight: calc(#{$detailsHeight} - #{$tabSectionHeight});
 $transitionDuration: 200ms;

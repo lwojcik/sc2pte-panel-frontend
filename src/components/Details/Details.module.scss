@@ -1,3 +1,4 @@
+@import 'src/mixins/variables';
 @import 'src/mixins/hidden';
 @import 'src/mixins/visible';
 @import 'src/mixins/transition';
@@ -11,7 +12,7 @@
   @include hidden;
 
   &.visible {
-    height: calc(100% - 123px);
+    height: $detailsHeight;
     @include visible;
   }
 }
