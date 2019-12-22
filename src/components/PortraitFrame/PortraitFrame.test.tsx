@@ -10,6 +10,6 @@ const testChild = (
   <p>TestElement</p>
 );
 
-it('renders correctly for all ranks', () => {
+it('renders correctly', () => {
   domRender(PortraitFrame, testData, testChild);
 });
