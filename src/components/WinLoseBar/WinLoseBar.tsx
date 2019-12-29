@@ -15,8 +15,8 @@ const WinLoseBar = ({ wins, losses }: WinLoseBarProps) => {
 
   return (
     <div className={cx('WinLoseBar')}>
-      <div className={cx('wins')} style={{ width: `${winPercentage}`}} />
-      <div className={cx('losses')} style={{ width: `${lossPercentage}`}} />
+      <div className={cx('wins')} style={{ width: `${winPercentage}%`}} />
+      <div className={cx('losses')} style={{ width: `${lossPercentage}%`}} />
     </div>
   );
 };

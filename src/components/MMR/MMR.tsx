@@ -10,7 +10,7 @@ const cx = classnames.bind(styles);
 
 const MMR = ({ rating }: LadderProps) => (
   <span className={cx('MMR')}>
-    {rating}
+    MMR {rating}
   </span>
 );
 
