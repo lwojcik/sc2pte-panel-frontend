@@ -15,6 +15,7 @@ const testData = {
         race: 'random' as Race,
         mmr: 3655,
         divisionRank: 3,
+        teamMembers: [ 'player' ],
       },
     ],
     stats: {

@@ -10,6 +10,10 @@
   flex-direction: row;
   align-items: center;
 
+  .data {
+    width: calc(100% - 60px - (2 * #{$edgePadding}));
+  }
+
   &:after {
     content: "";
     top: 0;
@@ -37,8 +41,4 @@
   &.random:after {
     background-image: url('./images/random.png');
   }
-}
-
-.data {
-  width: calc(100% - 60px - (2 * #{$edgePadding}));
 }

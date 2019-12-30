@@ -7,6 +7,8 @@ import RankImage, { Rank } from 'src/components/RankImage/RankImage';
 import RaceImage, { Race } from 'src/components/RaceImage/RaceImage';
 import WinLoseBar from 'src/components/WinLoseBar/WinLoseBar';
 import WinLoseRatio from 'src/components/WinLoseRatio/WinLoseRatio';
+import Row from 'src/components/Row/Row';
+import Spacer from 'src/components/Spacer/Spacer';
 import styles from './Ladder.module.scss';
 
 export interface LadderObject {
@@ -17,6 +19,7 @@ export interface LadderObject {
   race: Race;
   mmr: number;
   divisionRank: number;
+  teamMembers: string[];
 }
 
 interface LadderProps {
@@ -29,26 +32,33 @@ const Ladder = ({ ladder }: LadderProps) => (
   <div className={cx('Ladder', ladder.race)}>
     <RankImage rank={ladder.rank} divisionRank={ladder.divisionRank} />
     <div className={cx('data')}>
-      <div>
-        <span style={{ padding: '0 5px' }}>
-          <LadderMode mode={ladder.mode} />
-        </span>
-        <WinLoseRatio
-          wins={ladder.wins}
-          losses={ladder.losses}
-        />
-        <RaceImage race={ladder.race} />
-      </div>
-      <div>
+      <Row>
+        <Spacer>
+          <LadderMode mode={ladder.mode} members={ladder.teamMembers} />
+        </Spacer>
+        <Spacer>
+          <WinLoseRatio
+            wins={ladder.wins}
+            losses={ladder.losses}
+          />
+        </Spacer>
+        <Spacer>
+          <RaceImage race={ladder.race} />
+        </Spacer>
+      </Row>
+      <Row>
         <WinLoseBar
           wins={ladder.wins}
           losses={ladder.losses}
         />
-      </div>
-      <div>
+      </Row>
+      <Spacer>
         <MMR rating={ladder.mmr} />
+      </Spacer>
+      <Spacer />
+      <Spacer>
         <DivisionRank rank={ladder.divisionRank} />
-      </div>
+      </Spacer>
     </div>
   </div>
 );

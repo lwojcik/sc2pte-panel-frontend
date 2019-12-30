@@ -11,6 +11,7 @@ const testData = {
       race: 'random',
       mmr: 3655,
       divisionRank: 3,
+      teamMembers: [ 'player' ],
     },
     {
       mode: '2v2',
@@ -20,6 +21,10 @@ const testData = {
       race: 'terran',
       mmr: 3655,
       divisionRank: 3,
+      teamMembers: [
+        'player1',
+        'player2',
+      ],
     },
   ],
 };
