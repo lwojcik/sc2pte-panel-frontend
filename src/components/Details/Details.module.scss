@@ -6,8 +6,6 @@
 .Details {
   width: 100%;
   background: #0c1723;
-  display: flex;
-  flex-direction: column;
   @include transition;
   @include hidden;
 

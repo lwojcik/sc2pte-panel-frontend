@@ -7,7 +7,7 @@ $hoverTransitions: background-color, box-shadow;
   opacity: 0;
   height: 0;
   transform: scaleY(0);
-  border-bottom: 1px solid transparent;
+  border-bottom: 0px;
 }
 
 @mixin active {
@@ -41,7 +41,6 @@ $hoverTransitions: background-color, box-shadow;
   overflow: hidden;
   align-content: center;
   align-items: center;
-  justify-content: center;
   border-bottom:1px solid #1c6bb2;
   flex-direction: column;
   @include transition;
