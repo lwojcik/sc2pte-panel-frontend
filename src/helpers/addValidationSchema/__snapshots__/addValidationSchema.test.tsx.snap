@@ -26,8 +26,8 @@ Object {
       "_default": "",
       "_deps": Array [],
       "_exclusive": Object {
+        "matches": false,
         "min": true,
-        "undefined": false,
       },
       "_mutate": undefined,
       "_options": Object {
