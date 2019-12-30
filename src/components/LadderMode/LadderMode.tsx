@@ -16,8 +16,8 @@ interface LadderProps {
 const cx = classnames.bind(styles);
 
 const LadderMode = ({ mode }: LadderProps) => (
-  <span className={cx('Ladder')}>
-    {mode}
+  <span className={cx('LadderMode')}>
+    {mode}:
   </span>
 );
 

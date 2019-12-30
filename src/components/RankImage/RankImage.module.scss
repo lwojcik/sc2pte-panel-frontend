@@ -1,35 +1,124 @@
 .RankImage {
-  background-position: -99px 4px;
-  background-repeat: no-repeat;
-  width: 46px;
-  height: 51px;
-  background-image:url('images/none.png');
+  width: 47px;
+  height: 53px;
+  background-image:url('images/frame.png');
+
+  &:after {
+    content: '';
+    display: block;
+    background-image:url('images/ranks.png');
+    width: 47px;
+    height: 53px;
+    background-repeat: no-repeat;
+    background-position: 3px 5px;
+  }
+
+  &.bronze_1:after {
+    background-position: -41px 5px;
+  }
+
+  &.bronze_2:after {
+    background-position: -41px 5px;
+  }
+
+  &.bronze_3:after {
+    background-position: -41px 5px;
+  }
+
+  &.silver_1:after {
+    background-position: -41px 5px;
+  }
+
+  &.silver_2:after {
+    background-position: -41px 5px;
+  }
+
+  &.silver_3:after {
+    background-position: -41px 5px;
+  }
 }
 
-.bronze {
-  background-image:url('images/bronze.png');
-}
 
-.silver {
-  background-image:url('images/silver.png');
-}
 
-.gold {
-  background-image:url('images/gold.png');
-}
 
-.platinum {
-  background-image:url('images/platinum.png');
-}
+// @mixin rank($rank) {
+//   #{$rank}_1,
+//   #{$rank}_2,
+//   #{$rank}_3,
+//   #{$rank}_4 {
+//     &:after {
+//       background-image:url('images/#{$rank}.png');
+//     }
+//   }
+// }
 
-.diamond {
-  background-image:url('images/diamond.png');
-}
+// @include rank('silver');
 
-.master {
-  background-image:url('images/master.png');
-}
+//   .#{#{$rank}_1}:after {
+//     background-position: -99px 4px;
+//   }
 
-.grandmaster {
-  background-image:url('images/grandmaster.png');
-}
+//   .#{#{$rank}_2}:after {
+//     background-position: -99px -45px;
+//   }
+
+//   .#{#{$rank}_3}:after {
+//     background-position: -99px -94px;
+//   }
+
+//   .#{#{$rank}_4}:after {
+//     background-position: -99px -148px;
+//   }
+// }
+
+// // .silver_1,
+// // .silver_2,
+// // .silver_3 {
+// //   &:after {
+// //     background-image:url('images/silver.png');
+// //   }
+// // }
+
+// // .silver_1:after {
+// //   background-position: -99px 4px;
+// // }
+
+// // .silver_2:after {
+// //   background-position: -99px -45px;
+// // }
+
+// // .silver_3:after {
+// //   background-position: -99px -94px;
+// // }
+
+// // .silver_4:after {
+// //   background-position: -99px -148px;
+// // }
+
+// // .bronze {
+// //   background-image:url('images/bronze.png');
+// // }
+
+// // .silver {
+// //   background-image:url('images/silver.png');
+// // }
+
+// // .gold {
+// //   background-image:url('images/gold.png');
+// // }
+
+// // .platinum {
+// //   background-image:url('images/platinum.png');
+// // }
+
+// // .diamond {
+// //   background-image:url('images/diamond.png');
+// // }
+
+// // .master {
+// //   background-image:url('images/master.png');
+// // }
+
+// // .grandmaster {
+// //   background-image:url('images/grandmaster.png');
+// // }
