@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should calculate correct percentages 1`] = `0`;
+
+exports[`should calculate correct percentages 2`] = `1`;
+
+exports[`should calculate correct percentages 3`] = `39`;
+
+exports[`should calculate correct percentages 4`] = `50`;
+
+exports[`should calculate correct percentages 5`] = `100`;

@@ -1,124 +1,50 @@
-.RankImage {
+@mixin rankImageDimensions {
   width: 47px;
   height: 53px;
+}
+
+@mixin rankImage($rank, $bgPositionX) {
+  &.#{$rank}_1:after,
+  &.#{$rank}_2:after,
+  &.#{$rank}_3:after,
+  &.#{$rank}_4:after {
+    background-position-x: $bgPositionX;
+  }
+
+  &.#{$rank}_1:after {
+    background-position-y: -145px;
+  }
+
+
+  &.#{$rank}_2:after {
+    background-position-y: -95px;
+  }
+
+  &.#{$rank}_3:after {
+    background-position-y: -45px;
+  }
+
+  &.#{$rank}_4:after {
+    background-position-y: 5px;
+  }
+}
+
+.RankImage {
+  @include rankImageDimensions;
   background-image:url('images/frame.png');
 
   &:after {
     content: '';
     display: block;
-    background-image:url('images/ranks.png');
-    width: 47px;
-    height: 53px;
-    background-repeat: no-repeat;
-    background-position: 3px 5px;
+    @include rankImageDimensions;
+    background:url('images/ranks.png') no-repeat 3px 5px;
   }
 
-  &.bronze_1:after {
-    background-position: -41px 5px;
-  }
-
-  &.bronze_2:after {
-    background-position: -41px 5px;
-  }
-
-  &.bronze_3:after {
-    background-position: -41px 5px;
-  }
-
-  &.silver_1:after {
-    background-position: -41px 5px;
-  }
-
-  &.silver_2:after {
-    background-position: -41px 5px;
-  }
-
-  &.silver_3:after {
-    background-position: -41px 5px;
-  }
+  @include rankImage("bronze", -41px);
+  @include rankImage("silver", -89px);
+  @include rankImage("gold", -137px);
+  @include rankImage("platinum", -184px);
+  @include rankImage("diamond", -231px);
+  @include rankImage("master", -278px);
+  @include rankImage("grandmaster", -329px);
 }
-
-
-
-
-// @mixin rank($rank) {
-//   #{$rank}_1,
-//   #{$rank}_2,
-//   #{$rank}_3,
-//   #{$rank}_4 {
-//     &:after {
-//       background-image:url('images/#{$rank}.png');
-//     }
-//   }
-// }
-
-// @include rank('silver');
-
-//   .#{#{$rank}_1}:after {
-//     background-position: -99px 4px;
-//   }
-
-//   .#{#{$rank}_2}:after {
-//     background-position: -99px -45px;
-//   }
-
-//   .#{#{$rank}_3}:after {
-//     background-position: -99px -94px;
-//   }
-
-//   .#{#{$rank}_4}:after {
-//     background-position: -99px -148px;
-//   }
-// }
-
-// // .silver_1,
-// // .silver_2,
-// // .silver_3 {
-// //   &:after {
-// //     background-image:url('images/silver.png');
-// //   }
-// // }
-
-// // .silver_1:after {
-// //   background-position: -99px 4px;
-// // }
-
-// // .silver_2:after {
-// //   background-position: -99px -45px;
-// // }
-
-// // .silver_3:after {
-// //   background-position: -99px -94px;
-// // }
-
-// // .silver_4:after {
-// //   background-position: -99px -148px;
-// // }
-
-// // .bronze {
-// //   background-image:url('images/bronze.png');
-// // }
-
-// // .silver {
-// //   background-image:url('images/silver.png');
-// // }
-
-// // .gold {
-// //   background-image:url('images/gold.png');
-// // }
-
-// // .platinum {
-// //   background-image:url('images/platinum.png');
-// // }
-
-// // .diamond {
-// //   background-image:url('images/diamond.png');
-// // }
-
-// // .master {
-// //   background-image:url('images/master.png');
-// // }
-
-// // .grandmaster {
-// //   background-image:url('images/grandmaster.png');
-// // }

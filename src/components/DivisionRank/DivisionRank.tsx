@@ -10,7 +10,7 @@ const cx = classnames.bind(styles);
 
 const DivisionRank = ({ rank }: LadderProps) => (
   <span className={cx('DivisionRank')}>
-    Division rank: {rank}
+    Rank: {rank}
   </span>
 );
 

@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 1`] = `8`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 2`] = `25`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 3`] = `50`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 4`] = `100`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 5`] = `100`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 6`] = `8`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 7`] = `25`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 8`] = `50`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 9`] = `100`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 10`] = `100`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 11`] = `8`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 12`] = `25`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 13`] = `50`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 14`] = `100`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 15`] = `100`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 16`] = `8`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 17`] = `25`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 18`] = `50`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 19`] = `100`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 20`] = `100`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 21`] = `8`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 22`] = `25`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 23`] = `50`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 24`] = `100`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 25`] = `100`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 26`] = `8`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 27`] = `25`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 28`] = `50`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 29`] = `100`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 30`] = `100`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 31`] = `16`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 32`] = `50`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 33`] = `100`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 34`] = `200`;
+
+exports[`should calculate correct tier ranges for all ranks and division ranks 35`] = `100`;
