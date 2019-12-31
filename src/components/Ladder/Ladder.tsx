@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames/bind';
+import LadderWrapper from 'src/components/LadderWrapper/LadderWrapper';
 import LadderMode, { LadderGameMode } from 'src/components/LadderMode/LadderMode';
 import MMR from 'src/components/MMR/MMR';
 import DivisionRank from 'src/components/DivisionRank/DivisionRank';
@@ -31,7 +32,7 @@ const cx = classnames.bind(styles);
 const Ladder = ({ ladder }: LadderProps) => (
   <div className={cx('Ladder', ladder.race)}>
     <RankImage rank={ladder.rank} divisionRank={ladder.divisionRank} />
-    <div className={cx('data')}>
+    <LadderWrapper>
       <Row>
         <Spacer>
           <LadderMode mode={ladder.mode} members={ladder.teamMembers} />
@@ -59,7 +60,7 @@ const Ladder = ({ ladder }: LadderProps) => (
       <Spacer>
         <DivisionRank rank={ladder.divisionRank} />
       </Spacer>
-    </div>
+    </LadderWrapper>
   </div>
 );
 

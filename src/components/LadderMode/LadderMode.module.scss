@@ -7,19 +7,4 @@
   &.hoverable {
     cursor: pointer;
   }
-
-  .dropdown {
-    border: 1px solid pink;
-    background: red;
-    color: yellow;
-    width: 40px;
-    position: absolute;
-    left: 0;
-    top: 16px;
-    display: none;
-
-    &.expanded {
-      display: block;
-    }
-  }
 }

@@ -3,16 +3,11 @@
 .Ladder {
   border-bottom: 1px solid #163757;
   position: relative;
-  overflow: hidden;
   padding: 0 #{$edgePadding};
   height: 111px;
   display: flex;
   flex-direction: row;
   align-items: center;
-
-  .data {
-    width: calc(100% - 60px - (2 * #{$edgePadding}));
-  }
 
   &:after {
     content: "";

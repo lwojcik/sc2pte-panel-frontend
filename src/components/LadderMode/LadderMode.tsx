@@ -1,6 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import classnames from 'classnames/bind';
 import DropdownArrow from 'src/components/DropdownArrow/DropdownArrow';
+import DropdownArea from 'src/components/DropdownArea/DropdownArea';
+import OutsideClickArea from 'src/components/OutsideClickArea/OutsideClickArea';
 import styles from './LadderMode.module.scss';
 
 export type LadderGameMode =
@@ -18,43 +20,34 @@ interface LadderProps {
 const cx = classnames.bind(styles);
 
 const LadderMode = ({ mode, members }: LadderProps) => {
-  const node = useRef() as React.MutableRefObject<HTMLDivElement>;;
   const teamMode = mode !== '1v1';
   const [ expanded, setExpanded ] = useState(false);
-
-  const handleClickOutside = (e: MouseEvent) => {
-    if (node.current.contains(e.target as HTMLElement)) {
-      return;
-    }
-    setExpanded(false);
-  };
-
-  useEffect(() => {
-    if (expanded) {
-      document.addEventListener('mousedown', handleClickOutside);
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  });
+  const [ hovered, setHovered ] = useState(false);
 
   return (
-    <div
-      ref={node}
-      className={cx('LadderMode', { hoverable: teamMode })}
-      onClick={e => teamMode ? setExpanded(!expanded) : null}
+    <OutsideClickArea
+      active={expanded}
+      callback={() => teamMode ? setExpanded(!expanded) : null}
     >
-      {teamMode && (
-        <DropdownArrow expanded={expanded} />
-      )}
-      {mode}:
-      <div className={cx('dropdown', { expanded })}>
-        Test
+      <div
+        className={cx('LadderMode', { hoverable: teamMode })}
+        onMouseEnter={() => setHovered(true)}
+        onMouseOut={() => setHovered(false)}
+      >
+        {teamMode && (
+          <>
+            <DropdownArrow expanded={expanded} hovered={hovered} />
+            <DropdownArea visible={expanded}>
+              {members.map(member => (
+                <div>{member}</div>
+              ))}
+            </DropdownArea>
+          </>
+        )}
+        {mode}:
       </div>
-    </div>
+    </OutsideClickArea>
+
   );
 };
 

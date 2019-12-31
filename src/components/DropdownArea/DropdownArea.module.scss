@@ -1,0 +1,23 @@
+.DropdownArea {
+  border: 1px solid #163757;
+  background: rgba(0, 0, 0, 0.9);
+  color: #cfffff;
+  min-width: 100px;
+  position: absolute;
+  left: 0;
+  top: 16px;
+  display: none;
+  transition: display 100ms;
+
+  & * {
+    display: inline-block;
+    white-space: nowrap;
+    font-weight: normal;
+    font-size: 12px;
+    padding: 3px 5px;
+  }
+
+  &.visible {
+    display: block;
+  }
+}
