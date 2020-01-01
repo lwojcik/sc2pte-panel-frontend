@@ -30,6 +30,7 @@ const LadderMode = ({ mode, members }: LadderProps) => {
       callback={() => teamMode ? setExpanded(!expanded) : null}
     >
       <div
+        {...teamMode && ({ title: 'Click to see team members'})}
         className={cx('LadderMode', { hoverable: teamMode })}
         onMouseEnter={() => setHovered(true)}
         onMouseOut={() => setHovered(false)}
