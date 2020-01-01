@@ -31,11 +31,11 @@ const LadderMode = ({ mode, members }: LadderProps) => {
     >
       <div
         {...teamMode && ({ title: 'Click to see team members'})}
-        className={cx('LadderMode', { hoverable: teamMode })}
+        className={cx('LadderMode', { hoverable: teamMode && members })}
         onMouseEnter={() => setHovered(true)}
         onMouseOut={() => setHovered(false)}
       >
-        {teamMode && (
+        {teamMode && members && (
           <>
             <DropdownArrow expanded={expanded} hovered={hovered} />
             <DropdownArea visible={expanded}>

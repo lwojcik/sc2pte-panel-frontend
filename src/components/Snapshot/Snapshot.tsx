@@ -1,19 +1,21 @@
 import React from 'react';
-import HoverableScrollArea from 'src/components/HoverableScrollArea/HoverableScrollArea';
-import Ladder, { LadderObject } from 'src/components/Ladder/Ladder';
+import NoLaddersFound from 'src/components/NoLaddersFound/NoLaddersFound';
+import LadderList from 'src/components/LadderList/LadderList';
+import { LadderObject } from 'src/components/Ladder/Ladder';
 
 interface SnapshotProps {
   data: LadderObject[];
 }
 
 const Snapshot = ({ data }: SnapshotProps) => (
-  <HoverableScrollArea>
-    <>
-      {data.map((ladder, key) => (
-        <Ladder key={key} ladder={ladder} />
-      ))}
-    </>
-  </HoverableScrollArea>
+  <>
+    {data.length <= 0 && (
+      <NoLaddersFound />
+    )}
+    {data.length > 0 && (
+      <LadderList data={data} />
+    )}
+  </>
 );
 
 export default Snapshot;
