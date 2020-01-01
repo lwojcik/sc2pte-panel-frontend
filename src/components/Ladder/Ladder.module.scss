@@ -9,7 +9,7 @@
   flex-direction: row;
   align-items: center;
 
-  &:after {
+  &:before {
     content: "";
     top: 0;
     left: 0;
@@ -19,21 +19,22 @@
     z-index: -1;
     background-repeat: no-repeat;
     background-position: center top;
+    background-size: cover;
   }
 
-  &.terran:after {
+  &.terran:before {
     background: url('./images/terran.png');
   }
 
-  &.zerg:after {
+  &.zerg:before {
     background: url('./images/zerg.png');
   }
 
-  &.protoss:after {
+  &.protoss:before {
     background: url('./images/protoss.png');
   }
 
-  &.random:after {
+  &.random:before {
     background-image: url('./images/random.png');
   }
 }

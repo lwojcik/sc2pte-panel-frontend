@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames/bind';
+import StatLabel from 'src/components/StatLabel/StatLabel';
 import RankImage, { Rank } from 'src/components/RankImage/RankImage';
 import styles from './HighestRank.module.scss';
 
@@ -12,10 +13,12 @@ interface HighestRankProps {
 const cx = classnames.bind(styles);
 
 const HighestRank = ({ className, type, rank }: HighestRankProps) => (
-  <span className={cx('HighestRank', className)}>
-    Highest {type} rank:<br/>
+  <div className={cx('HighestRank', className)}>
+    <StatLabel>
+      Highest {type} rank:
+    </StatLabel>
     <RankImage rank={rank} />
-  </span>
+  </div>
 );
 
 export default HighestRank;

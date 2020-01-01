@@ -1,10 +1,10 @@
 import domRender from 'src/testUtils/domRender';
-import BonusPool from './BonusPool';
+import StatLabel from './StatLabel';
 
 const testData = {
-  count: 1,
+  children: 'Test',
 };
 
 it('renders correctly', () => {
-  domRender(BonusPool, testData);
+  domRender(StatLabel, testData);
 });

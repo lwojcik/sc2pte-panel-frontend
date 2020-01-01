@@ -1,18 +1,15 @@
 import React from 'react';
-import classnames from 'classnames/bind';
-import styles from './TotalGamesThisSeason.module.scss';
+import TotalGames from 'src/components/TotalGames/TotalGames';
 
 interface TotalGamesThisSeasonProps {
   count: number;
 }
 
-const cx = classnames.bind(styles);
-
 const TotalGamesThisSeason = ({ count }: TotalGamesThisSeasonProps) => (
-  <div className={cx('TotalGamesThisSeason')}>
-    Total games this season:<br/>
-    {count}
-  </div>
+  <TotalGames
+    label='Total&nbsp;games this&nbsp;season'
+    count={count}
+  />
 );
 
 export default TotalGamesThisSeason;

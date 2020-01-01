@@ -1,3 +1,7 @@
+@import 'src/mixins/variables';
+
 .TotalGames {
-  text-decoration: none;
+  padding: 1rem #{$edgePadding};
+  text-align: center;
+  min-height: 100px;
 }
