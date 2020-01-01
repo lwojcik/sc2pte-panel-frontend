@@ -1,4 +1,4 @@
-import { Rank } from 'src/components/RankImage/RankImage';
+import { Rank, Tier } from 'src/components/RankImage/RankImage';
 import calculateTierRange from './calculateTierRange';
 
 const ranks = [
@@ -11,7 +11,7 @@ const ranks = [
   'grandmaster',
 ] as Rank[];
 
-const tiers = [1, 2, 3, 4, undefined];
+const tiers = [1, 2, 3, 4, undefined] as Tier[];
 
 it('should calculate correct tier ranges for all ranks and division ranks', () => {
   ranks.map(rank =>
