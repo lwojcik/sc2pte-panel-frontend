@@ -20,7 +20,7 @@ interface LadderProps {
 const cx = classnames.bind(styles);
 
 const LadderMode = ({ mode, members }: LadderProps) => {
-  const teamMode = mode !== '1v1';
+  const teamMode = mode !== '1v1' && members;
   const [ expanded, setExpanded ] = useState(false);
   const [ hovered, setHovered ] = useState(false);
 
@@ -35,7 +35,7 @@ const LadderMode = ({ mode, members }: LadderProps) => {
         onMouseEnter={() => setHovered(true)}
         onMouseOut={() => setHovered(false)}
       >
-        {teamMode && members && (
+        {teamMode && (
           <>
             <DropdownArrow expanded={expanded} hovered={hovered} />
             <DropdownArea visible={expanded}>
