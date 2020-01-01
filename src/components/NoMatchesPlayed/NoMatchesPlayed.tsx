@@ -1,15 +1,10 @@
 import React from 'react';
-import classnames from 'classnames/bind';
-import logo from './images/logo.png';
-import styles from './NoMatchesPlayed.module.scss';
-
-const cx = classnames.bind(styles);
+import EmptyPlaceholder from '../EmptyPlaceholder/EmptyPlaceholder';
 
 const NoMatchesPlayed = () => (
-  <div className={cx('NoMatchesPlayed')}>
-    <img src={logo} alt='' />
+  <EmptyPlaceholder>
     <p>No matches played recently</p>
-  </div>
+  </EmptyPlaceholder>
 );
 
 export default NoMatchesPlayed;

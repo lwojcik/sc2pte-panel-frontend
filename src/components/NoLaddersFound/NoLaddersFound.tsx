@@ -1,15 +1,10 @@
 import React from 'react';
-import classnames from 'classnames/bind';
-import PlaceholderLogo from 'src/components/PlaceholderLogo/PlaceholderLogo';
-import styles from './NoLaddersFound.module.scss';
+import EmptyPlaceholder from '../EmptyPlaceholder/EmptyPlaceholder';
 
-const cx = classnames.bind(styles);
-
-const NoMatchesPlayed = () => (
-  <div className={cx('NoLaddersFound')}>
-    <PlaceholderLogo />
+const NoLaddersFound = () => (
+  <EmptyPlaceholder>
     <p>No ladder placements found</p>
-  </div>
+  </EmptyPlaceholder>
 );
 
-export default NoMatchesPlayed;
+export default NoLaddersFound;
