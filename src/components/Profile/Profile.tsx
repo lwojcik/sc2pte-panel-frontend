@@ -45,6 +45,7 @@ const Profile = ({
         data={data.heading}
         active={active}
         onClick={onClickFn}
+        showArrow={!single}
       />
       <Details
         data={data.details}
