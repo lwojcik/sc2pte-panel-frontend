@@ -24,13 +24,6 @@ const cx = classnames.bind(styles);
 
 const Stats = ({ data }: StatsProps) => (
   <div className={cx('Stats')}>
-    <div className={cx('total')}>
-      <TotalCareerGames count={data.totalCareerGames} />
-    </div>
-    <div className={cx('count')}>
-      <TotalRankedSeasonGames count={data.totalRankedGamesThisSeason} />
-      <TotalGamesThisSeason count={data.totalGamesThisSeason} />
-    </div>
     <div className={cx('ranks')}>
       <div>
         <HighestSoloRank rank={data.highestSoloRank} />
@@ -39,6 +32,14 @@ const Stats = ({ data }: StatsProps) => (
         <HighestTeamRank rank={data.highestTeamRank} />
       </div>
     </div>
+    <div className={cx('count')}>
+      <TotalRankedSeasonGames count={data.totalRankedGamesThisSeason} />
+      <TotalGamesThisSeason count={data.totalGamesThisSeason} />
+    </div>
+    <div className={cx('total')}>
+      <TotalCareerGames count={data.totalCareerGames} />
+    </div>
+
   </div>
 );
 

@@ -1,0 +1,35 @@
+@import 'src/mixins/animations';
+
+$topPosition: 9px;
+$edgePosition: 27px;
+
+.LoadingScreenLogo {
+  background: url('images/logo.png') no-repeat center center;
+  width: 176px;
+  height: 187px;
+  position: relative;
+  animation: FadeIn 1s;
+  transition: opacity 1s;
+
+  .left,
+  .right {
+    position: absolute;
+    top: $topPosition;
+    overflow: hidden;
+    height: 0;
+    animation: FadeIn 1s;
+    animation: Loading 1s infinite ease;
+  }
+
+  .left {
+    left: $edgePosition;
+  }
+
+  .right {
+    right: $edgePosition;
+
+    * {
+      transform: scaleX(-1);
+    }
+  }
+}

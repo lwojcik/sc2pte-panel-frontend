@@ -1,8 +1,10 @@
+@import 'src/mixins/animations';
+
 .ViewerPanel {
-  background-color: #091932;
   border: 1px solid #1c6bb2;
   font-family: 'Lato', sans-serif;
   color:#cfffff;
   min-width: 318px;
   height: 100vh;
+  animation: FadeIn 1s;
 }
