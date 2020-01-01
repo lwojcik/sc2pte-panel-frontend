@@ -3,7 +3,7 @@ import classnames from 'classnames/bind';
 import styles from './Arrow.module.scss';
 
 interface ArrowProps {
-  active: boolean;
+  active?: boolean;
 }
 
 const cx = classnames.bind(styles);
