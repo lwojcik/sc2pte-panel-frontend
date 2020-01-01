@@ -6,9 +6,10 @@ interface BonusPoolProps {
 }
 
 const BonusPool = ({ count }: BonusPoolProps) => (
-  <span className={styles.BonusPool}>
+  <div className={styles.BonusPool}>
+    Bonus pool:<br />
     {count}
-  </span>
+  </div>
 );
 
 export default BonusPool;

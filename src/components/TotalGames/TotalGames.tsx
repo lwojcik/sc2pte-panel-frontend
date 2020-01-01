@@ -7,6 +7,7 @@ interface TotalGamesProps {
 
 const TotalGames = ({ count }: TotalGamesProps) => (
   <span className={styles.TotalGames}>
+    Total games this season:<br/>
     {count}
   </span>
 );
