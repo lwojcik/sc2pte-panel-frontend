@@ -1,8 +1,14 @@
 import React from 'react';
-import RefreshPageButton from 'src/components/RefreshPageButton/RefreshPageButton';
+import useTimeout from 'src/hooks/useTimeout/useTimeout';
 
-const ViewerDataFetchError = () => (
-  <p>Error fetching data. <RefreshPageButton /></p>
-);
+const ViewerDataFetchError = () => {
+  useTimeout(() => {
+    window.location.reload();
+  }, 60000);
+
+  return (
+    <p>Error fetching data.</p>
+  );
+};
 
 export default ViewerDataFetchError;

@@ -10,10 +10,10 @@ export interface ViewerData {
   error?: Boolean;
 }
 
-const useViewerData = (channelId: string, token: string) => {
+const useViewerData = (channelId: string, token: string, refreshInterval: number) => {
   const { url, method } = getViewerUrl(channelId);
   const headers = { channelId, token };
-  const { data, error } = useData({ url, method, headers }) as ViewerData;
+  const { data, error } = useData({ url, method, headers, refreshInterval }) as ViewerData;
   return error
     ? {
       channelId,

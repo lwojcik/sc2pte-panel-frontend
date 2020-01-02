@@ -6,6 +6,6 @@ Object {
   "enableLocalStorageCache": false,
   "enableTwitchAuth": false,
   "localStorageCacheKey": "sc2pte20test",
-  "updateInterval": 5000,
+  "updateInterval": 480000,
 }
 `;
