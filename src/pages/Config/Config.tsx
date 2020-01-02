@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames/bind';
 import useTwitchAuth from 'react-twitch-ext-onauthorized';
 import useConfigData from 'src/hooks/useConfigData/useConfigData';
 import ConfigConnectionError from 'src/components/ConfigConnectionError/ConfigConnectionError';
@@ -9,6 +10,8 @@ import addValidator from 'src/helpers/addValidator/addValidator';
 import addValidationSchema from 'src/helpers/addValidationSchema/addValidationSchema';
 import submitConfig from 'src/helpers/submitConfig/submitConfig';
 import styles from './Config.module.scss';
+
+const cx = classnames.bind(styles);
 
 const Config = () => {
   const { authorized, channelId, token } = useTwitchAuth();
@@ -21,25 +24,33 @@ const Config = () => {
 
   return error
     ? (
-      <div className={styles.config}>
+      <div className={cx('Config')}>
         <ConfigConnectionError />
       </div>
     )
     : (
-      <div className={styles.config}>
-        <FormikWrapper
-          initialValues={data}
-          validationSchema={validationSchema}
-          onSubmit={configSubmitFunction}
-        >
-          {(props) => (
-            <ConfigForm
-              {...props}
-              status={props.status}
-              profiles={props.values.profiles}
-            />
-          )}
-        </FormikWrapper>
+      <div className={cx('Config')}>
+        <div className={cx('bg')} />
+        <div className={cx('cols')}>
+          <div className={cx('formCol')}>
+            <FormikWrapper
+              initialValues={data}
+              validationSchema={validationSchema}
+              onSubmit={configSubmitFunction}
+            >
+              {(props) => (
+                <ConfigForm
+                  {...props}
+                  status={props.status}
+                  profiles={props.values.profiles}
+                />
+              )}
+            </FormikWrapper>
+          </div>
+          <div className={cx('infoCol')}>
+            Info
+          </div>
+        </div>
       </div>
     );
 };
