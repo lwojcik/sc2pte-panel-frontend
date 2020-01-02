@@ -38,7 +38,7 @@ const ConfigForm = ({
       <ConfigFieldArray
         profiles={profiles}
         errors={errors}
-        disableDragDrop={areThereErrors(errors)}
+        disableDragDrop={areThereErrors(errors) || profiles.length === 1}
       />
       <p>{(typeof errors.profiles === 'string') && errors.profiles}</p>
       <div>

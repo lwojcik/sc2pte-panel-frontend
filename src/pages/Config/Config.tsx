@@ -9,6 +9,7 @@ import ConfigForm from 'src/components/ConfigForm/ConfigForm';
 import addValidator from 'src/helpers/addValidator/addValidator';
 import addValidationSchema from 'src/helpers/addValidationSchema/addValidationSchema';
 import submitConfig from 'src/helpers/submitConfig/submitConfig';
+import 'typeface-lato';
 import styles from './Config.module.scss';
 
 const cx = classnames.bind(styles);

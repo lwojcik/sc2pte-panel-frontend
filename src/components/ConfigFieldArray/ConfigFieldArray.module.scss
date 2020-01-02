@@ -1,11 +1,12 @@
+@import 'src/mixins/variables';
+
 .ConfigFieldArrayItem {
   padding: 10px;
-  background: brown;
+  background: rgba(28, 107, 178, 0.5);
   margin: 10px 0;
   width: 100%;
 
   &.isDragging {
-    background: brown;
     margin: 10px 0;
     padding: 10px;
   }

@@ -1,4 +1,25 @@
+@import 'src/mixins/variables';
+
 .ConfigProfileFormField {
-  background: #eee;
-  color: red;
+  border: 1px solid #333;
+  background: #111;
+  color: #999;
+  padding: 5px;
+  position: relative;
+  width: calc(100% - 40px);
+  max-width: 330px;
+  font-size: 14px;
+  line-height: 1.2;
+  font-family: $fontFamily;
+
+  &:hover,
+  &:active:hover {
+    border-color: #666;
+  }
+
+  &:focus,
+  &:active {
+    border-color: #00aeff;
+    outline: none;
+  }
 }
