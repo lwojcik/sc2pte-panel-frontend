@@ -13,7 +13,7 @@ const ConfigProfileFormField = ({ name }: ConfigProfileFormFieldProps) => (
   <Field
     className={cx('ConfigProfileFormField')}
     name={name}
-    autocomplete='off'
+    autoComplete='off'
   />
 );
 

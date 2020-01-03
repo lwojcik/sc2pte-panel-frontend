@@ -9,6 +9,7 @@ interface ConfigFormErrors {
 
 export interface ConfigFormProps extends FormikProps<FormikValues> {
     profiles: string[];
+    maxProfiles: number;
     status: {
       success: boolean;
       msg: string;
@@ -29,6 +30,7 @@ const areThereErrors = (errors: ConfigFormErrors) =>
 const ConfigForm = ({
   profiles,
   errors,
+  maxProfiles,
   dirty,
   isSubmitting,
   status
@@ -38,6 +40,7 @@ const ConfigForm = ({
       <ConfigFieldArray
         profiles={profiles}
         errors={errors}
+        maxProfiles={maxProfiles}
         disableDragDrop={areThereErrors(errors) || profiles.length === 1}
       />
       <p>{(typeof errors.profiles === 'string') && errors.profiles}</p>

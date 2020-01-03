@@ -20,6 +20,7 @@ const fetchData = async ({ url, method, headers }: FetchParams) => {
   } catch {
     return {
       error: true,
+      status: 500,
     };
   }
 };

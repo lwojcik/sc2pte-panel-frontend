@@ -6,6 +6,7 @@ Object {
   "enableLocalStorageCache": false,
   "enableTwitchAuth": false,
   "localStorageCacheKey": "sc2pte20test",
+  "maxProfiles": 3,
   "updateInterval": 480000,
 }
 `;

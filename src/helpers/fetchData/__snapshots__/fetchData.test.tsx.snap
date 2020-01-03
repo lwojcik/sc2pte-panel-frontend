@@ -24,5 +24,6 @@ Object {
 exports[`returns error object when request fails 1`] = `
 Object {
   "error": true,
+  "status": 500,
 }
 `;

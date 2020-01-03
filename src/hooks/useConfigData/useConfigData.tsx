@@ -6,6 +6,7 @@ interface InitialConfigObject {
   error: null | undefined;
   data: {
     profiles: Sc2ProfileObject[] | [];
+    maxProfiles: number;
   }
 }
 
@@ -13,6 +14,7 @@ const useConfigData = (channelId: string, token: string) => {
   const { url, method } = getConfigUrl(channelId);
   const headers = { channelId, token };
   const { error, data } = useData({ url, method, headers }) as InitialConfigObject;
+  console.log({ error, data }); // eslint-disable-line
   return !error && data && data.profiles
     ? {
       data: {

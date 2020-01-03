@@ -7,14 +7,20 @@ import RefreshPageButton from 'src/components/RefreshPageButton/RefreshPageButto
 import styles from './ConfigFieldArray.module.scss';
 
 interface ConfigFieldArrayProps {
-  profiles: string[],
+  profiles: string[];
+  maxProfiles: number;
   errors: {
     profiles?: string[] | string,
-  },
-  disableDragDrop: boolean,
+  };
+  disableDragDrop: boolean;
 }
 
-const ConfigFieldArray = ({ profiles, disableDragDrop, errors }: ConfigFieldArrayProps) => (
+const ConfigFieldArray = ({
+  profiles,
+  maxProfiles,
+  disableDragDrop,
+  errors,
+}: ConfigFieldArrayProps) => (
   <FieldArray
     name='profiles'
     render={arrayHelpers => (
@@ -47,7 +53,7 @@ const ConfigFieldArray = ({ profiles, disableDragDrop, errors }: ConfigFieldArra
         {profiles.length === 0 && (
           <p>No profiles yet! Add one with a button below</p>
         )}
-        {profiles.length < 5 && !(typeof errors.profiles === 'string' && errors.profiles) && (
+        {profiles.length < maxProfiles && !(typeof errors.profiles === 'string' && errors.profiles) && (
           <AddProfileButton onClick={() => arrayHelpers.push('')} />
         )}
       </>
