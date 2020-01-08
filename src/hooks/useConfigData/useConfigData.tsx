@@ -14,13 +14,13 @@ const useConfigData = (channelId: string, token: string) => {
   const { url, method } = getConfigUrl(channelId);
   const headers = { channelId, token };
   const { error, data } = useData({ url, method, headers }) as InitialConfigObject;
-  console.log({ error, data }); // eslint-disable-line
   return !error && data && data.profiles
     ? {
       data: {
         profiles: data.profiles?.length > 0
           ? constructProfileUrls(data.profiles)
           : [],
+        maxProfiles: data.maxProfiles,
       },
     }
     : {

@@ -23,15 +23,15 @@
   }
 
   &.terran:before {
-    background: url('./images/terran.png');
+    background-image: url('./images/terran.png');
   }
 
   &.zerg:before {
-    background: url('./images/zerg.png');
+    background-image: url('./images/zerg.png');
   }
 
   &.protoss:before {
-    background: url('./images/protoss.png');
+    background-image: url('./images/protoss.png');
   }
 
   &.random:before {

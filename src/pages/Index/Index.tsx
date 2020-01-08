@@ -13,6 +13,11 @@ const Index = () => (
         Config
       </Link>
     </li>
+    <li>
+      <Link to='/sample'>
+        Sample
+      </Link>
+    </li>
   </ul>
 );
 
