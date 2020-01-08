@@ -200,7 +200,7 @@ const sample = [
           tag: '',
         },
         name: 'Player name',
-        server: 'eu',
+        server: 'us',
       },
     },
     details: {
@@ -265,7 +265,7 @@ const sample = [
           tag: '',
         },
         name: 'Player name',
-        server: 'eu',
+        server: 'kr',
       },
     },
     details: {
@@ -330,7 +330,7 @@ const sample = [
           tag: '',
         },
         name: 'Player name',
-        server: 'eu',
+        server: 'kr',
       },
     },
     details: {
