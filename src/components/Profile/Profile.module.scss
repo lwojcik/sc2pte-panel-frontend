@@ -1,8 +1,5 @@
 @import 'src/mixins/variables';
 
-$transitions: height, transform, opacity;
-$hoverTransitions: background-color, box-shadow;
-
 @mixin inactive {
   opacity: 0;
   height: 0;
@@ -16,11 +13,6 @@ $hoverTransitions: background-color, box-shadow;
   transform: scaleY(1);
 }
 
-@mixin transition {
-  transition-property: $transitions;
-  transition-duration: $transitionDuration;
-}
-
 @mixin hover {
   background-color: #0e3d6c;
   box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.2);
@@ -31,11 +23,6 @@ $hoverTransitions: background-color, box-shadow;
   box-shadow: none;
 }
 
-@mixin hoverTransition {
-  transition-property: $hoverTransitions, $transitions;
-  transition-duration: $transitionDuration;
-}
-
 .Profile {
   display: flex;
   overflow: hidden;
@@ -43,7 +30,6 @@ $hoverTransitions: background-color, box-shadow;
   align-items: center;
   border-bottom:1px solid #1c6bb2;
   flex-direction: column;
-  @include transition;
   @include active;
 
   &.listActive {
@@ -60,8 +46,6 @@ $hoverTransitions: background-color, box-shadow;
   }
 
   &:not(.single) {
-    @include hoverTransition;
-
     &:hover,
     &:focus {
       @include hover;

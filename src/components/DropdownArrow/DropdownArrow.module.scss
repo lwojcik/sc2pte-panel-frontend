@@ -7,7 +7,7 @@
   background: #01122d;
   opacity: 0.6;
   cursor: pointer;
-  transition: opacity 100ms;
+  transition: opacity 200ms;
 
   &:after {
     content:'';
@@ -15,7 +15,7 @@
     width: 100%;
     height: 100%;
     background: url('./images/arrow.png') no-repeat center center;
-    transition: transform 100ms;
+    transition: transform 200ms;
   }
 
   &.expanded {

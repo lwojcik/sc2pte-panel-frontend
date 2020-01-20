@@ -1,6 +1,5 @@
 @import 'src/mixins/hidden';
 @import 'src/mixins/visible';
-@import 'src/mixins/transition';
 @import 'src/mixins/variables';
 
 $borderColor: #1f598e;
@@ -30,7 +29,6 @@ $tabBorder: 1px solid $borderColor;
   text-align: center;
   text-transform: uppercase;
   border-bottom: $tabBorder;
-  transition: background-color $transitionDuration;
 
   &:not(:last-child) {
     border-right: 1px solid $borderColor;
@@ -52,7 +50,6 @@ $tabBorder: 1px solid $borderColor;
 
 .TabPanel {
   @include hidden;
-  @include transition(top);
 }
 
 .TabPanelVisible {

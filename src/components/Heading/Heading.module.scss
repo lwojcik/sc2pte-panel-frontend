@@ -8,11 +8,6 @@
   height: $headerHeight;
 }
 
-@mixin transition {
-  transition-property: height;
-  transition-duration: $transitionDuration;
-}
-
 .Heading {
   width: 100%;
   padding: 0 $edgePadding;
@@ -20,7 +15,6 @@
   align-items: center;
   cursor: default;
   position: relative;
-  @include transition;
   @include inactive;
 
   &.active {

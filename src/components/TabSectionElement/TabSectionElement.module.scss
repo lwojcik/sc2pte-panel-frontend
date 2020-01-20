@@ -1,7 +1,6 @@
 @import 'src/mixins/variables';
 @import 'src/mixins/hidden';
 @import 'src/mixins/visible';
-@import 'src/mixins/transition';
 
 .TabList {
   display: flex;
@@ -40,7 +39,6 @@
 
 .TabPanel {
   @include hidden;
-  @include transition(top);
 }
 
 .TabPanelVisible {

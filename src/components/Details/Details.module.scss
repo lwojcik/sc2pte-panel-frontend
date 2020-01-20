@@ -1,12 +1,10 @@
 @import 'src/mixins/variables';
 @import 'src/mixins/hidden';
 @import 'src/mixins/visible';
-@import 'src/mixins/transition';
 
 .Details {
   width: 100%;
   background: #0c1723;
-  @include transition;
   @include hidden;
 
   &.visible {
