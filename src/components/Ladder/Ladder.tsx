@@ -31,11 +31,17 @@ const cx = classnames.bind(styles);
 
 const Ladder = ({ ladder }: LadderProps) => (
   <div className={cx('Ladder', ladder.race)}>
-    <RankImage rank={ladder.rank} divisionRank={ladder.divisionRank} />
+    <RankImage
+      rank={ladder.rank}
+      divisionRank={ladder.divisionRank}
+    />
     <LadderWrapper>
       <Row>
         <Spacer>
-          <LadderMode mode={ladder.mode} members={ladder.teamMembers} />
+          <LadderMode
+            mode={ladder.mode}
+            members={ladder.teamMembers}
+          />
         </Spacer>
         <Spacer>
           <WinLoseRatio

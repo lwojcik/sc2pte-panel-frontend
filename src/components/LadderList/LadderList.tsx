@@ -10,7 +10,10 @@ const LadderList = ({ data }: SnapshotProps) => (
   <HoverableScrollArea>
     <>
       {data.map((ladder, key) => (
-        <Ladder key={key} ladder={ladder} />
+        <Ladder
+          key={key}
+          ladder={ladder}
+        />
       ))}
     </>
   </HoverableScrollArea>

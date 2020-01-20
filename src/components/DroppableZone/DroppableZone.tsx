@@ -16,7 +16,10 @@ const DroppableZoneProvider = ({
   elementArray,
   children,
 }: DroppableZoneProviderProps) => (
-  <Droppable droppableId={droppableId} isDropDisabled={disabled}>
+  <Droppable
+    droppableId={droppableId}
+    isDropDisabled={disabled}
+  >
     {(provided, snapshot) => (
       <>
         <div

@@ -31,7 +31,10 @@ const RankImage = ({ rank, divisionRank }: RankImageProps) => {
     : capitalize(rank);
 
   return (
-    <div className={cx('RankImage', `${rank}_${tier}`)} title={title} />
+    <div
+      className={cx('RankImage', `${rank}_${tier}`)}
+      title={title}
+    />
   );
 };
 

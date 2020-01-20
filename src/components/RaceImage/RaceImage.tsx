@@ -16,7 +16,10 @@ interface RaceImageProps {
 const cx = classnames.bind(styles);
 
 const RaceImage = ({ race }: RaceImageProps) => (
-  <div className={cx('RaceImage', race)} title={capitalize(race)}></div>
+  <div
+    className={cx('RaceImage', race)}
+    title={capitalize(race)}
+  />
 );
 
 export default RaceImage;

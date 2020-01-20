@@ -12,8 +12,15 @@ const Viewer = () => {
   const { error, data } = useViewerData(channelId, token, updateInterval) as ViewerData;
 
   return authorized
-    ? <ViewerPanel error={error} data={data} />
-    : <Unauthorized />;
+    ? (
+      <ViewerPanel
+        error={error}
+        data={data}
+      />
+    )
+    : (
+      <Unauthorized />
+    );
 };
 
 export default Viewer;

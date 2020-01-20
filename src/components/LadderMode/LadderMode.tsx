@@ -37,7 +37,10 @@ const LadderMode = ({ mode, members }: LadderProps) => {
       >
         {teamMode && (
           <>
-            <DropdownArrow expanded={expanded} hovered={hovered} />
+            <DropdownArrow
+              expanded={expanded}
+              hovered={hovered}
+            />
             <DropdownArea visible={expanded}>
               {members.map((member, key) => (
                 <div key={key}>{member}</div>

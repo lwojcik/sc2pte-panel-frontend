@@ -8,7 +8,10 @@ interface DateProps {
 
 const Date = ({ date }: DateProps) => (
   <span className={styles.Date}>
-    <TimeAgo date={date} minPeriod={60} />
+    <TimeAgo
+      date={date}
+      minPeriod={60}
+    />
   </span>
 );
 

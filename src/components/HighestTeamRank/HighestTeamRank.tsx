@@ -7,7 +7,10 @@ interface HighestSoloRankProps {
 }
 
 const HighestTeamRank = ({ rank }: HighestSoloRankProps) => (
-  <HighestRank type='team' rank={rank} />
+  <HighestRank
+    type='team'
+    rank={rank}
+  />
 );
 
 export default HighestTeamRank;

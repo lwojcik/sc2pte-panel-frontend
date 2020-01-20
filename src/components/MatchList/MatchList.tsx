@@ -10,7 +10,10 @@ const MatchList = ({ data }: MatchListProps) => (
   <HoverableScrollArea>
     <>
       {data.map((match, key) => (
-        <Match key={key} match={match} />
+        <Match
+          key={key}
+          match={match}
+        />
       ))}
     </>
   </HoverableScrollArea>

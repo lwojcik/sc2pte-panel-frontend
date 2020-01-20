@@ -10,7 +10,7 @@ interface HighestRankProps {
 const HighestRank = ({ type, rank }: HighestRankProps) => (
   <div>
     <StatLabel>
-      Highest {type} rank:
+      Highest {type}&nbsp;rank:
     </StatLabel>
     <RankImage rank={rank} />
   </div>

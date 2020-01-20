@@ -18,7 +18,12 @@ const DraggableElementProvider = ({
   disabled,
   children,
 }: DraggableElementProviderProps) => (
-  <Draggable key={index} draggableId={`${name}.${index}`} index={index} isDragDisabled={disabled}>
+  <Draggable
+    key={index}
+    draggableId={`${name}.${index}`}
+    index={index}
+    isDragDisabled={disabled}
+  >
     {(provided, snapshot) => (
       <div
         className={`${className}${snapshot.isDragging ? ` ${isDraggingCssClass}` : ''}`}
