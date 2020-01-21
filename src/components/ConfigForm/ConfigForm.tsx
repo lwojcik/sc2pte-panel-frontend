@@ -35,20 +35,25 @@ const ConfigForm = ({
   isSubmitting,
   status
 }: ConfigFormProps) => {
+  const disabled = (!dirty && !isSubmitting) || areThereErrors(errors);
+  const disableDragDrop = areThereErrors(errors) || profiles.length === 1;
+  const profileErrors = typeof errors.profiles === 'string';
+  const showStatusMessage = !dirty && status;
+
   return (
     <Form>
       <ConfigFieldArray
         profiles={profiles}
         errors={errors}
         maxProfiles={maxProfiles}
-        disableDragDrop={areThereErrors(errors) || profiles.length === 1}
+        disableDragDrop={disableDragDrop}
       />
-      <p>{(typeof errors.profiles === 'string') && errors.profiles}</p>
+      <p>{profileErrors && errors.profiles}</p>
       <div>
         <SubmitButton
-          disabled={(!dirty && !isSubmitting) || areThereErrors(errors)}
+          disabled={disabled}
         />
-        <p>{!dirty && status && status.msg}</p>
+        <p>{showStatusMessage && status.msg}</p>
       </div>
     </Form>
   );
