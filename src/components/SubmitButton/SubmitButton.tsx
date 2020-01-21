@@ -14,7 +14,7 @@ const SubmitButton = ({ disabled }: SubmitButtonProps) => (
     disabled={disabled}
     type='submit'
   >
-    {disabled ? 'Disabled' : 'Submit' }
+    Save changes
   </button>
 );
 

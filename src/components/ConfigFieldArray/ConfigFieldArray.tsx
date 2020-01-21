@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames/bind';
 import { FieldArray } from 'formik';
 import AddProfileButton from 'src/components/AddProfileButton/AddProfileButton';
 import ConfigProfileFormFieldGroup from 'src/components/ConfigProfileFormFieldGroup/ConfigProfileFormFieldGroup';
@@ -14,6 +15,8 @@ interface ConfigFieldArrayProps {
   };
   disableDragDrop: boolean;
 }
+
+const cx = classnames.bind(styles);
 
 const ConfigFieldArray = ({
   profiles,
@@ -34,9 +37,9 @@ const ConfigFieldArray = ({
             disabled={disableDragDrop}
             droppableId='droppable'
             draggableId='profile'
-            draggableCssClass={styles.ConfigFieldArrayItem}
-            isDraggingCssClass={styles.isDragging}
-            droppableDraggingOverCssClass={styles.droppableDraggingOver}
+            draggableCssClass={cx('ConfigFieldArrayItem')}
+            isDraggingCssClass={cx('isDragging')}
+            droppableDraggingOverCssClass={cx('droppableDraggingOver')}
             droppableElementArray={profiles}
           >
             {(index: number) => (

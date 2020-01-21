@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames/bind';
 import GenericButton from 'src/components/GenericButton/GenericButton';
 import styles from './DeleteProfileButton.module.scss';
 
@@ -7,11 +8,14 @@ interface DeleteProfileButtonProps {
   disabled?: boolean,
 }
 
+const cx = classnames.bind(styles);
+
 const DeleteProfileButtonProps = ({ onClick, disabled }: DeleteProfileButtonProps) => (
   <GenericButton
-    className={styles.DeleteProfileButton}
+    className={cx('DeleteProfileButton')}
     disabled={disabled}
     onClick={onClick}
+    title="Delete profile URL"
   >
     X
   </GenericButton>
