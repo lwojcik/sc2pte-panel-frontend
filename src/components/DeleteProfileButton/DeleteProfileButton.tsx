@@ -16,9 +16,7 @@ const DeleteProfileButtonProps = ({ onClick, disabled }: DeleteProfileButtonProp
     disabled={disabled}
     onClick={onClick}
     title="Delete profile URL"
-  >
-    X
-  </GenericButton>
+  />
 );
 
 export default DeleteProfileButtonProps;

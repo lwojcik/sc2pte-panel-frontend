@@ -1,26 +1,26 @@
 .DeleteProfileButton {
-  background-color: #0e86ca;
+  background: #0e86ca url('images/DeleteProfileButton.png') no-repeat center center;
   border: 1px solid #00aeff;
   font-family: "Lato", Arial, Helvetica, sans-serif;
   color: #fff;
   margin: 0 5px;
   width: 32px;
-  height: 28px;
+  height: 32px;
   text-align: center;
   cursor: pointer;
   transition: color 100ms, background-color 100ms, border-color 100ms;
-
-  &:not(:active):not(:disabled):hover,
-  &:not(:active):not(:disabled):focus {
-    background-color: rgba(204, 0, 0, 0.75);
-    border: 1px solid #c00;
-  }
 
   &[disabled] {
     background-color: rgba(14, 134, 202, .2);
     border: 1px solid rgba(0, 174, 255, .2);
     color: rgba(255, 255, 255, .15);
     cursor: default;
+  }
+
+  &:not(:active):not(:disabled):hover,
+  &:not(:active):not(:disabled):focus {
+    background-color: rgba(204, 0, 0, 0.75);
+    border: 1px solid #c00;
   }
   // border: 0;
   // color: #fff;
