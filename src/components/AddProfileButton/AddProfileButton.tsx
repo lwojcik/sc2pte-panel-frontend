@@ -16,7 +16,7 @@ const AddProfileButton = ({ onClick, disabled }: AddProfileButtonProps) => (
     disabled={disabled}
     onClick={onClick}
   >
-    Add a profile
+    + Add a profile
   </GenericButton>
 );
 
