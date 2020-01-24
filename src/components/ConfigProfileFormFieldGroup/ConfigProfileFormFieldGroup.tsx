@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames/bind';
 import ConfigProfileFormField from 'src/components/ConfigProfileFormField/ConfigProfileFormField';
 import DeleteProfileButton from 'src/components/DeleteProfileButton/DeleteProfileButton';
 import styles from './ConfigProfileFormFieldGroup.module.scss';
@@ -10,13 +11,15 @@ interface ProfileFormFieldGroupProps {
   deleteProfileFn: () => void,
 }
 
+const cx = classnames.bind(styles);
+
 const ConfigProfileFormFieldGroup = ({
   index,
   profiles,
   errors,
   deleteProfileFn
 }: ProfileFormFieldGroupProps) => (
-  <div className={styles.ConfigProfileFormFieldGroup}>
+  <div className={cx('ConfigProfileFormFieldGroup')}>
     <ConfigProfileFormField name={`profiles.${index}`} />
     <DeleteProfileButton
       onClick={deleteProfileFn}

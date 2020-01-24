@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames/bind';
 import ClanName from 'src/components/ClanName/ClanName';
 import ClanTag from 'src/components/ClanTag/ClanTag';
 import PlayerName from 'src/components/PlayerName/PlayerName';
@@ -18,14 +19,16 @@ interface PlayerProps {
   player: PlayerObject;
 }
 
+const cx = classnames.bind(styles);
+
 const Player = ({ player }: PlayerProps) => (
-  <div className={styles.Player}>
-    <div className={styles.signature}>
+  <div className={cx('Player')}>
+    <div className={cx('signature')}>
       <ClanTag tag={player.clan.tag} />
       <PlayerName name={player.name} />
     </div>
     <ClanName name={player.clan.name} />
-    <div className={styles.flag}>
+    <div className={cx('flag')}>
       <Flag code={player.server} />
     </div>
   </div>

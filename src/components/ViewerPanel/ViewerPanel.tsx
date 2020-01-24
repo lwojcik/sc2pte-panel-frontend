@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames/bind';
 import ProfileList from 'src/components/ProfileList/ProfileList';
 import Profile, { ProfileObject } from 'src/components/Profile/Profile';
 import NoProfilesFound from 'src/components/NoProfilesFound/NoProfilesFound';
@@ -13,8 +14,10 @@ interface ViewerPanelProps {
   error?: Boolean;
 }
 
+const cx = classnames.bind(styles);
+
 const ViewerPanel = ({ data, error }: ViewerPanelProps) => (
-  <div className={styles.ViewerPanel}>
+  <div className={cx('ViewerPanel')}>
     {error && (
       <ViewerDataFetchError />
     )}

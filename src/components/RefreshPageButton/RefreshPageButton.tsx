@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import classnames from 'classnames/bind';
 import GenericButton from 'src/components/GenericButton/GenericButton';
 import styles from './RefreshPageButton.module.scss';
+
+const cx = classnames.bind(styles);
 
 const RefreshPageButton = () => {
   const [disabled, setDisabled] = useState(false);
@@ -12,7 +15,7 @@ const RefreshPageButton = () => {
 
   return (
     <GenericButton
-      className={styles.RefreshPageButton}
+      className={cx('RefreshPageButton')}
       disabled={disabled}
       onClick={reload}
     >

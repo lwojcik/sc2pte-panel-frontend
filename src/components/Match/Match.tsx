@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames/bind';
 import MapName from 'src/components/MapName/MapName';
 import Separator from 'src/components/Separator/Separator';
 import Result, { ResultType } from 'src/components/Result/Result';
@@ -16,10 +17,17 @@ interface MatchProps {
   match: MatchObject;
 }
 
+const cx = classnames.bind(styles);
+
 const Match = ({ match }: MatchProps) => (
-  <div className={styles.Match}>
-    <MapName name={match.mapName} /> <Separator /> {match.mode}<br />
-    <Result type={match.result} /> <Separator /> <Date date={match.date} />
+  <div className={cx('Match')}>
+    <MapName name={match.mapName} />
+    <Separator />
+    {match.mode}
+    <br />
+    <Result type={match.result} />
+    <Separator />
+    <Date date={match.date} />
   </div>
 );
 
