@@ -2,7 +2,9 @@
 
 .Config {
   width: 100%;
-  max-height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   position: relative;
   font-family: $fontFamily;
   transition: all $transitionDuration;
@@ -49,5 +51,10 @@
       padding: 20px 0;
     }
   }
-}
 
+  .footer {
+    margin-top: auto;
+    height:50px;
+    background:PapayaWhip;
+  }
+}
