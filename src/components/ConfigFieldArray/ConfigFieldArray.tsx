@@ -58,7 +58,10 @@ const ConfigFieldArray = ({
           <p>No profiles yet! Add one with a button below</p>
         )}
         {profiles.length < maxProfiles && !(typeof errors.profiles === 'string' && errors.profiles) && (
-          <AddProfileButton onClick={() => arrayHelpers.push('')} />
+          <AddProfileButton
+            onClick={() => arrayHelpers.push('')}
+            profilesLeft={maxProfiles - profiles.length}
+          />
         )}
       </>
     )}

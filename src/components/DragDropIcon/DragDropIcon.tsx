@@ -11,6 +11,7 @@ const cx = classnames.bind(styles);
 const DragDropIcon = ({ disabled }: DragDropIconProps) => (
   <div
     className={cx('DragDropIcon', { disabled })}
+    {...!disabled ? { title: 'Drag to change order' } : null}
   />
 );
 

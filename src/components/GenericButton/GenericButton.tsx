@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
 interface GenericButtonProps {
   className: string;
   title?: string;
   onClick: () => void;
   disabled?: boolean;
-  children?: string;
+  children?: ReactElement;
 }
 
 const GenericButton = ({

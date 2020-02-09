@@ -5,18 +5,25 @@ import styles from './AddProfileButton.module.scss';
 
 interface AddProfileButtonProps {
   onClick: () => void;
+  profilesLeft: number;
   disabled?: boolean;
 }
 
 const cx = classnames.bind(styles);
 
-const AddProfileButton = ({ onClick, disabled }: AddProfileButtonProps) => (
+const AddProfileButton = ({
+  onClick,
+  profilesLeft,
+  disabled,
+}: AddProfileButtonProps) => (
   <GenericButton
     className={cx('AddProfileButton')}
     disabled={disabled}
     onClick={onClick}
   >
-    + Add a profile
+    <>
+      + Add a profile (available slots: {profilesLeft})
+    </>
   </GenericButton>
 );
 
