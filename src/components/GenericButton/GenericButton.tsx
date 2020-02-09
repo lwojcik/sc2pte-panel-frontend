@@ -5,7 +5,7 @@ interface GenericButtonProps {
   title?: string;
   onClick: () => void;
   disabled?: boolean;
-  children?: ReactElement;
+  children?: string | ReactElement;
 }
 
 const GenericButton = ({
