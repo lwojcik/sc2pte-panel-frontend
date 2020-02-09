@@ -7,10 +7,11 @@ import ConfigFormValidationMessage from 'src/components/ConfigFormValidationMess
 import styles from './ConfigProfileFormFieldGroup.module.scss';
 
 interface ProfileFormFieldGroupProps {
-  index: number,
-  profiles: string[],
-  errors: string | false,
-  deleteProfileFn: () => void,
+  index: number;
+  profiles: string[];
+  errors: string | false;
+  disableDragDrop: boolean;
+  deleteProfileFn: () => void;
 }
 
 const cx = classnames.bind(styles);
@@ -19,7 +20,8 @@ const ConfigProfileFormFieldGroup = ({
   index,
   profiles,
   errors,
-  deleteProfileFn
+  disableDragDrop,
+  deleteProfileFn,
 }: ProfileFormFieldGroupProps) => {
   const name = `profiles.${index}`;
   const disabled = profiles.length === 1;
@@ -27,7 +29,7 @@ const ConfigProfileFormFieldGroup = ({
 
   return (
     <div className={cx('ConfigProfileFormFieldGroup')}>
-      <DragDropIcon disabled />
+      <DragDropIcon disabled={disableDragDrop} />
       <ConfigProfileFormField name={name} />
       <DeleteProfileButton
         onClick={deleteProfileFn}

@@ -47,6 +47,7 @@ const ConfigFieldArray = ({
                 key={index}
                 index={index}
                 profiles={profiles}
+                disableDragDrop={disableDragDrop}
                 errors={Array.isArray(errors.profiles) && errors.profiles[index]}
                 deleteProfileFn={() => arrayHelpers.remove(index)}
               />
