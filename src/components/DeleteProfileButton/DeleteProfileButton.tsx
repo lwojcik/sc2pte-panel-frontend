@@ -15,7 +15,7 @@ const DeleteProfileButtonProps = ({ onClick, disabled }: DeleteProfileButtonProp
     className={cx('DeleteProfileButton')}
     disabled={disabled}
     onClick={onClick}
-    title="Delete profile URL"
+    {...!disabled && { title: 'Delete profile URL' }}
   />
 );
 

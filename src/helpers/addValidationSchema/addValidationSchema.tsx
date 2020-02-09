@@ -7,10 +7,10 @@ const addValidationSchema = (yup: YupInstance) => ({
     .of(
       yup.string()
         .ensure()
-        .min(34, 'too short')
+        .min(34, 'enter URL')
         .matches(StarCraft2API.profileUrlRegex(),
           {
-            message: 'invalid SC2 profile',
+            message: 'invalid URL',
             excludeEmptyString: false,
           },
         )
