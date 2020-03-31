@@ -7,6 +7,7 @@ import ConfigConnectionError from 'src/components/ConfigConnectionError/ConfigCo
 import FormikWrapper from 'src/components/FormikWrapper/FormikWrapper';
 import Unauthorized from 'src/components/Unauthorized/Unauthorized';
 import ConfigForm from 'src/components/ConfigForm/ConfigForm';
+import Footer from'src/components/Footer/Footer';
 import addValidator from 'src/helpers/addValidator/addValidator';
 import addValidationSchema from 'src/helpers/addValidationSchema/addValidationSchema';
 import submitConfig from 'src/helpers/submitConfig/submitConfig';
@@ -26,43 +27,43 @@ const Config = () => {
     ? data.maxProfiles
     : appConfig.maxProfiles;
 
-  if (!authorized) return <Unauthorized />;
+  if (!authorized) return (
+    <Unauthorized />
+  );
 
-  return error && !data.profiles
-    ? (
-      <div className={cx('Config')}>
-        <ConfigConnectionError />
-      </div>
-    )
-    : (
-      <div className={cx('Config')}>
-        <ConfigBackground />
-        <div className={cx('cols')}>
-          <div className={cx('formCol')}>
-            <FormikWrapper
-              initialValues={data}
-              validationSchema={validationSchema}
-              onSubmit={configSubmitFunction}
-            >
-              {(props) => (
-                <ConfigForm
-                  {...props}
-                  status={props.status}
-                  profiles={props.values.profiles}
-                  maxProfiles={maxProfiles}
-                />
-              )}
-            </FormikWrapper>
-          </div>
-          <div className={cx('infoCol')}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Info
-          </div>
+  if (error && !data.profiles) return (
+    <div className={cx('Config')}>
+      <ConfigConnectionError />
+    </div>
+  );
+
+  return (
+    <div className={cx('Config')}>
+      <ConfigBackground />
+      <div className={cx('cols')}>
+        <div className={cx('formCol')}>
+          <FormikWrapper
+            initialValues={data}
+            validationSchema={validationSchema}
+            onSubmit={configSubmitFunction}
+          >
+            {(props) => (
+              <ConfigForm
+                {...props}
+                status={props.status}
+                profiles={props.values.profiles}
+                maxProfiles={maxProfiles}
+              />
+            )}
+          </FormikWrapper>
         </div>
-        <div className={cx('footer')}>
-          <p>Footer</p>
+        <div className={cx('infoCol')}>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Info
         </div>
       </div>
-    );
+      <Footer />
+    </div>
+  );
 };
 
 export default Config;
