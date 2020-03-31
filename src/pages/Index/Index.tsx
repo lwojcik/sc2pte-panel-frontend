@@ -15,7 +15,12 @@ const Index = () => (
     </li>
     <li>
       <Link to='/sample'>
-        Sample
+        SampleViewer
+      </Link>
+    </li>
+    <li>
+      <Link to='/sampleConfig'>
+        SampleConfig
       </Link>
     </li>
   </ul>

@@ -10,6 +10,8 @@ const Viewer = lazy(() => import('src/pages/Viewer/Viewer'));
 const Config = lazy(() => import('src/pages/Config/Config'));
 /* istanbul ignore next */
 const Sample = lazy(() => import('src/pages/Sample/Sample'));
+/* istanbul ignore next */
+const SampleConfig = lazy(() => import('src/pages/SampleConfig/SampleConfig'));
 
 const App = () => (
   <Router>
@@ -28,6 +30,10 @@ const App = () => (
         <Route
           path='/config'
           component={Config}
+        />
+        <Route
+          path='/sampleConfig'
+          component={SampleConfig}
         />
       </Switch>
     </Suspense>
