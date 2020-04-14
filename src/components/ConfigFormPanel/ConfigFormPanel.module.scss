@@ -1,17 +1,19 @@
 @import 'src/mixins/variables';
 
-.Config {
+.ConfigFormPanel {
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
-  padding-top: 140px;
   font-family: $fontFamily;
   transition: all $transitionDuration;
 
   .cols {
+    position: relative;
+    z-index: 1;
     display: flex;
+    padding-top: 140px;
     margin: 0 auto;
     max-width: 960px;
     width: 95%;

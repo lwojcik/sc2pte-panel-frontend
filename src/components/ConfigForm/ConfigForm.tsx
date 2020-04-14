@@ -7,9 +7,12 @@ interface ConfigFormErrors {
   profiles?: string[] | string;
 }
 
-export interface ConfigFormProps extends FormikProps<FormikValues> {
-    profiles: string[];
-    maxProfiles: number;
+export interface ConfigData {
+  profiles: string[];
+  maxProfiles: number;
+}
+
+export interface ConfigFormProps extends ConfigData, FormikProps<FormikValues> {
     status: {
       success: boolean;
       msg: string;

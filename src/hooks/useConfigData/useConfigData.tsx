@@ -27,6 +27,7 @@ const useConfigData = (channelId: string, token: string) => {
       error: true,
       data: {
         profiles: [],
+        maxProfiles: 0,
       },
     };
 };
