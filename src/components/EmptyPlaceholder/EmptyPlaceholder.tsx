@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import PlaceholderLogo from 'src/components/PlaceholderLogo/PlaceholderLogo';
+import PlaceholderLogo from 'components/PlaceholderLogo/PlaceholderLogo';
 import styles from './EmptyPlaceholder.module.scss';
 
 interface EmptyPlaceholderProps {

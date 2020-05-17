@@ -1,22 +1,11 @@
 import React from 'react';
 import { Form, FormikProps, FormikValues } from 'formik';
-import ConfigFieldArray from 'src/components/ConfigFieldArray/ConfigFieldArray';
-import SubmitButton from 'src/components/SubmitButton/SubmitButton';
+import ConfigFieldArray from 'components/ConfigFieldArray/ConfigFieldArray';
+import SubmitButton from 'components/SubmitButton/SubmitButton';
+import { ConfigData } from 'types';
 
 interface ConfigFormErrors {
   profiles?: string[] | string;
-}
-
-export interface ConfigData {
-  profiles: string[];
-  maxProfiles: number;
-}
-
-export interface ConfigFormProps extends ConfigData, FormikProps<FormikValues> {
-    status: {
-      success: boolean;
-      msg: string;
-    };
 }
 
 const areThereErrors = (errors: ConfigFormErrors) =>
@@ -29,6 +18,13 @@ const areThereErrors = (errors: ConfigFormErrors) =>
       || (typeof errors.profiles === 'string'
         && errors.profiles.length > 0)
     ));
+
+interface ConfigFormProps extends ConfigData, FormikProps<FormikValues> {
+  status: {
+    success: boolean;
+    msg: string;
+  };
+}
 
 const ConfigForm = ({
   profiles,

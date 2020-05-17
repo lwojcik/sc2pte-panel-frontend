@@ -1,5 +1,5 @@
 import calculateRankTier from './calculateRankTier';
-import { Rank } from 'src/components/RankImage/RankImage';
+import { Rank } from 'components/RankImage/RankImage';
 
 const ranks = [
   'bronze',

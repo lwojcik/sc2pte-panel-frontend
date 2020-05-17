@@ -1,5 +1,5 @@
-import domRender from 'src/testUtils/domRender';
-import AddProfileButton from 'src/components/AddProfileButton/AddProfileButton';
+import domRender from 'utils/domRender';
+import AddProfileButton from 'components/AddProfileButton/AddProfileButton';
 
 const testData = {
   onClick: () => null,

@@ -1,10 +1,10 @@
 import React from 'react';
 import classnames from 'classnames/bind';
 import { FieldArray } from 'formik';
-import AddProfileButton from 'src/components/AddProfileButton/AddProfileButton';
-import ConfigProfileFormFieldGroup from 'src/components/ConfigProfileFormFieldGroup/ConfigProfileFormFieldGroup';
-import DragAndDrop from 'src/components/DragAndDrop/DragAndDrop';
-import RefreshPageButton from 'src/components/RefreshPageButton/RefreshPageButton';
+import AddProfileButton from 'components/AddProfileButton/AddProfileButton';
+import ConfigProfileFormFieldGroup from 'components/ConfigProfileFormFieldGroup/ConfigProfileFormFieldGroup';
+import DragAndDrop from 'components/DragAndDrop/DragAndDrop';
+import RefreshPageButton from 'components/RefreshPageButton/RefreshPageButton';
 import styles from './ConfigFieldArray.module.scss';
 
 interface ConfigFieldArrayProps {

@@ -1,13 +1,8 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import capitalize from 'src/helpers/capitalize/capitalize';
+import capitalize from 'helpers/capitalize/capitalize';
 import styles from './RaceImage.module.scss';
-
-export type Race =
-  'terran'
-  | 'zerg'
-  | 'protoss'
-  | 'random';
+import { Race } from 'types';
 
 interface RaceImageProps {
   race: Race;

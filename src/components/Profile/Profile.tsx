@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import classnames from 'classnames/bind';
-import Heading, { HeadingObject } from 'src/components/Heading/Heading';
-import Details, { DetailsObject } from 'src/components/Details/Details';
+import Heading from 'components/Heading/Heading';
+import Details from 'components/Details/Details';
+import { ProfileObject } from 'types';
 import styles from './Profile.module.scss';
-
-export interface ProfileObject {
-  heading: HeadingObject;
-  details: DetailsObject;
-}
 
 interface ProfileProps {
   onClick?: () => void | undefined;
@@ -24,6 +20,7 @@ const Profile = ({
   listActive,
   single,
 }: ProfileProps) => {
+  const { heading, details } = data;
   const [active, setActive] = useState(false);
 
   useEffect(() => {
@@ -39,17 +36,20 @@ const Profile = ({
     ? undefined
     : handleOnClick;
 
+  const showArrow = !single;
+  const detailsVisible = single || active;
+
   return (
     <div className={cx('Profile', { single, active, listActive })}>
       <Heading
-        data={data.heading}
+        data={heading}
         active={active}
         onClick={onClickFn}
-        showArrow={!single}
+        showArrow={showArrow}
       />
       <Details
-        data={data.details}
-        visible={single || active}
+        data={details}
+        visible={detailsVisible}
       />
     </div>
   );

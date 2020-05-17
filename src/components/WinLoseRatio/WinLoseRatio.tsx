@@ -1,6 +1,6 @@
 import React from 'react';
-import Win from 'src/components/Win/Win';
-import Loss from 'src/components/Loss/Loss';
+import Win from 'components/Win/Win';
+import Loss from 'components/Loss/Loss';
 import styles from './WinLoseRatio.module.scss';
 
 interface WinLoseRatioProps {

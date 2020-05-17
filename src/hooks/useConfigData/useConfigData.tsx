@@ -1,6 +1,7 @@
-import getConfigUrl from 'src/helpers/getConfigUrl/getConfigUrl';
-import useData from 'src/hooks/useData/useData';
-import constructProfileUrls, { Sc2ProfileObject } from 'src/helpers/constructProfileUrls/constructProfileUrls';
+import getConfigUrl from 'helpers/getConfigUrl/getConfigUrl';
+import useData from 'hooks/useData/useData';
+import constructProfileUrls from 'helpers/constructProfileUrls/constructProfileUrls';
+import { Sc2ProfileObject } from 'types';
 
 interface InitialConfigObject {
   error: null | undefined;

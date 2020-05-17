@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import useData, { FetchMethod } from './useData';
+import useData from './useData';
+import { FetchMethod } from 'types';
 
 const testParams = {
   url: 'http://testurl',

@@ -1,4 +1,4 @@
-import domRender from 'src/testUtils/domRender';
+import domRender from 'utils/domRender';
 import PlaceholderLogo from './PlaceholderLogo';
 
 it('renders correctly', () => {

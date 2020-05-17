@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import classnames from 'classnames/bind';
-import { Rank } from 'src/components/RankImage/RankImage';
+import { Rank } from 'types';
 import styles from './PortraitFrame.module.scss';
 
 interface PortraitFrameProps {

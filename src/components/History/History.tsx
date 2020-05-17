@@ -1,7 +1,7 @@
 import React from 'react';
-import { MatchObject } from 'src/components/Match/Match';
-import NoMatchesPlayed from 'src/components/NoMatchesPlayed/NoMatchesPlayed';
-import MatchList from 'src/components/MatchList/MatchList';
+import NoMatchesPlayed from 'components/NoMatchesPlayed/NoMatchesPlayed';
+import MatchList from 'components/MatchList/MatchList';
+import { MatchObject } from 'types';
 
 interface HistoryProps {
   data: MatchObject[];

@@ -1,4 +1,4 @@
-import checkIfZero from 'src/helpers/checkIfZero/checkIfZero';
+import checkIfZero from 'helpers/checkIfZero/checkIfZero';
 
 const calculatePercentage = (number: number, total: number) => {
   if (number < 0 || total < 0) return 0;

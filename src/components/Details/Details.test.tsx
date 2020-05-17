@@ -1,8 +1,7 @@
-import domRender from 'src/testUtils/domRender';
+import domRender from 'utils/domRender';
 import Details from './Details';
-import { Rank } from 'src/components/RankImage/RankImage';
-import { Race } from 'src/components/RaceImage/RaceImage';
-import { ResultType } from 'src/components/Result/Result';
+import { Race } from 'components/RaceImage/RaceImage';
+import { Rank, ResultType } from 'types';
 
 const testData = {
   data: {

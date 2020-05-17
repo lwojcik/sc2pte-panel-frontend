@@ -1,5 +1,5 @@
-import stringifyProfiles from 'src/helpers/stringifyProfiles/stringifyProfiles';
-import isStringArrayUnique from 'src/helpers/isStringArrayUnique/isStringArrayUnique';
+import stringifyProfiles from 'helpers/stringifyProfiles/stringifyProfiles';
+import isStringArrayUnique from 'helpers/isStringArrayUnique/isStringArrayUnique';
 
 const isProfileListUnique = (list: string[]) => {
   const configObjectsWithoutLocale = stringifyProfiles(list, false);

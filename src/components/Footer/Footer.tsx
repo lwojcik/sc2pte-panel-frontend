@@ -8,17 +8,17 @@ const cx = classnames.bind(styles);
 
 const Footer = () => (
   <div className={cx('Footer')}>
-    <div><a href="#email">support@lukem.net</a></div>
+    <div><a href='#email'>support@lukem.net</a></div>
     <div>
-      <a href="#test1">
+      <a href='#test1'>
         <img
-          alt=""
+          alt=''
           src={image1}
         />
       </a>
-      <a href="#test2">
+      <a href='#test2'>
         <img
-          alt=""
+          alt=''
           src={image2}
         />
       </a>

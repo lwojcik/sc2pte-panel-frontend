@@ -1,6 +1,7 @@
 import React, { useState }  from 'react';
-import Profile, { ProfileObject } from 'src/components/Profile/Profile';
+import Profile from 'components/Profile/Profile';
 import classnames from 'classnames/bind';
+import { ProfileObject } from 'types';
 import styles from './ProfileList.module.scss';
 
 interface ProfileListProps {

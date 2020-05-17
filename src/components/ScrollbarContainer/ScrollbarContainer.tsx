@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { StrollableContainer } from 'react-stroller';
-import Scrollbar from 'src/components/Scrollbar/Scrollbar';
+import Scrollbar from 'components/Scrollbar/Scrollbar';
 
 interface ScrollbarContainerProps {
   visible: boolean;

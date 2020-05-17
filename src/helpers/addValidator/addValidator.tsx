@@ -1,5 +1,5 @@
-import getValidatorInstance from 'src/helpers/getValidatorInstance/getValidatorInstance';
-import addUniqueProfileListValidationMethod from 'src/helpers/addUniqueProfileListValidationMethod/addUniqueProfileListValidationMethod';
+import getValidatorInstance from 'helpers/getValidatorInstance/getValidatorInstance';
+import addUniqueProfileListValidationMethod from 'helpers/addUniqueProfileListValidationMethod/addUniqueProfileListValidationMethod';
 
 const addValidator = () => {
   const validatorInstance = getValidatorInstance();

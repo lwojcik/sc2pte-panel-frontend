@@ -1,7 +1,7 @@
 import React, { Children } from 'react';
 import classnames from 'classnames/bind';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { TabSectionElementProps } from 'src/components/TabSectionElement/TabSectionElement';
+import { TabSectionElementProps } from 'components/TabSectionElement/TabSectionElement';
 import styles from './TabSection.module.scss';
 
 interface TabSectionElement {

@@ -1,5 +1,5 @@
 import React from 'react';
-import useTimeout from 'src/hooks/useTimeout/useTimeout';
+import useTimeout from 'hooks/useTimeout/useTimeout';
 
 const ViewerDataFetchError = () => {
   useTimeout(() => {

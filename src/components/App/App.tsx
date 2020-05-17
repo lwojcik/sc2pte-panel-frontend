@@ -1,17 +1,17 @@
 import React, { Suspense, lazy } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
-import LoadingScreen from 'src/components/LoadingScreen/LoadingScreen';
+import LoadingScreen from 'components/LoadingScreen/LoadingScreen';
 
 /* istanbul ignore next */
-// const Index = lazy(() => import('src/pages/Index/Index'));
+// const Index = lazy(() => import('pages/Index/Index'));
 /* istanbul ignore next */
-const Viewer = lazy(() => import('src/pages/Viewer/Viewer'));
+const Viewer = lazy(() => import('pages/Viewer/Viewer'));
 /* istanbul ignore next */
-const Config = lazy(() => import('src/pages/Config/Config'));
+const Config = lazy(() => import('pages/Config/Config'));
 /* istanbul ignore next */
-const Sample = lazy(() => import('src/pages/Sample/Sample'));
+const Sample = lazy(() => import('pages/Sample/Sample'));
 /* istanbul ignore next */
-const SampleConfig = lazy(() => import('src/pages/SampleConfig/SampleConfig'));
+const SampleConfig = lazy(() => import('pages/SampleConfig/SampleConfig'));
 
 const App = () => (
   <Router>

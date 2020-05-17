@@ -1,9 +1,9 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import ConfigProfileFormField from 'src/components/ConfigProfileFormField/ConfigProfileFormField';
-import DragDropIcon from 'src/components/DragDropIcon/DragDropIcon';
-import DeleteProfileButton from 'src/components/DeleteProfileButton/DeleteProfileButton';
-import ConfigFormValidationMessage from 'src/components/ConfigFormValidationMessage/ConfigFormValidationMessage';
+import ConfigProfileFormField from 'components/ConfigProfileFormField/ConfigProfileFormField';
+import DragDropIcon from 'components/DragDropIcon/DragDropIcon';
+import DeleteProfileButton from 'components/DeleteProfileButton/DeleteProfileButton';
+import ConfigFormValidationMessage from 'components/ConfigFormValidationMessage/ConfigFormValidationMessage';
 import styles from './ConfigProfileFormFieldGroup.module.scss';
 
 interface ProfileFormFieldGroupProps {

@@ -1,6 +1,6 @@
 import { FormikHelpers, FormikValues } from 'formik';
-import saveConfigUrl from 'src/helpers/saveConfigUrl/saveConfigUrl';
-import unpackProfileUrls from 'src/helpers/unpackProfileUrls/unpackProfileUrls';
+import saveConfigUrl from 'helpers/saveConfigUrl/saveConfigUrl';
+import unpackProfileUrls from 'helpers/unpackProfileUrls/unpackProfileUrls';
 
 export interface ConfigFormValues extends FormikValues {
   profiles: string[];

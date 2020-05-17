@@ -1,16 +1,10 @@
-export type FetchMethod = 'GET' | 'POST';
+import { FetchParams } from 'types';
 
-interface FetchHeaders {
-  [key: string]: string;
-}
-
-export interface FetchParams {
-  url: string;
-  method?: FetchMethod;
-  headers?: FetchHeaders;
-}
-
-const fetchData = async ({ url, method, headers }: FetchParams) => {
+const fetchData = async ({
+  url,
+  method,
+  headers,
+}: FetchParams) => {
   try {
     const response = await fetch(url, {
       method: method || 'GET',

@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
-import DroppableZone from 'src/components/DroppableZone/DroppableZone';
-import DraggableElement from 'src/components/DraggableElement/DraggableElement';
+import DroppableZone from 'components/DroppableZone/DroppableZone';
+import DraggableElement from 'components/DraggableElement/DraggableElement';
 
 type SwapElementsFunction = (source: number, destination: number) => void;
 

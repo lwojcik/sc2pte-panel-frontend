@@ -1,4 +1,4 @@
-import { Rank, Tier } from 'src/components/RankImage/RankImage';
+import { Rank, Tier } from 'types';
 
 const calculateTierRange = (rank: Rank, tier?: Tier) => {
   const percentages = [100, 8, 25, 50, 100];

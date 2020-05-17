@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import calculateWinRatio from 'src/helpers/calculateWinRatio/calculateWinRatio';
+import calculateWinRatio from 'helpers/calculateWinRatio/calculateWinRatio';
 import styles from './WinLoseBar.module.scss';
 
 interface WinLoseBarProps {

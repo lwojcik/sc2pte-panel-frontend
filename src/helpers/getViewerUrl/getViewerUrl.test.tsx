@@ -1,4 +1,4 @@
-import getViewerUrl from 'src/helpers/getViewerUrl/getViewerUrl';
+import getViewerUrl from 'helpers/getViewerUrl/getViewerUrl';
 
 jest.mock('src/helpers/getApiUrl/getApiUrl', () =>
   jest.fn().mockImplementationOnce(() => ({

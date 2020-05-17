@@ -1,21 +1,11 @@
-import { YupInstance, Schema } from 'yup';
-
-type SchemaType =
-  'mixed'
-  | 'string'
-  | 'number'
-  | 'boolean'
-  | 'bool'
-  | 'date'
-  | 'array'
-  | 'object';
+import { YupInstance } from 'yup';
+import { SchemaType, ValidationMethod } from 'types';
 
 interface addValidationMethodParams {
   validator: YupInstance;
   schemaType: SchemaType;
   name: string;
-  method: (this: Schema<unknown>, message: string, testFn: (testedValues: unknown) => boolean)
-    => Schema<unknown>;
+  method: ValidationMethod;
 }
 
 const addValidationMethod = ({

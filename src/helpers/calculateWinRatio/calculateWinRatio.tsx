@@ -1,5 +1,5 @@
-import checkIfZero from 'src/helpers/checkIfZero/checkIfZero';
-import calculatePercentage from 'src/helpers/calculatePercentage/calculatePercentage';
+import checkIfZero from 'helpers/checkIfZero/checkIfZero';
+import calculatePercentage from 'helpers/calculatePercentage/calculatePercentage';
 
 const calculateWinRatio = (wins: number, losses: number) => {
   const gamesOverall = wins + losses;

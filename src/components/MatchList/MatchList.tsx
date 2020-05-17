@@ -1,6 +1,7 @@
 import React from 'react';
-import Match, { MatchObject } from 'src/components/Match/Match';
-import HoverableScrollArea from 'src/components/HoverableScrollArea/HoverableScrollArea';
+import Match from 'components/Match/Match';
+import HoverableScrollArea from 'components/HoverableScrollArea/HoverableScrollArea';
+import { MatchObject } from 'types';
 
 interface MatchListProps {
   data: MatchObject[];

@@ -1,27 +1,17 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import LadderWrapper from 'src/components/LadderWrapper/LadderWrapper';
-import LadderMode, { LadderGameMode } from 'src/components/LadderMode/LadderMode';
-import MMR from 'src/components/MMR/MMR';
-import DivisionRank from 'src/components/DivisionRank/DivisionRank';
-import RankImage, { Rank } from 'src/components/RankImage/RankImage';
-import RaceImage, { Race } from 'src/components/RaceImage/RaceImage';
-import WinLoseBar from 'src/components/WinLoseBar/WinLoseBar';
-import WinLoseRatio from 'src/components/WinLoseRatio/WinLoseRatio';
-import Row from 'src/components/Row/Row';
-import Spacer from 'src/components/Spacer/Spacer';
+import LadderWrapper from 'components/LadderWrapper/LadderWrapper';
+import LadderMode from 'components/LadderMode/LadderMode';
+import MMR from 'components/MMR/MMR';
+import DivisionRank from 'components/DivisionRank/DivisionRank';
+import RankImage from 'components/RankImage/RankImage';
+import RaceImage from 'components/RaceImage/RaceImage';
+import WinLoseBar from 'components/WinLoseBar/WinLoseBar';
+import WinLoseRatio from 'components/WinLoseRatio/WinLoseRatio';
+import Row from 'components/Row/Row';
+import Spacer from 'components/Spacer/Spacer';
+import { LadderObject } from 'types';
 import styles from './Ladder.module.scss';
-
-export interface LadderObject {
-  mode: LadderGameMode;
-  rank: Rank;
-  wins: number;
-  losses: number;
-  race: Race;
-  mmr: number;
-  divisionRank: number;
-  teamMembers: string[];
-}
 
 interface LadderProps {
   ladder: LadderObject;
@@ -29,45 +19,56 @@ interface LadderProps {
 
 const cx = classnames.bind(styles);
 
-const Ladder = ({ ladder }: LadderProps) => (
-  <div className={cx('Ladder', ladder.race)}>
-    <RankImage
-      rank={ladder.rank}
-      divisionRank={ladder.divisionRank}
-    />
-    <LadderWrapper>
-      <Row>
-        <Spacer>
-          <LadderMode
-            mode={ladder.mode}
-            members={ladder.teamMembers}
+const Ladder = ({ ladder }: LadderProps) => {
+  const {
+    race,
+    mode,
+    divisionRank,
+    teamMembers,
+    wins,
+    losses,
+    mmr,
+  } = ladder;
+  return (
+    <div className={cx('Ladder', race)}>
+      <RankImage
+        rank={ladder.rank}
+        divisionRank={divisionRank}
+      />
+      <LadderWrapper>
+        <Row>
+          <Spacer>
+            <LadderMode
+              mode={mode}
+              members={teamMembers}
+            />
+          </Spacer>
+          <Spacer>
+            <WinLoseRatio
+              wins={wins}
+              losses={losses}
+            />
+          </Spacer>
+          <Spacer>
+            <RaceImage race={race} />
+          </Spacer>
+        </Row>
+        <Row>
+          <WinLoseBar
+            wins={wins}
+            losses={losses}
           />
-        </Spacer>
+        </Row>
         <Spacer>
-          <WinLoseRatio
-            wins={ladder.wins}
-            losses={ladder.losses}
-          />
+          <MMR rating={mmr} />
         </Spacer>
+        <Spacer />
         <Spacer>
-          <RaceImage race={ladder.race} />
+          <DivisionRank rank={divisionRank} />
         </Spacer>
-      </Row>
-      <Row>
-        <WinLoseBar
-          wins={ladder.wins}
-          losses={ladder.losses}
-        />
-      </Row>
-      <Spacer>
-        <MMR rating={ladder.mmr} />
-      </Spacer>
-      <Spacer />
-      <Spacer>
-        <DivisionRank rank={ladder.divisionRank} />
-      </Spacer>
-    </LadderWrapper>
-  </div>
-);
+      </LadderWrapper>
+    </div>
+  );
+};
 
 export default Ladder;

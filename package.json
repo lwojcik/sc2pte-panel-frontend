@@ -112,6 +112,10 @@
           "avoidEscape": true
         }
       ],
+      "jsx-quotes": [
+        "error",
+        "prefer-single"
+      ],
       "indent": [
         "error",
         2
@@ -143,6 +147,10 @@
           "maximum": 1,
           "when": "always"
         }
+      ],
+      "jsx-closing-bracket-location": [
+        "error",
+        "tag-aligned"
       ]
     }
   },

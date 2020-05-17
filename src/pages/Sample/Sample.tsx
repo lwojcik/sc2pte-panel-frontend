@@ -1,5 +1,5 @@
-import sample from 'src/sample/index';
-import ViewerPanel from 'src/components/ViewerPanel/ViewerPanel';
+import sample from 'sample/index';
+import ViewerPanel from 'components/ViewerPanel/ViewerPanel';
 import React from 'react';
 
 const Sample = () => (

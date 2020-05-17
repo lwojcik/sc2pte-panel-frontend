@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import getHashParam from 'src/helpers/getHashParam/getHashParam';
+import getHashParam from 'helpers/getHashParam/getHashParam';
 
 const useQueryHash = (paramName: string, defaultValue = '') => {
   const [paramValue, setParamValue] = useState({ [paramName]: defaultValue });

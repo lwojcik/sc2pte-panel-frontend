@@ -1,6 +1,6 @@
 it('works', () => {});
 
-// import domRender from 'src/testUtils/domRender';
+// import domRender from 'utils/domRender';
 // import ClanTag from './ClanTag';
 
 // const testData = {

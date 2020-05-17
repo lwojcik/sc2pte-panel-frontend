@@ -1,5 +1,5 @@
 import React from 'react';
-import RefreshPageButton from 'src/components/RefreshPageButton/RefreshPageButton';
+import RefreshPageButton from 'components/RefreshPageButton/RefreshPageButton';
 
 const ConfigDataError = () => (
   <p>Error fetching configuration data. <RefreshPageButton /></p>

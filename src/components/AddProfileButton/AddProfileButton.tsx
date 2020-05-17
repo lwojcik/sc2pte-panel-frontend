@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import GenericButton from 'src/components/GenericButton/GenericButton';
+import GenericButton from 'components/GenericButton/GenericButton';
 import styles from './AddProfileButton.module.scss';
 
 interface AddProfileButtonProps {

@@ -1,14 +1,15 @@
 import React from 'react';
 import { Schema } from 'yup';
-import { ConfigFormValues } from 'src/helpers/submitConfig/submitConfig';
+import { ConfigFormValues } from 'helpers/submitConfig/submitConfig';
 import { FormikHelpers, FormikValues } from 'formik';
 import classnames from 'classnames/bind';
-import ConfigBackground from 'src/components/ConfigBackground/ConfigBackground';
-import FormikWrapper from 'src/components/FormikWrapper/FormikWrapper';
-import ConfigForm, { ConfigData } from 'src/components/ConfigForm/ConfigForm';
-import ConfigFormWrapper from 'src/components/ConfigFormWrapper/ConfigFormWrapper';
-import Footer from'src/components/Footer/Footer';
+import ConfigBackground from 'components/ConfigBackground/ConfigBackground';
+import FormikWrapper from 'components/FormikWrapper/FormikWrapper';
+import ConfigForm from 'components/ConfigForm/ConfigForm';
+import ConfigFormWrapper from 'components/ConfigFormWrapper/ConfigFormWrapper';
+import Footer from 'components/Footer/Footer';
 import 'typeface-lato';
+import { ConfigData } from 'types';
 import styles from './ConfigFormPanel.module.scss';
 
 const cx = classnames.bind(styles);
@@ -35,7 +36,7 @@ const ConfigFormPanel = ({
           validationSchema={validationSchema}
           onSubmit={onSubmit}
         >
-          {(props) => (
+          {props => (
             <ConfigForm
               {...props}
               status={props.status}

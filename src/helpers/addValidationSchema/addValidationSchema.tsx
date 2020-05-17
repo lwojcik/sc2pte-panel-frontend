@@ -1,6 +1,6 @@
 import { YupInstance } from 'yup';
-import isProfileListUnique from 'src/helpers/isProfileListUnique/isProfileListUnique';
 import StarCraft2API from 'starcraft2-api';
+import isProfileListUnique from 'helpers/isProfileListUnique/isProfileListUnique';
 
 const addValidationSchema = (yup: YupInstance) => ({
   profiles: yup.array()
@@ -8,7 +8,8 @@ const addValidationSchema = (yup: YupInstance) => ({
       yup.string()
         .ensure()
         .min(34, 'enter URL')
-        .matches(StarCraft2API.profileUrlRegex(),
+        .matches(
+          StarCraft2API.profileUrlRegex(),
           {
             message: 'invalid URL',
             excludeEmptyString: false,

@@ -1,5 +1,5 @@
 import React from 'react';
-import domRender from 'src/testUtils/domRender';
+import domRender from 'utils/domRender';
 import { MemoryRouter } from 'react-router';
 import Index from './Index';
 

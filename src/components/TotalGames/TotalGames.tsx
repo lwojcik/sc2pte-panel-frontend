@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import StatLabel from 'src/components/StatLabel/StatLabel';
-import StatCount from 'src/components/StatCount/StatCount';
+import StatLabel from 'components/StatLabel/StatLabel';
+import StatCount from 'components/StatCount/StatCount';
 import styles from './TotalGames.module.scss';
 
 interface TotalGamesProps {

@@ -297,8 +297,6 @@ module.exports = function(webpackEnv) {
           'scheduler/tracing': 'scheduler/tracing-profiling',
         }),
         ...(modules.webpackAliases || {}),
-        // sc2pte-frontend aliases
-        '@Pages': path.resolve(__dirname, '../src/pages'),
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding

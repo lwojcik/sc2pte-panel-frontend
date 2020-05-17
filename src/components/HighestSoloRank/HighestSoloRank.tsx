@@ -1,6 +1,6 @@
 import React from 'react';
-import HighestRank from 'src/components/HighestRank/HighestRank';
-import { Rank } from 'src/components/RankImage/RankImage';
+import HighestRank from 'components/HighestRank/HighestRank';
+import { Rank } from 'types';
 
 interface HighestSoloRankProps {
   rank: Rank;

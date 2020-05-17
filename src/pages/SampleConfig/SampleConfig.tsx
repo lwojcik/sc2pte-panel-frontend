@@ -1,5 +1,5 @@
 import React from 'react';
-import ConfigFormPanel from 'src/components/ConfigFormPanel/ConfigFormPanel';
+import ConfigFormPanel from 'components/ConfigFormPanel/ConfigFormPanel';
 
 const data = {
   profiles: [

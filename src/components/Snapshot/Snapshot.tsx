@@ -1,7 +1,7 @@
 import React from 'react';
-import NoLaddersFound from 'src/components/NoLaddersFound/NoLaddersFound';
-import LadderList from 'src/components/LadderList/LadderList';
-import { LadderObject } from 'src/components/Ladder/Ladder';
+import NoLaddersFound from 'components/NoLaddersFound/NoLaddersFound';
+import LadderList from 'components/LadderList/LadderList';
+import { LadderObject } from 'types';
 
 interface SnapshotProps {
   data: LadderObject[];

@@ -1,14 +1,6 @@
-import getViewerUrl from 'src/helpers/getViewerUrl/getViewerUrl';
-import useData from 'src/hooks/useData/useData';
-import { ProfileObject } from 'src/components/Profile/Profile';
-
-export interface ViewerData {
-  channelId: string;
-  data: {
-    profiles: ProfileObject[];
-  }
-  error?: Boolean;
-}
+import getViewerUrl from 'helpers/getViewerUrl/getViewerUrl';
+import useData from 'hooks/useData/useData';
+import { ViewerData } from 'types';
 
 const useViewerData = (channelId: string, token: string, refreshInterval: number) => {
   const { url, method } = getViewerUrl(channelId);

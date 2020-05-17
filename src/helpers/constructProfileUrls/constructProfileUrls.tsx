@@ -1,14 +1,7 @@
-import StarCraft2API from 'starcraft2-api';
+import StarCraft2API, { PlayerObject }  from 'starcraft2-api';
 
-export interface Sc2ProfileObject {
-  regionId: number;
-  realmId: number;
-  profileId: string;
-  locale: string;
-}
-
-const constructProfileUrls = (profiles: Sc2ProfileObject[]) =>
-  profiles.map((profile: Sc2ProfileObject) =>
+const constructProfileUrls = (profiles: PlayerObject[]) =>
+  profiles.map((profile: PlayerObject) =>
     StarCraft2API.constructProfileUrl({ ...profile }, profile.locale));
 
 export default constructProfileUrls;

@@ -1,9 +1,10 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import ProfileList from 'src/components/ProfileList/ProfileList';
-import Profile, { ProfileObject } from 'src/components/Profile/Profile';
-import NoProfilesFound from 'src/components/NoProfilesFound/NoProfilesFound';
-import ViewerDataFetchError from 'src/components/ViewerDataFetchError/ViewerDataFetchError';
+import ProfileList from 'components/ProfileList/ProfileList';
+import Profile from 'components/Profile/Profile';
+import NoProfilesFound from 'components/NoProfilesFound/NoProfilesFound';
+import ViewerDataFetchError from 'components/ViewerDataFetchError/ViewerDataFetchError';
+import { ProfileObject } from 'types';
 import 'typeface-lato';
 import styles from './ViewerPanel.module.scss';
 

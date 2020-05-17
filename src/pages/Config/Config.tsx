@@ -1,13 +1,13 @@
 import React from 'react';
 import useTwitchAuth from 'react-twitch-ext-onauthorized';
-import useConfigData from 'src/hooks/useConfigData/useConfigData';
-import ConfigFormPanel from 'src/components/ConfigFormPanel/ConfigFormPanel';
-import ConfigConnectionError from 'src/components/ConfigConnectionError/ConfigConnectionError';
-import Unauthorized from 'src/components/Unauthorized/Unauthorized';
-import addValidator from 'src/helpers/addValidator/addValidator';
-import addValidationSchema from 'src/helpers/addValidationSchema/addValidationSchema';
-import submitConfig from 'src/helpers/submitConfig/submitConfig';
-import appConfig from 'src/config/app';
+import useConfigData from 'hooks/useConfigData/useConfigData';
+import ConfigFormPanel from 'components/ConfigFormPanel/ConfigFormPanel';
+import ConfigConnectionError from 'components/ConfigConnectionError/ConfigConnectionError';
+import Unauthorized from 'components/Unauthorized/Unauthorized';
+import addValidator from 'helpers/addValidator/addValidator';
+import addValidationSchema from 'helpers/addValidationSchema/addValidationSchema';
+import submitConfig from 'helpers/submitConfig/submitConfig';
+import appConfig from 'config/app';
 import 'typeface-lato';
 
 const Config = () => {

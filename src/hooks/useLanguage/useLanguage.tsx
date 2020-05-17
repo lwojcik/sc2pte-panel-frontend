@@ -1,5 +1,5 @@
-import useQuerySearch from 'src/hooks/useQuerySearch/useQuerySearch';
-import useQueryHash from 'src/hooks/useQueryHash/useQueryHash';
+import useQuerySearch from 'hooks/useQuerySearch/useQuerySearch';
+import useQueryHash from 'hooks/useQueryHash/useQueryHash';
 
 const useLanguage = (defaultLanguage = '') => {
   const language = useQuerySearch('language', defaultLanguage);

@@ -1,4 +1,4 @@
-import { Rank, Tier } from 'src/components/RankImage/RankImage';
+import { Rank, Tier } from 'types';
 
 const calculateRankTier = (rank: Rank, divisionRank?: number): Tier => {
   const multiplier = rank === 'grandmaster' ? 2 : 1;

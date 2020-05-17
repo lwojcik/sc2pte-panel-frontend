@@ -23,13 +23,16 @@ const FormikWrapper = ({
   <Formik
     initialValues={initialValues}
     initialStatus={initialStatus}
-    onSubmit={(values: FormikValues, actions: FormikHelpers<FormikValues>) => {
+    onSubmit={(
+      values: FormikValues,
+      actions: FormikHelpers<FormikValues>,
+    ) => {
       onSubmit(values, actions);
       actions.resetForm(values);
     }}
     validationSchema={Yup.object().shape(validationSchema)}
   >
-    {(formikBag) => children(formikBag)}
+    {formikBag => children(formikBag)}
   </Formik>
 );
 

@@ -1,4 +1,4 @@
-import getConfigUrl from 'src/helpers/getConfigUrl/getConfigUrl';
+import getConfigUrl from 'helpers/getConfigUrl/getConfigUrl';
 
 jest.mock('src/helpers/getApiUrl/getApiUrl', () =>
   jest.fn().mockImplementationOnce(() => ({

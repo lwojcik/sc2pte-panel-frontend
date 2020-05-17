@@ -1,6 +1,7 @@
 import React from 'react';
-import HoverableScrollArea from 'src/components/HoverableScrollArea/HoverableScrollArea';
-import Ladder, { LadderObject } from 'src/components/Ladder/Ladder';
+import HoverableScrollArea from 'components/HoverableScrollArea/HoverableScrollArea';
+import Ladder from 'components/Ladder/Ladder';
+import { LadderObject } from 'types';
 
 interface SnapshotProps {
   data: LadderObject[];

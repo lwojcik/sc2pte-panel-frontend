@@ -1,5 +1,5 @@
 import React from 'react';
-import TotalGames from 'src/components/TotalGames/TotalGames';
+import TotalGames from 'components/TotalGames/TotalGames';
 
 interface TotalGamesThisSeasonProps {
   count: number;

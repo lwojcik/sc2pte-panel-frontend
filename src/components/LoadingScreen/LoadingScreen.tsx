@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import LoadingScreenLogo from 'src/components/LoadingScreenLogo/LoadingScreenLogo';
+import LoadingScreenLogo from 'components/LoadingScreenLogo/LoadingScreenLogo';
 import styles from './LoadingScreen.module.scss';
 
 const cx = classnames.bind(styles);

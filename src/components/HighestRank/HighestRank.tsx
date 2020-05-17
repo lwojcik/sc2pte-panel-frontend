@@ -1,9 +1,10 @@
 import React from 'react';
-import StatLabel from 'src/components/StatLabel/StatLabel';
-import RankImage, { Rank } from 'src/components/RankImage/RankImage';
+import StatLabel from 'components/StatLabel/StatLabel';
+import RankImage from 'components/RankImage/RankImage';
+import { Rank, GameType } from 'types';
 
 interface HighestRankProps {
-  type: 'solo' | 'team';
+  type: GameType;
   rank: Rank;
 }
 
