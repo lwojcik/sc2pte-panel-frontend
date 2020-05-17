@@ -39,6 +39,7 @@ ArraySchema {
     "transforms": Array [
       [Function],
     ],
+    "type": "string",
   },
   "_type": "array",
   "_typeError": [Function],
@@ -46,11 +47,37 @@ ArraySchema {
     "list": Set {},
     "refs": Map {},
   },
+  "innerType": StringSchema {
+    "_blacklist": RefSet {
+      "list": Set {},
+      "refs": Map {},
+    },
+    "_conditions": Array [],
+    "_deps": Array [],
+    "_exclusive": Object {},
+    "_mutate": undefined,
+    "_options": Object {
+      "abortEarly": true,
+      "recursive": true,
+    },
+    "_type": "string",
+    "_typeError": [Function],
+    "_whitelist": RefSet {
+      "list": Set {},
+      "refs": Map {},
+    },
+    "tests": Array [],
+    "transforms": Array [
+      [Function],
+    ],
+    "type": "string",
+  },
   "tests": Array [
     [Function],
   ],
   "transforms": Array [
     [Function],
   ],
+  "type": "array",
 }
 `;

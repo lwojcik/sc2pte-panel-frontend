@@ -48,6 +48,7 @@ Object {
         [Function],
         [Function],
       ],
+      "type": "string",
     },
     "_type": "array",
     "_typeError": [Function],
@@ -55,12 +56,46 @@ Object {
       "list": Set {},
       "refs": Map {},
     },
+    "innerType": StringSchema {
+      "_blacklist": RefSet {
+        "list": Set {},
+        "refs": Map {},
+      },
+      "_conditions": Array [],
+      "_default": "",
+      "_deps": Array [],
+      "_exclusive": Object {
+        "matches": false,
+        "min": true,
+      },
+      "_mutate": undefined,
+      "_options": Object {
+        "abortEarly": true,
+        "recursive": true,
+      },
+      "_type": "string",
+      "_typeError": [Function],
+      "_whitelist": RefSet {
+        "list": Set {},
+        "refs": Map {},
+      },
+      "tests": Array [
+        [Function],
+        [Function],
+      ],
+      "transforms": Array [
+        [Function],
+        [Function],
+      ],
+      "type": "string",
+    },
     "tests": Array [
       [Function],
     ],
     "transforms": Array [
       [Function],
     ],
+    "type": "array",
   },
 }
 `;
