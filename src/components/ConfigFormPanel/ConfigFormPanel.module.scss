@@ -8,47 +8,5 @@
   position: relative;
   font-family: $fontFamily;
   transition: all $transitionDuration;
-
-  .cols {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    padding-top: 140px;
-    margin: 0 auto;
-    max-width: 960px;
-    width: 95%;
-  }
-
-  .formCol {
-    align-self: flex-start; 
-    width: 65%;
-    margin-right: 20px;
-    height: auto;
-    border: 1px solid #163757;
-    padding: 0 10px;
-    background: rgba(1, 18, 45, 0.75);
-  }
-
-  .infoCol {
-    align-self: flex-start; 
-    width: 35%;
-  }
-
-  @media screen and (max-width: 950px) {
-    .cols {
-      display: block;
-      margin: 0 auto;
-      padding-top: 20px;
-      width: 95%;
-    }
-
-    .formCol,
-    .infoCol {
-      width: 100%;
-    }
-
-    .infoCol {
-      padding: 20px 0;
-    }
-  }
 }
+

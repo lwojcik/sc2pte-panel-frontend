@@ -1,9 +1,43 @@
+@import 'src/mixins/variables';
+
 .ConfigFormWrapper {
-  align-self: flex-start; 
-  width: 65%;
-  margin-right: 20px;
-  height: auto;
-  border: 1px solid #163757;
-  padding: 0 10px;
-  background: rgba(1, 18, 45, 0.75);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  padding-top: 140px;
+  margin: 0 auto;
+  max-width: 960px;
+  width: 95%;
+
+  & > :first-child {
+    align-self: flex-start; 
+    width: 65%;
+    margin-right: 20px;
+    height: auto;
+    border: 1px solid #163757;
+    padding: 0 10px;
+    background: rgba(1, 18, 45, 0.75);  
+  }
+
+  & > :last-child {
+    align-self: flex-start; 
+    width: 35%;
+  }
+}
+
+
+@media screen and (max-width: 950px) {
+  .ConfigFormWrapper {
+    display: block;
+    padding-top: 20px;
+
+    & > :first-child,
+    & > :last-child {
+      width: 100%;
+    }
+  
+    & > :last-child {
+      padding: 20px 0;
+    }
+  }
 }
