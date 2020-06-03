@@ -2,9 +2,8 @@
 
 .ConfigFieldArrayItem {
   padding: 10px;
+  margin-bottom: 10px;
   background: rgba(28, 107, 178, 0.5);
-  margin: 10px 0;
-  width: 100%;
 
   &.isDragging {
     margin: 10px 0;
@@ -13,5 +12,5 @@
 }
 
 .droppableDraggingOver {
-  background: lightblue;
+  background: #ADD8E6;
 }

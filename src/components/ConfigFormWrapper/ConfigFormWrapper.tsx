@@ -4,8 +4,10 @@ import styles from './ConfigFormWrapper.module.scss';
 
 const cx = classnames.bind(styles);
 
+type TwoReactElements = [ReactElement, ReactElement];
+
 interface ConfigFormWrapperProps {
-  children: ReactElement[];
+  children: TwoReactElements;
 }
 
 const ConfigFormWrapper = ({ children }: ConfigFormWrapperProps) => (

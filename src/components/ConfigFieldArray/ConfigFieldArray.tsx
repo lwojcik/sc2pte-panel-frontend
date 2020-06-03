@@ -27,7 +27,7 @@ const ConfigFieldArray = ({
   <FieldArray
     name='profiles'
     render={arrayHelpers => (
-      <>
+      <div className={cx('ConfigFieldArray')}>
         {(!Boolean(profiles) && (
           <p>Something went wrong! <RefreshPageButton /></p>
         ))}
@@ -63,7 +63,7 @@ const ConfigFieldArray = ({
             profilesLeft={maxProfiles - profiles.length}
           />
         )}
-      </>
+      </div>
     )}
   />
 );

@@ -1,12 +1,16 @@
 import React from 'react';
+import classnames from 'classnames/bind';
 import { Form, FormikProps, FormikValues } from 'formik';
 import ConfigFieldArray from 'components/ConfigFieldArray/ConfigFieldArray';
 import SubmitButton from 'components/SubmitButton/SubmitButton';
 import { ConfigData } from 'types';
+import styles from './ConfigForm.module.scss';
 
 interface ConfigFormErrors {
   profiles?: string[] | string;
 }
+
+const cx = classnames.bind(styles);
 
 const areThereErrors = (errors: ConfigFormErrors) =>
   !!(errors?.profiles
@@ -37,24 +41,26 @@ const ConfigForm = ({
   const disabled = (!dirty && !isSubmitting) || areThereErrors(errors);
   const disableDragDrop = areThereErrors(errors) || profiles.length === 1;
   const profileErrors = typeof errors.profiles === 'string';
-  const showStatusMessage = !dirty && status;
+  const showStatusMessage = !dirty && status.msg;
 
   return (
-    <Form>
-      <ConfigFieldArray
-        profiles={profiles}
-        errors={errors}
-        maxProfiles={maxProfiles}
-        disableDragDrop={disableDragDrop}
-      />
-      <p>{profileErrors && errors.profiles}</p>
-      <div>
+    <div className={cx('ConfigForm')}>
+      <Form>
+        <ConfigFieldArray
+          profiles={profiles}
+          errors={errors}
+          maxProfiles={maxProfiles}
+          disableDragDrop={disableDragDrop}
+        />
+        <p>{profileErrors && errors.profiles}</p>
         <SubmitButton
           disabled={disabled}
         />
-        <p>{showStatusMessage && status.msg}</p>
-      </div>
-    </Form>
+        {showStatusMessage && (
+          <p>{status.msg}</p>
+        )}
+      </Form>
+    </div>
   );
 };
 
