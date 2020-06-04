@@ -2,6 +2,7 @@
 
 .ConfigInfoBox {
   padding: 0 10px;
+  transition: all $transitionDuration;
 
   h2 {
     width: 100%;
@@ -35,15 +36,23 @@
     }
   }
 
+  img {
+    max-width: 100%;
+  }
+
   a {
     color: #00aeff;
   }
 
   .content {
-    display: none;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all $transitionDuration;
 
     &.expanded {
-      display: block;
+      height: 100%;
+      opacity: 1;
     }
   }
 }

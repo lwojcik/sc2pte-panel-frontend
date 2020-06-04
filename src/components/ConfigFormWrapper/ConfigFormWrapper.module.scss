@@ -1,10 +1,11 @@
 @import 'src/mixins/variables';
 
 .ConfigFormWrapper {
-  padding-top: 20px;
+  padding-top: 50px;
   margin: 0 auto;
   max-width: 960px;
   width: 95%;
+  transition: all $transitionDuration;
 
   > div {
     border: 1px solid #163757;

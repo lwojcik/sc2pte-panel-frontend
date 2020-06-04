@@ -5,6 +5,8 @@ import { FormikHelpers, FormikValues } from 'formik';
 import classnames from 'classnames/bind';
 import ConfigBackground from 'components/ConfigBackground/ConfigBackground';
 import FormikWrapper from 'components/FormikWrapper/FormikWrapper';
+import ConfigFormHeading from 'components/ConfigFormHeading/ConfigFormHeading';
+import ConfigFormLeadText from 'components/ConfigFormLeadText/ConfigFormLeadText';
 import ConfigForm from 'components/ConfigForm/ConfigForm';
 import ConfigFormWrapper from 'components/ConfigFormWrapper/ConfigFormWrapper';
 import ConfigInfoBox from 'components/ConfigInfoBox/ConfigInfoBox';
@@ -32,6 +34,8 @@ const ConfigFormPanel = ({
     <ConfigBackground />
     <ConfigFormWrapper>
       <div>
+        <ConfigFormHeading />
+        <ConfigFormLeadText />
         <FormikWrapper
           initialValues={initialValues}
           validationSchema={validationSchema}

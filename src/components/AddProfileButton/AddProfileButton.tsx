@@ -22,7 +22,7 @@ const AddProfileButton = ({
     onClick={onClick}
   >
     <>
-      + Add a profile (available slots: {profilesLeft})
+      +&nbsp;Add a profile (available slots: {profilesLeft})
     </>
   </GenericButton>
 );
