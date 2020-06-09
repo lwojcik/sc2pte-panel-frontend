@@ -1,5 +1,6 @@
 import React from 'react';
 import useTimeout from 'hooks/useTimeout/useTimeout';
+import EmptyPlaceholder from 'components/EmptyPlaceholder/EmptyPlaceholder';
 
 const ViewerDataFetchError = () => {
   useTimeout(() => {
@@ -7,7 +8,9 @@ const ViewerDataFetchError = () => {
   }, 60000);
 
   return (
-    <p>Error fetching data.</p>
+    <EmptyPlaceholder>
+      <p>Error fetching player data</p>
+    </EmptyPlaceholder>
   );
 };
 
