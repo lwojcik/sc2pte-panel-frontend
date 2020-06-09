@@ -49,7 +49,8 @@ const ConfigInfoBox = () => {
             />
           </li>
           <li>
-            Copy the link to the profile page you just landed on.
+            Copy the link to the profile page you just landed on. It should look similarly to this:<br/>
+            <i>https://starcraft2.com/en-us/profile/1/2/242838</i>
           </li>
           <li>
             Paste the link to the config form. Save your changes. All done!

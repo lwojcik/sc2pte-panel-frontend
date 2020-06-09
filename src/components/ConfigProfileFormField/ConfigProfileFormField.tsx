@@ -5,15 +5,19 @@ import styles from './ConfigProfileFormField.module.scss';
 
 interface ConfigProfileFormFieldProps {
   name: string;
+  placeholder?: string;
 }
 
 const cx = classnames.bind(styles);
 
-const ConfigProfileFormField = ({ name }: ConfigProfileFormFieldProps) => (
+const ConfigProfileFormField = ({
+  name,
+  placeholder,
+}: ConfigProfileFormFieldProps) => (
   <Field
     className={cx('ConfigProfileFormField')}
     name={name}
-    autoComplete='off'
+    placeholder={placeholder}
   />
 );
 

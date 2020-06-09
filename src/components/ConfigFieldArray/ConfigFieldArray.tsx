@@ -1,10 +1,11 @@
 import React from 'react';
 import classnames from 'classnames/bind';
 import { FieldArray } from 'formik';
+import NoProfilesInConfig from 'components/NoProfilesInConfig/NoProfilesInConfig';
+import ConfigServerError from 'components/ConfigServerError/ConfigServerError';
 import AddProfileButton from 'components/AddProfileButton/AddProfileButton';
 import ConfigProfileFormFieldGroup from 'components/ConfigProfileFormFieldGroup/ConfigProfileFormFieldGroup';
 import DragAndDrop from 'components/DragAndDrop/DragAndDrop';
-import RefreshPageButton from 'components/RefreshPageButton/RefreshPageButton';
 import styles from './ConfigFieldArray.module.scss';
 
 interface ConfigFieldArrayProps {
@@ -23,49 +24,57 @@ const ConfigFieldArray = ({
   maxProfiles,
   disableDragDrop,
   errors,
-}: ConfigFieldArrayProps) => (
-  <FieldArray
-    name='profiles'
-    render={arrayHelpers => (
-      <div className={cx('ConfigFieldArray')}>
-        {(!Boolean(profiles) && (
-          <p>Something went wrong! <RefreshPageButton /></p>
-        ))}
-        {profiles.length > 0 && (
-          <DragAndDrop
-            dragEndFn={arrayHelpers.swap}
-            disabled={disableDragDrop}
-            droppableId='droppable'
-            draggableId='profile'
-            draggableCssClass={cx('ConfigFieldArrayItem')}
-            isDraggingCssClass={cx('isDragging')}
-            droppableDraggingOverCssClass={cx('droppableDraggingOver')}
-            droppableElementArray={profiles}
-          >
-            {(index: number) => (
-              <ConfigProfileFormFieldGroup
-                key={index}
-                index={index}
-                profiles={profiles}
-                disableDragDrop={disableDragDrop}
-                errors={Array.isArray(errors.profiles) && errors.profiles[index]}
-                deleteProfileFn={() => arrayHelpers.remove(index)}
-              />
-            )}
-          </DragAndDrop>
-        )}
-        {profiles.length === 0 && (
-          <p>No profiles yet! Add one with a button below</p>
-        )}
-        {profiles.length < maxProfiles && !(typeof errors.profiles === 'string' && errors.profiles) && (
-          <AddProfileButton
-            onClick={() => arrayHelpers.push('')}
-            profilesLeft={maxProfiles - profiles.length}
-          />
-        )}
-      </div>
-    )}
-  />
-);
+}: ConfigFieldArrayProps) => {
+  const profilesFound = profiles.length > 0;
+  const configServerError = (!Boolean(profiles) || profiles.length === 0) && errors;
+  const fieldGroupErrors = (index: number) =>
+    Array.isArray(errors.profiles) && errors.profiles[index];
+  const noProfilesInConfig = profiles.length === 0 && !errors;
+  const showAddProfileButton =
+    !configServerError
+    && profiles.length < maxProfiles
+    && !(typeof errors.profiles === 'string' && errors.profiles);
+
+  return (
+    <FieldArray
+      name='profiles'
+      render={arrayHelpers => (
+        <div className={cx('ConfigFieldArray')}>
+          {configServerError && <ConfigServerError />}
+          {profilesFound && (
+            <DragAndDrop
+              dragEndFn={arrayHelpers.swap}
+              disabled={disableDragDrop}
+              droppableId='droppable'
+              draggableId='profile'
+              draggableCssClass={cx('ConfigFieldArrayItem')}
+              isDraggingCssClass={cx('isDragging')}
+              droppableDraggingOverCssClass={cx('droppableDraggingOver')}
+              droppableElementArray={profiles}
+            >
+              {(index: number) => (
+                <ConfigProfileFormFieldGroup
+                  key={index}
+                  index={index}
+                  profiles={profiles}
+                  disableDragDrop={disableDragDrop}
+                  errors={fieldGroupErrors(index)}
+                  deleteProfileFn={() => arrayHelpers.remove(index)}
+                />
+              )}
+            </DragAndDrop>
+          )}
+          {noProfilesInConfig && <NoProfilesInConfig />}
+          {showAddProfileButton && (
+            <AddProfileButton
+              onClick={() => arrayHelpers.push('')}
+              profilesLeft={maxProfiles - profiles.length}
+            />
+          )}
+        </div>
+      )}
+    />
+  );
+};
 
 export default ConfigFieldArray;

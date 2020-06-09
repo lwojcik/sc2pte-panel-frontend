@@ -35,7 +35,7 @@ const handleSuccess = (values: ConfigFormValues, actions: FormikHelpers<FormikVa
   resetFormWithStatus({
     status: {
       success: true,
-      msg: 'Changes have been saved!'
+      msg: 'Your configuration has been saved successfully. Please allow up to 15 minutes for changes to be visible in the extension.'
     },
     values,
     actions,
@@ -46,7 +46,7 @@ const handleFailure = (values: ConfigFormValues, actions: FormikHelpers<FormikVa
   resetFormWithStatus({
     status: {
       success: false,
-      msg: 'Something went wrong!',
+      msg: 'Failed to save your configuration due to server error. Please try again later.',
     },
     values,
     actions,

@@ -1,0 +1,10 @@
+@import 'src/mixins/variables';
+
+.ConfigProfileErrors {
+  background-color: #360e10;
+  color: rgba(255,255,255,0.7);
+  border: 1px solid #000;
+  font-size: 14px;
+  padding: 10px;
+  margin: 10px 0;
+}

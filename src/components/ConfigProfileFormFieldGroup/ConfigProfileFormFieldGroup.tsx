@@ -29,12 +29,17 @@ const ConfigProfileFormFieldGroup = ({
 
   return (
     <div className={cx('ConfigProfileFormFieldGroup')}>
-      <DragDropIcon disabled={disableDragDrop} />
-      <ConfigProfileFormField name={name} />
-      <DeleteProfileButton
-        onClick={deleteProfileFn}
-        disabled={disabled}
-      />
+      <div className={cx('fields')}>
+        <DragDropIcon disabled={disableDragDrop} />
+        <ConfigProfileFormField
+          name={name}
+          placeholder='example: https://starcraft2.com/en-us/profile/1/2/242838'
+        />
+        <DeleteProfileButton
+          onClick={deleteProfileFn}
+          disabled={disabled}
+        />
+      </div>
       {validationErrors && (
         <ConfigFormValidationMessage>
           {errors as string}

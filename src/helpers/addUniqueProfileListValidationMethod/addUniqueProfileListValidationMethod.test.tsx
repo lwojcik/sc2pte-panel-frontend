@@ -12,6 +12,6 @@ it('adds validation method correctly', () => {
       yupInstance.string()
     )
     // istanbul ignore next
-    .unique('duplicate phone', jest.fn().mockImplementation(() => true)),
+    .unique('Duplicate profiles detected. Please review your configuration.', jest.fn().mockImplementation(() => true)),
   ).toMatchSnapshot();
 });

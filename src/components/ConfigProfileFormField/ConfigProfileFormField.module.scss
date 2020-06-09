@@ -23,4 +23,14 @@
     border-color: #00aeff;
     outline: none;
   }
+
+  &::placeholder {
+    font-style: italic;
+  }
+
+  &:focus::placeholder,
+  &:active::placeholder {
+    color: red;
+    opacity: 0;
+  }
 }

@@ -7,16 +7,16 @@ const addValidationSchema = (yup: YupInstance) => ({
     .of(
       yup.string()
         .ensure()
-        .min(34, 'enter URL')
+        .min(34, 'Please provide correct StarCraft II profile URL.')
         .matches(
           StarCraft2API.profileUrlRegex(),
           {
-            message: 'invalid URL',
+            message: 'Profile URL is invalid.',
             excludeEmptyString: false,
           },
         )
     )
-    .unique('duplicate phone', isProfileListUnique),
+    .unique('Duplicate profiles detected. Please review your configuration before saving.', isProfileListUnique),
 });
 
 export default addValidationSchema;
