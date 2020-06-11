@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`returns correct config API URL 1`] = `
+Object {
+  "method": "TEST_CONFIG_METHOD",
+  "url": "testConfigUrl",
+}
+`;

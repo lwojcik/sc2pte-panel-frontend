@@ -1,0 +1,14 @@
+@import 'src/mixins/variables';
+
+.EmptyPlaceholder {
+  height: $tabContainerHeight;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    color: #1f598e;
+    font-size: 13px;
+  }
+}

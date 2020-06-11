@@ -1,0 +1,13 @@
+@import 'src/mixins/variables';
+
+.ConfigFormLeadText {
+  padding: 20px 20px 0;
+  font-size: 14px;
+  line-height: 1.5;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+

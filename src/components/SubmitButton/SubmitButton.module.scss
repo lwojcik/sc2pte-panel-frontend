@@ -1,0 +1,25 @@
+.SubmitButton {
+  background-color: #0e86ca;
+  border: 1px solid #00aeff;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #fff;
+  padding: 10px 30px;
+  margin: 20px 0;
+  text-align: center;
+  cursor: pointer;
+  transition: color 200ms, background-color 200ms, border-color 200ms;
+
+  &:not(:active):not(:disabled):hover,
+  &:not(:active):not(:disabled):focus {
+    background-color: #00aeff;
+    border: 1px solid #00aeff;
+  }
+
+  &[disabled] {
+    background-color: rgba(14, 134, 202, .2);
+    border: 1px solid rgba(0, 174, 255, .2);
+    color: rgba(255, 255, 255, .15);
+    cursor: default;
+  }
+}

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  "{\\"regionId\\":\\"1\\",\\"realmId\\":\\"1\\",\\"profileId\\":\\"1\\"}",
+  "{\\"regionId\\":\\"2\\",\\"realmId\\":\\"1\\",\\"profileId\\":\\"1\\"}",
+  "{\\"regionId\\":\\"3\\",\\"realmId\\":\\"1\\",\\"profileId\\":\\"1\\"}",
+]
+`;

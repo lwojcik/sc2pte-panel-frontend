@@ -1,0 +1,10 @@
+.LadderMode {
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &.hoverable {
+    cursor: pointer;
+  }
+}

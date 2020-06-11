@@ -1,0 +1,7 @@
+$headerHeight: 123px;
+$tabSectionHeight: 20px;
+$edgePadding: 0.75rem;
+$detailsHeight: calc(100vh - #{$headerHeight});
+$tabContainerHeight: calc(100vh - #{$headerHeight} - #{$tabSectionHeight});
+$transitionDuration: 150ms;
+$fontFamily: 'Lato', Arial, Helvetica, sans-serif;

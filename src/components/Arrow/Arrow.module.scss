@@ -1,0 +1,14 @@
+@import 'src/mixins/variables';
+
+.Arrow {
+  width: 16px;
+  height: 16px;
+  background: url('images/arrow.png') no-repeat center center;
+  transform: rotate(0);
+  transition: transform $transitionDuration;
+  display: inline-block;
+
+  &.active {
+    transform: rotate(180deg);
+  }
+}

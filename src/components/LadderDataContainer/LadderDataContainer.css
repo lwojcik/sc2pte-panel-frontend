@@ -1,6 +1,0 @@
-.LadderDataContainer {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: calc(100vh - 83px - 1.25rem - 60px);
-}

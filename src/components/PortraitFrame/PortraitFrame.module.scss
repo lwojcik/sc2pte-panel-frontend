@@ -1,0 +1,59 @@
+.PortraitFrame {
+  width: 84px;
+  height: 83px;
+  margin: 19px 0;
+  position: relative;
+}
+
+.frame {
+  text-decoration: none;
+  background: url('./images/PortraitFrames.png') no-repeat 0 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.content {
+  display: block;
+  width: 64px;
+  height: 63px;
+  position: absolute;
+  overflow: hidden;
+  top: 10px;
+  left: 10px;
+  z-index: 0;
+
+  & > * {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.bronze {
+  background-position:0 -84px;
+}
+
+.silver {
+  background-position:0 -168px;
+}
+
+.gold {
+  background-position:0 -252px;
+}
+
+.platinum {
+  background-position:0 -336px;
+}
+
+.diamond {
+  background-position:0 -420px;
+}
+
+.master {
+  background-position:0px -504px;
+}
+
+.grandmaster {
+  background-position:0px -588px;
+}
