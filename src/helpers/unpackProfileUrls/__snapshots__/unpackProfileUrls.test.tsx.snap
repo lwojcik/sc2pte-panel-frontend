@@ -8,12 +8,12 @@ Array [
     "regionId": "1",
   },
   Object {
-    "profileId": "2",
+    "profileId": "1",
     "realmId": "1",
     "regionId": "2",
   },
   Object {
-    "profileId": "3",
+    "profileId": "1",
     "realmId": "1",
     "regionId": "3",
   },
