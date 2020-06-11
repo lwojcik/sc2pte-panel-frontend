@@ -65,7 +65,7 @@ const submitConfig = (channelId: string, token: string) => {
   const { url, method } = saveConfigUrl(channelId);
   return async (values: ConfigFormValues, actions: FormikHelpers<FormikValues>) => {
     try {
-      const sc2ConfigArray = unpackProfileUrls(values.profiles);
+      const sc2ConfigArray = unpackProfileUrls(values.profiles, true);
       const body = JSON.stringify(sc2ConfigArray);
       const response = await fetch(url, {
         headers: {

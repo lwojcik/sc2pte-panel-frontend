@@ -123,7 +123,6 @@ export interface FetchHeaders {
 
 export interface ConfigData {
   profiles: string[];
-  maxProfiles: number;
 }
 
 export interface Sc2ProfileObject {

@@ -8,6 +8,8 @@ interface InitialConfigObject {
   data: {
     profiles: Sc2ProfileObject[] | [];
     maxProfiles: number;
+    error?: Boolean;
+    status?: number;
   }
 }
 
@@ -15,20 +17,20 @@ const useConfigData = (channelId: string, token: string) => {
   const { url, method } = getConfigUrl(channelId);
   const headers = { channelId, token };
   const { error, data } = useData({ url, method, headers }) as InitialConfigObject;
-  return !error && data && data.profiles
+  console.log({ error, data }); // eslint-disable-line
+  const serverError = data.error && data.status === 500;
+  return !serverError
     ? {
       data: {
         profiles: data.profiles?.length > 0
           ? constructProfileUrls(data.profiles)
           : [],
-        maxProfiles: data.maxProfiles,
       },
     }
     : {
       error: true,
       data: {
         profiles: [],
-        maxProfiles: 0,
       },
     };
 };

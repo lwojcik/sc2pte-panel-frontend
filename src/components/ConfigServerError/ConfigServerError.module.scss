@@ -1,7 +1,10 @@
+@import 'src/mixins/variables';
+
 .ConfigServerError {
   line-height: 1.5;
   background-color: #360e10;
   color: rgba(255, 255, 255, 0.7);
   border: 1px solid #000;
   padding: 0 10px;
+  font-family: $fontFamily;
 }

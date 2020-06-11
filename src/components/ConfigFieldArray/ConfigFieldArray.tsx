@@ -2,7 +2,6 @@ import React from 'react';
 import classnames from 'classnames/bind';
 import { FieldArray } from 'formik';
 import NoProfilesInConfig from 'components/NoProfilesInConfig/NoProfilesInConfig';
-import ConfigServerError from 'components/ConfigServerError/ConfigServerError';
 import AddProfileButton from 'components/AddProfileButton/AddProfileButton';
 import ConfigProfileFormFieldGroup from 'components/ConfigProfileFormFieldGroup/ConfigProfileFormFieldGroup';
 import DragAndDrop from 'components/DragAndDrop/DragAndDrop';
@@ -26,13 +25,11 @@ const ConfigFieldArray = ({
   errors,
 }: ConfigFieldArrayProps) => {
   const profilesFound = profiles.length > 0;
-  const configServerError = (!Boolean(profiles) || profiles.length === 0) && errors;
+  console.log(profiles); // eslint-disable-line
   const fieldGroupErrors = (index: number) =>
     Array.isArray(errors.profiles) && errors.profiles[index];
-  const noProfilesInConfig = profiles.length === 0 && !errors;
-  const showAddProfileButton =
-    !configServerError
-    && profiles.length < maxProfiles
+  const noProfilesInConfig = profiles.length === 0;
+  const showAddProfileButton = profiles.length < maxProfiles
     && !(typeof errors.profiles === 'string' && errors.profiles);
 
   return (
@@ -40,7 +37,6 @@ const ConfigFieldArray = ({
       name='profiles'
       render={arrayHelpers => (
         <div className={cx('ConfigFieldArray')}>
-          {configServerError && <ConfigServerError />}
           {profilesFound && (
             <DragAndDrop
               dragEndFn={arrayHelpers.swap}

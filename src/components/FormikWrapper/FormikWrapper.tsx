@@ -18,7 +18,7 @@ const FormikWrapper = ({
   initialValues,
   validationSchema,
   onSubmit,
-  children
+  children,
 }: FormStateProviderProps) => (
   <Formik
     initialValues={initialValues}

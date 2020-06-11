@@ -13,16 +13,17 @@ import 'typeface-lato';
 const Config = () => {
   const { authorized, channelId, token } = useTwitchAuth();
   const { data, error } = useConfigData(channelId, token);
+  console.log({ data, error }); // eslint-disable-line
   const onSubmit = submitConfig(channelId, token);
   const validator = addValidator();
   const validationSchema = addValidationSchema(validator);
-  const maxProfiles = data.maxProfiles | appConfig.maxProfiles;
+  const maxProfiles = appConfig.maxProfiles;
 
   if (!authorized) return (
     <Unauthorized />
   );
 
-  if (error && !data.profiles) return (
+  if (error) return (
     <ConfigConnectionError />
   );
 

@@ -26,6 +26,7 @@ const areThereErrors = (errors: ConfigFormErrors) =>
     ));
 
 interface ConfigFormProps extends ConfigData, FormikProps<FormikValues> {
+  maxProfiles: number;
   status: {
     success: boolean;
     msg: string;
