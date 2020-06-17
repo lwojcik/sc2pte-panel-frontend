@@ -19,22 +19,22 @@ const cx = classnames.bind(styles);
 
 const ViewerPanel = ({ data, error }: ViewerPanelProps) => (
   <div className={cx('ViewerPanel')}>
-    {error && (
+    {(!data.profiles || error) && (
       <ViewerDataFetchError />
     )}
 
-    {data?.profiles.length === 0 && (
+    {data?.profiles?.length === 0 && (
       <NoProfilesFound />
     )}
 
-    {data?.profiles.length === 1 && (
+    {data?.profiles?.length === 1 && (
       <Profile
         data={data.profiles[0]}
         single={true}
       />
     )}
 
-    {data?.profiles.length > 1 && (
+    {data?.profiles?.length > 1 && (
       <ProfileList data={data.profiles} />
     )}
   </div>
