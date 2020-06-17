@@ -13,7 +13,6 @@ import 'typeface-lato';
 const Config = () => {
   const { authorized, channelId, token } = useTwitchAuth();
   const { data, error } = useConfigData(channelId, token);
-  console.log({ data, error }); // eslint-disable-line
   const onSubmit = submitConfig(channelId, token);
   const validator = addValidator();
   const validationSchema = addValidationSchema(validator);

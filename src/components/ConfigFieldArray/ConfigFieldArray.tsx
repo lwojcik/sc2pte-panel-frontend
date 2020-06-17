@@ -25,7 +25,6 @@ const ConfigFieldArray = ({
   errors,
 }: ConfigFieldArrayProps) => {
   const profilesFound = profiles.length > 0;
-  console.log(profiles); // eslint-disable-line
   const fieldGroupErrors = (index: number) =>
     Array.isArray(errors.profiles) && errors.profiles[index];
   const noProfilesInConfig = profiles.length === 0;

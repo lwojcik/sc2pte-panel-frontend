@@ -3,17 +3,17 @@
 exports[`unpacks profile URLs correctly 1`] = `
 Array [
   Object {
-    "profileId": "1",
+    "profileId": "123456789",
     "realmId": "1",
     "regionId": "1",
   },
   Object {
-    "profileId": "1",
+    "profileId": "234567890",
     "realmId": "1",
     "regionId": "2",
   },
   Object {
-    "profileId": "1",
+    "profileId": "345678901",
     "realmId": "1",
     "regionId": "3",
   },

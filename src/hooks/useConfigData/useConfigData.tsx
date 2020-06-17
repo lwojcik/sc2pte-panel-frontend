@@ -17,8 +17,7 @@ const useConfigData = (channelId: string, token: string) => {
   const { url, method } = getConfigUrl(channelId);
   const headers = { channelId, token };
   const { error, data } = useData({ url, method, headers }) as InitialConfigObject;
-  console.log({ error, data }); // eslint-disable-line
-  const serverError = data.error && data.status === 500;
+  const serverError = error || (data.error && data.status === 500);
   return !serverError
     ? {
       data: {
