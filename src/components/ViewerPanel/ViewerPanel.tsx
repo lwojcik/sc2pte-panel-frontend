@@ -19,7 +19,7 @@ const cx = classnames.bind(styles);
 
 const ViewerPanel = ({ data, error }: ViewerPanelProps) => (
   <div className={cx('ViewerPanel')}>
-    {(!data.profiles || error) && (
+    {(!data?.profiles || error) && (
       <ViewerDataFetchError />
     )}
 
