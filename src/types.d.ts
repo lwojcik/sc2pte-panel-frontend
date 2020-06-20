@@ -36,7 +36,8 @@ export type Rank =
   | 'platinum'
   | 'diamond'
   | 'master'
-  | 'grandmaster';
+  | 'grandmaster'
+  | '';
 
 export type Tier = 1 | 2 | 3 | 4;
 
