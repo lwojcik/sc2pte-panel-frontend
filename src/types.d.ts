@@ -98,7 +98,7 @@ export interface StatsObject {
 
 export interface MatchObject {
   mapName: string;
-  mode: string;
+  mode: GameMode;
   result: ResultType;
   date: number;
 }
