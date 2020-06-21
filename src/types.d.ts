@@ -27,7 +27,8 @@ export type ServerLocale =
 
 export type ResultType =
   'win'
-  | 'loss';
+  | 'loss'
+  | 'left';
 
 export type Rank =
   'bronze'
@@ -55,6 +56,12 @@ export type LadderGameMode =
   | '3v3'
   | '4v4'
   | 'Archon';
+
+export type GameMode =
+  LadderGameMode
+  | 'Custom'
+  | 'Co-Op'
+  | '(Unknown)';
 
 export interface FetchParams {
   url: string;
