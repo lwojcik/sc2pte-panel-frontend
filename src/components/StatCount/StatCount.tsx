@@ -3,7 +3,7 @@ import classnames from 'classnames/bind';
 import styles from './StatCount.module.scss';
 
 interface StatCountProps {
-  children: number;
+  children: number | string;
 }
 
 const cx = classnames.bind(styles);

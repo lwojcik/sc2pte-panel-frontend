@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import TotalGamesThisSeason from 'components/TotalGamesThisSeason/TotalGamesThisSeason';
+import SeasonWinRatio from 'components/SeasonWinRatio/SeasonWinRatio';
 import TotalCareerGames from 'components/TotalCareerGames/TotalCareerGames';
 import TotalRankedSeasonGames from 'components/TotalRankedSeasonGames/TotalRankedSeasonGames';
 import HighestSoloRank from 'components/HighestSoloRank/HighestSoloRank';
@@ -19,7 +19,7 @@ const Stats = ({ data }: StatsProps) => {
     highestSoloRank,
     highestTeamRank,
     totalRankedGamesThisSeason,
-    totalGamesThisSeason,
+    seasonWinRatio,
     totalCareerGames,
   } = data;
 
@@ -35,7 +35,7 @@ const Stats = ({ data }: StatsProps) => {
       </div>
       <div className={cx('count')}>
         <TotalRankedSeasonGames count={totalRankedGamesThisSeason} />
-        <TotalGamesThisSeason count={totalGamesThisSeason} />
+        <SeasonWinRatio count={seasonWinRatio} />
       </div>
       <div className={cx('total')}>
         <TotalCareerGames count={totalCareerGames} />

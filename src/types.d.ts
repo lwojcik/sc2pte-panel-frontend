@@ -82,8 +82,8 @@ export interface HeadingObject {
 }
 
 export interface StatsObject {
-  totalGamesThisSeason: number;
   totalRankedGamesThisSeason: number;
+  seasonWinRatio: number;
   totalCareerGames: number;
   highestSoloRank: Rank;
   highestTeamRank: Rank;

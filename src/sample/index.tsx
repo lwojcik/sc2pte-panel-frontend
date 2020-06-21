@@ -52,7 +52,7 @@ const sample = [
       ],
       stats: {
         totalCareerGames: 100,
-        totalGamesThisSeason: 101,
+        seasonWinRatio: 50,
         totalRankedGamesThisSeason: 102,
         highestSoloRank: 'silver',
         highestTeamRank: '',

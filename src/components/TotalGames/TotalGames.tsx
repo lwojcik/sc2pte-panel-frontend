@@ -6,7 +6,7 @@ import styles from './TotalGames.module.scss';
 
 interface TotalGamesProps {
   label: string;
-  count: number;
+  count: number | string;
 }
 
 const cx = classnames.bind(styles);
