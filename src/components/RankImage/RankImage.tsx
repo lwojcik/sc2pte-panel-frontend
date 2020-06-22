@@ -14,8 +14,8 @@ interface RankImageProps {
 const cx = classnames.bind(styles);
 
 const RankImage = ({ rank, divisionRank }: RankImageProps) => {
-  const tier = calculateRankTier(rank, divisionRank);
-  const tierRange = calculateTierRange(rank, tier);
+  const tier = calculateRankTier(rank, divisionRank) || 1;
+  const tierRange = calculateTierRange(rank, tier)  || 1;
   const title = divisionRank
     ? capitalize(`${rank}, top ${tierRange}`)
     : capitalize(rank);

@@ -9,10 +9,10 @@ interface SnapshotProps {
 
 const Snapshot = ({ data }: SnapshotProps) => (
   <>
-    {data.length <= 0 && (
+    {(!data || data?.length <= 0) && (
       <NoLaddersFound />
     )}
-    {data.length > 0 && (
+    {data?.length > 0 && (
       <LadderList data={data} />
     )}
   </>

@@ -9,10 +9,10 @@ interface HistoryProps {
 
 const History = ({ data }: HistoryProps) => (
   <>
-    {data.length <= 0 && (
+    {data?.length <= 0 && (
       <NoMatchesPlayed />
     )}
-    {data.length > 0 && (
+    {data?.length > 0 && (
       <MatchList data={data} />
     )}
   </>
