@@ -7,7 +7,7 @@ interface SeasonWinRatioProps {
 
 const SeasonWinRatio = ({ count }: SeasonWinRatioProps) => (
   <TotalGames
-    label='Season win-ratio'
+    label='Season win&#x2011;ratio'
     count={`${count}%`}
   />
 );
