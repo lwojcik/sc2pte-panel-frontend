@@ -6,11 +6,15 @@ import Unauthorized from 'components/Unauthorized/Unauthorized';
 import { ViewerData } from 'types';
 import appConfig from 'config/app';
 
-const { updateInterval } = appConfig;
+const { refreshInterval } = appConfig;
 
 const Viewer = () => {
   const { authorized, channelId, token } = useTwitchAuth();
-  const { error, data } = useViewerData(channelId, token, updateInterval) as ViewerData;
+  const { error, data } = useViewerData({
+    channelId,
+    token,
+    refreshInterval,
+  }) as ViewerData;
 
   return authorized
     ? (
