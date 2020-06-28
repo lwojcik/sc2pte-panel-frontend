@@ -17,27 +17,35 @@ interface ViewerPanelProps {
 
 const cx = classnames.bind(styles);
 
-const ViewerPanel = ({ data, error }: ViewerPanelProps) => (
-  <div className={cx('ViewerPanel')}>
-    {(!data?.profiles || error) && (
-      <ViewerDataFetchError />
-    )}
+const ViewerPanel = ({ data, error }: ViewerPanelProps) => {
+  const profiles = data.profiles.filter(
+    profile =>
+      Object.keys(profile).length > 0
+  )
+  || [];
 
-    {data?.profiles?.length === 0 && (
-      <NoProfilesFound />
-    )}
+  return (
+    <div className={cx('ViewerPanel')}>
+      {(!profiles || error) && (
+        <ViewerDataFetchError />
+      )}
 
-    {data?.profiles?.length === 1 && (
-      <Profile
-        data={data.profiles[0]}
-        single={true}
-      />
-    )}
+      {profiles?.length === 0 && (
+        <NoProfilesFound />
+      )}
 
-    {data?.profiles?.length > 1 && (
-      <ProfileList data={data.profiles} />
-    )}
-  </div>
-);
+      {profiles?.length === 1 && (
+        <Profile
+          data={profiles[0]}
+          single={true}
+        />
+      )}
+
+      {profiles?.length > 1 && (
+        <ProfileList data={profiles} />
+      )}
+    </div>
+  );
+};
 
 export default ViewerPanel;
