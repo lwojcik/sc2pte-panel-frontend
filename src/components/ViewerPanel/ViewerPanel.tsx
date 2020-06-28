@@ -18,11 +18,10 @@ interface ViewerPanelProps {
 const cx = classnames.bind(styles);
 
 const ViewerPanel = ({ data, error }: ViewerPanelProps) => {
-  const profiles = data.profiles.filter(
+  const profiles = data?.profiles?.filter(
     profile =>
       Object.keys(profile).length > 0
-  )
-  || [];
+  ) || [];
 
   return (
     <div className={cx('ViewerPanel')}>
@@ -30,7 +29,7 @@ const ViewerPanel = ({ data, error }: ViewerPanelProps) => {
         <ViewerDataFetchError />
       )}
 
-      {profiles?.length === 0 && (
+      {profiles?.length === 0 && !error && (
         <NoProfilesFound />
       )}
 
