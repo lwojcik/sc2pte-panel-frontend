@@ -2,14 +2,14 @@
   border: 1px solid #1860a1;
   background: rgba(0, 0, 0, 0.9);
   color: #cfffff;
-  min-width: 100px;
+  min-width: 90px;
   position: absolute;
   left: 0;
   top: 15px;
   display: none;
 
   & * {
-    display: inline-block;
+    display: flex;
     white-space: nowrap;
     font-weight: normal;
     font-size: 12px;
