@@ -1,10 +1,11 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import StatCount from './StatCount';
 
-const testData = {
-  count: 999,
-};
-
 it('renders correctly', () => {
-  domRender(StatCount, testData);
+  render(
+    <StatCount>
+      Test
+    </StatCount>
+  );
 });

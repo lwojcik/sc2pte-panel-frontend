@@ -1,10 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import HighestSoloRank from './HighestSoloRank';
 
-const testData = {
-  rank: 'bronze',
-};
-
 it('renders correctly', () => {
-  domRender(HighestSoloRank, testData);
+  render(<HighestSoloRank rank='bronze' />);
 });

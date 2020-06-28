@@ -1,10 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import Loss from './Loss';
 
-const testData = {
-  count: 999,
-};
-
 it('renders correctly', () => {
-  domRender(Loss, testData);
+  render(<Loss count={999} />);
 });

@@ -1,11 +1,12 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import WinLoseRatio from './WinLoseRatio';
 
-const testData = {
-  wins: 1,
-  losses: 2,
-};
-
 it('renders correctly', () => {
-  domRender(WinLoseRatio, testData);
+  render(
+    <WinLoseRatio
+      wins={1}
+      losses={2}
+    />
+  );
 });

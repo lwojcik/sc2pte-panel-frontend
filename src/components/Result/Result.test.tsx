@@ -1,10 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import Result from './Result';
 
-const testData = {
-  type: 'win',
-};
-
 it('renders correctly', () => {
-  domRender(Result, testData);
+  render(<Result type='win' />);
 });

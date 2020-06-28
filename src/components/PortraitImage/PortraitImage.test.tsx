@@ -1,10 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import PortraitImage from './PortraitImage';
 
-const testData = {
-  url: 'testUrl',
-};
-
 it('renders correctly', () => {
-  domRender(PortraitImage, testData);
+  render(<PortraitImage url='testUrl' />);
 });

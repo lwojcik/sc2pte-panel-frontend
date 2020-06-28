@@ -1,10 +1,11 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import StatLabel from './StatLabel';
 
-const testData = {
-  children: 'Test',
-};
-
 it('renders correctly', () => {
-  domRender(StatLabel, testData);
+  render(
+    <StatLabel>
+      Test
+    </StatLabel>
+  );
 });

@@ -1,10 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import Win from './Win';
 
-const testData = {
-  count: 999,
-};
-
 it('renders correctly', () => {
-  domRender(Win, testData);
+  render(<Win count={999} />);
 });

@@ -1,23 +1,25 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import MatchList from './MatchList';
+import { LadderGameMode, ResultType } from 'types';
 
 const testData = {
   data: [
     {
       mapName: 'Test Map Name 1 LE',
-      mode: '1v1',
-      result: 'win',
+      mode: '1v1' as LadderGameMode,
+      result: 'win' as ResultType,
       date: 1562164424000,
     },
     {
       mapName: 'Test Map Name 2 LE',
-      mode: '1v1',
-      result: 'loss',
+      mode: '1v1' as LadderGameMode,
+      result: 'loss' as ResultType,
       date: 1562164424000,
     },
   ],
 };
 
 it('renders correctly', () => {
-  domRender(MatchList, testData);
+  render(<MatchList {...testData} />);
 });

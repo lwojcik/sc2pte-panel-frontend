@@ -1,10 +1,12 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render, screen } from '@testing-library/react';
 import ClanName from './ClanName';
 
-const testData = {
-  name: 'Test Clan',
-};
+it('renders correctly when clan name is provided', () => {
+  render(<ClanName name='Test Clan Name' />);
+  expect(screen.getByText(/Test Clan Name/i)).toBeInTheDocument();
+});
 
-it('renders correctly', () => {
-  domRender(ClanName, testData);
+it('renders correctly when no clan name is provided', () => {
+  render(<ClanName />);
 });

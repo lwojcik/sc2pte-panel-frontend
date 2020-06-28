@@ -1,6 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import SubmitButton from './SubmitButton';
 
 it('renders correctly', () => {
-  domRender(SubmitButton);
+  render(<SubmitButton />);
 });

@@ -1,10 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import TotalRankedSeasonGames from './TotalRankedSeasonGames';
 
-const testData = {
-  count: 999,
-};
-
 it('renders correctly', () => {
-  domRender(TotalRankedSeasonGames, testData);
+  render(<TotalRankedSeasonGames count={999} />);
 });

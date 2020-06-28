@@ -1,10 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import Date from './Date';
 
-const testData = {
-  date: 1562164424000,
-};
-
 it('renders correctly', () => {
-  domRender(Date, testData);
+  render(<Date date={1562164424000} />);
 });

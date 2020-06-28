@@ -1,13 +1,13 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import Details from './Details';
-import { Race } from 'components/RaceImage/RaceImage';
-import { Rank, ResultType } from 'types';
+import { Rank, Race, ResultType, LadderGameMode } from 'types';
 
 const testData = {
   data: {
     snapshot: [
       {
-        mode: '1v1',
+        mode: '1v1' as LadderGameMode,
         rank: 'silver' as Rank,
         wins: 101,
         losses: 100,
@@ -19,14 +19,16 @@ const testData = {
     ],
     stats: {
       totalGames: 100,
-      bonusPool: 24,
       highestSoloRank: 'silver' as Rank,
       highestTeamRank: '' as Rank,
+      totalRankedGamesThisSeason: 1,
+      seasonWinRatio: 50,
+      totalCareerGames: 40,
     },
     history: [
       {
         mapName: 'Kairos Junction LE',
-        mode: '1v1',
+        mode: '1v1' as LadderGameMode,
         result: 'win' as ResultType,
         date: 1562164424000,
       },
@@ -35,5 +37,5 @@ const testData = {
 };
 
 it('renders correctly', () => {
-  domRender(Details, testData);
+  render(<Details {...testData} />);
 });

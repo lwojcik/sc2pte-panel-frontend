@@ -1,18 +1,12 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render, screen } from '@testing-library/react';
 import ClanTag from './ClanTag';
 
-const testData = {
-  tag: 'Test',
-};
-
-const emptyTestData = {
-  tag: '',
-};
-
 it('renders correctly when clan tag is provided', () => {
-  domRender(ClanTag, testData);
+  render(<ClanTag tag='TestTag' />);
+  expect(screen.getByText(/TestTag/i)).toBeInTheDocument();
 });
 
 it('renders correctly when no clan tag is provided', () => {
-  domRender(ClanTag, emptyTestData);
+  render(<ClanTag />);
 });

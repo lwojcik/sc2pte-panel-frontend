@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import FooterCreators from './FooterCreators';
+import DivisionRank from './DivisionRank';
 
 it('renders correctly', () => {
-  render(<FooterCreators />);
+  render(<DivisionRank rank={1} />);
 });

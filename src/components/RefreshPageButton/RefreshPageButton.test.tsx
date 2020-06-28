@@ -1,6 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import RefreshPageButton from './RefreshPageButton';
 
 it('renders correctly', () => {
-  domRender(RefreshPageButton);
+  render(<RefreshPageButton />);
 });

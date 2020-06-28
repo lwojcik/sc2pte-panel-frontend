@@ -1,10 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import Flag from './Flag';
 
-const testData = {
-  code: 'eu',
-};
-
 it('renders correctly', () => {
-  domRender(Flag, testData);
+  render(<Flag code='eu' />);
 });

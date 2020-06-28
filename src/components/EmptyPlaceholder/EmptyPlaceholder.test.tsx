@@ -1,6 +1,11 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import EmptyPlaceholder from './EmptyPlaceholder';
 
 it('renders correctly', () => {
-  domRender(EmptyPlaceholder);
+  render(
+    <EmptyPlaceholder>
+      <p>Test element</p>
+    </EmptyPlaceholder>
+  );
 });

@@ -1,10 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import MapName from './MapName';
 
-const testData = {
-  name: 'Test',
-};
-
 it('renders correctly', () => {
-  domRender(MapName, testData);
+  render(<MapName name='Test' />);
 });

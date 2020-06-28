@@ -1,10 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import DragDropIcon from './DragDropIcon';
 
-const testData = {
-  disabled: false,
-};
-
 it('renders correctly', () => {
-  domRender(DragDropIcon, testData);
+  render(<DragDropIcon disabled={false} />);
 });

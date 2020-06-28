@@ -1,6 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import ViewerDataFetchError from './ViewerDataFetchError';
 
 it('renders correctly', () => {
-  domRender(ViewerDataFetchError);
+  render(<ViewerDataFetchError />);
 });

@@ -1,13 +1,15 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import Portrait from './Portrait';
+import { Rank } from 'types';
 
 const testData = {
   portrait: {
     url: 'sampleUrl',
-    frame: 'silver',
+    frame: 'silver' as Rank,
   }
 };
 
 it('renders correctly', () => {
-  domRender(Portrait, testData);
+  render(<Portrait {...testData} />);
 });

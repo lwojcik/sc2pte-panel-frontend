@@ -1,6 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import LogoHand from './LogoHand';
 
 it('renders correctly', () => {
-  domRender(LogoHand);
+  render(<LogoHand />);
 });

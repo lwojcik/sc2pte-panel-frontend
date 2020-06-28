@@ -1,6 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import PlaceholderLogo from './PlaceholderLogo';
 
 it('renders correctly', () => {
-  domRender(PlaceholderLogo);
+  render(<PlaceholderLogo />);
 });

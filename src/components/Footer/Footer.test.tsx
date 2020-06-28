@@ -1,6 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import Footer from './Footer';
 
 it('renders correctly', () => {
-  domRender(Footer);
+  render(<Footer />);
 });

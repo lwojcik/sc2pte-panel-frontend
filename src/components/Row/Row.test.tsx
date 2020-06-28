@@ -1,11 +1,11 @@
 import React from 'react';
-import domRender from 'utils/domRender';
+import { render } from '@testing-library/react';
 import Row from './Row';
 
-const testData = {
-  children: <p>Test</p>,
-};
-
 it('renders correctly', () => {
-  domRender(Row, testData);
+  render(
+    <Row>
+      <p>Test element</p>
+    </Row>
+  );
 });

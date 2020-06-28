@@ -1,10 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import PlayerName from './PlayerName';
 
-const testData = {
-  name: 'Test',
-};
-
 it('renders correctly', () => {
-  domRender(PlayerName, testData);
+  render(<PlayerName name='Test' />);
 });

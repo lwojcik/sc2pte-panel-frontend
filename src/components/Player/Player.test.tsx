@@ -1,5 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import Player from './Player';
+import { ServerLocale } from 'types';
 
 const testData = {
   player: {
@@ -8,10 +10,10 @@ const testData = {
       tag: 'testTag',
     },
     name: 'testName',
-    server: 'eu',
+    server: 'eu' as ServerLocale,
   },
 };
 
 it('renders correctly', () => {
-  domRender(Player, testData);
+  render(<Player {...testData} />);
 });

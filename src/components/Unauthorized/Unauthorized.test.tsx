@@ -1,6 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import Unauthorized from './Unauthorized';
 
 it('renders correctly', () => {
-  domRender(Unauthorized);
+  render(<Unauthorized />);
 });

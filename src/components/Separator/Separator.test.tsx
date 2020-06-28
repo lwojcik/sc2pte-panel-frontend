@@ -1,6 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import Separator from './Separator';
 
 it('renders correctly', () => {
-  domRender(Separator);
+  render(<Separator />);
 });

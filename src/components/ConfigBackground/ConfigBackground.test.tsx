@@ -1,6 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import ConfigBackground from './ConfigBackground';
 
 it('renders correctly', () => {
-  domRender(ConfigBackground);
+  render(<ConfigBackground />);
 });

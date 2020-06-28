@@ -1,11 +1,12 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import WinLoseBar from './WinLoseBar';
 
-const testData = {
-  wins: 999,
-  losses: 999,
-};
-
 it('renders correctly', () => {
-  domRender(WinLoseBar, testData);
+  render(
+    <WinLoseBar
+      wins={999}
+      losses={999}
+    />
+  );
 });

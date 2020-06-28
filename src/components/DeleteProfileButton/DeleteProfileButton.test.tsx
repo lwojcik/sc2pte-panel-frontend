@@ -1,10 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import DeleteProfileButton from './DeleteProfileButton';
 
-const testData = {
-  onClick: () => null,
-};
-
 it('renders correctly', () => {
-  domRender(DeleteProfileButton, testData);
+  render(<DeleteProfileButton onClick={jest.fn()} />);
 });

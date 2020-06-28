@@ -1,6 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import NoProfilesInConfig from './NoProfilesInConfig';
 
 it('renders correctly', () => {
-  domRender(NoProfilesInConfig);
+  render(<NoProfilesInConfig />);
 });

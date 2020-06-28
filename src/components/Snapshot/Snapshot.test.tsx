@@ -1,24 +1,26 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import Snapshot from './Snapshot';
+import { LadderGameMode, Rank, Race } from 'types';
 
 const testData = {
   data: [
     {
-      mode: '1v1',
-      rank: 'silver',
+      mode: '1v1' as LadderGameMode,
+      rank: 'silver' as Rank,
       wins: 101,
       losses: 100,
-      race: 'random',
+      race: 'random' as Race,
       mmr: 3655,
       divisionRank: 3,
       teamMembers: [ 'player' ],
     },
     {
-      mode: '2v2',
-      rank: 'silver',
+      mode: '2v2' as LadderGameMode,
+      rank: 'silver' as Rank,
       wins: 101,
       losses: 100,
-      race: 'terran',
+      race: 'terran' as Race,
       mmr: 3655,
       divisionRank: 3,
       teamMembers: [
@@ -30,5 +32,5 @@ const testData = {
 };
 
 it('renders correctly', () => {
-  domRender(Snapshot, testData);
+  render(<Snapshot {...testData} />);
 });

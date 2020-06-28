@@ -3,7 +3,7 @@ import classnames from 'classnames/bind';
 import styles from './ClanName.module.scss';
 
 interface ClanNameProps {
-  name: string;
+  name?: string;
 }
 
 const cx = classnames.bind(styles);

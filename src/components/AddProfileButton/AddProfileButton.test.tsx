@@ -1,10 +1,26 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import {
+  render,
+  fireEvent,
+  screen,
+} from '@testing-library/react';
 import AddProfileButton from './AddProfileButton';
 
-const testData = {
-  onClick: () => null,
-};
+const testOnClick = jest.fn();
+const testElement = (
+  <AddProfileButton
+    onClick={testOnClick}
+    profilesLeft={3}
+  />
+);
 
 it('renders correctly', () => {
-  domRender(AddProfileButton, testData);
+  render(testElement);
+  expect(screen.queryByText(/\+/i)).toBeInTheDocument();
+});
+
+it('onClick is triggered', () => {
+  render(testElement);
+  fireEvent.click(screen.getByText(/\+/i));
+  expect(testOnClick).toHaveBeenCalled();
 });

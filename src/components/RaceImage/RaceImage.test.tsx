@@ -1,10 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import RaceImage from './RaceImage';
 
-const testData = {
-  race: 'terran',
-};
-
 it('renders correctly', () => {
-  domRender(RaceImage, testData);
+  render(<RaceImage race='terran' />);
 });

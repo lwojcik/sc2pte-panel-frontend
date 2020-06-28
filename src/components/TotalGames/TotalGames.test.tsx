@@ -1,10 +1,12 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import TotalGames from './TotalGames';
 
-const testData = {
-  count: 999,
-};
-
 it('renders correctly', () => {
-  domRender(TotalGames, testData);
+  render(
+    <TotalGames
+      label='Test label'
+      count={999}
+    />
+  );
 });

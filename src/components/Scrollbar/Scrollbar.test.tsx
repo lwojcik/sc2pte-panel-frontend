@@ -1,10 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import Scrollbar from './Scrollbar';
 
-const testData = {
-  visible: true,
-};
-
 it('renders correctly', () => {
-  domRender(Scrollbar, testData);
+  render(<Scrollbar visible={true} />);
 });

@@ -1,10 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import RankImage from './RankImage';
 
-const testData = {
-  rank: 'silver',
-};
-
 it('renders correctly', () => {
-  domRender(RankImage, testData);
+  render(<RankImage rank='silver' />);
 });

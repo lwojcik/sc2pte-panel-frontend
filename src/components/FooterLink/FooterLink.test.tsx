@@ -1,6 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import FooterLink from './FooterLink';
 
 it('renders correctly', () => {
-  domRender(FooterLink);
+  render(<FooterLink />);
 });

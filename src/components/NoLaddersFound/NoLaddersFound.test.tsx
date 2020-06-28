@@ -1,6 +1,7 @@
-import domRender from 'utils/domRender';
+import React from 'react';
+import { render } from '@testing-library/react';
 import NoLaddersFound from './NoLaddersFound';
 
 it('renders correctly', () => {
-  domRender(NoLaddersFound);
+  render(<NoLaddersFound />);
 });
