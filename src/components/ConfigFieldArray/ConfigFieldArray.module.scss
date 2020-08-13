@@ -1,0 +1,16 @@
+@import 'src/mixins/variables';
+
+.ConfigFieldArrayItem {
+  padding: 10px;
+  margin-bottom: 10px;
+  background: rgba(28, 107, 178, 0.5);
+
+  &.isDragging {
+    margin: 10px 0;
+    padding: 10px;
+  }
+}
+
+.droppableDraggingOver {
+  background: #ADD8E6;
+}

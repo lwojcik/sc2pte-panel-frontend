@@ -1,0 +1,19 @@
+.SubmitStatusMessage {
+  line-height: 1.5;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 14px;
+  transition: all 0.3s;
+
+  &.success {
+    background: rgb(0, 27, 0);
+    color: green;
+    border: 1px solid green;
+  }
+
+  &.failure {
+    background-color: #360e10;
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #000;
+  }
+}

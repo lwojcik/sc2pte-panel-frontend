@@ -1,0 +1,12 @@
+@import 'src/mixins/variables';
+
+.ConfigFormPanel {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: $fontFamily;
+  transition: all $transitionDuration;
+}
+

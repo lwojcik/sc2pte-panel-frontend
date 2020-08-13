@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`unpacks profile URLs correctly 1`] = `
+Array [
+  Object {
+    "profileId": "123456789",
+    "realmId": "1",
+    "regionId": "1",
+  },
+  Object {
+    "profileId": "234567890",
+    "realmId": "1",
+    "regionId": "2",
+  },
+  Object {
+    "profileId": "345678901",
+    "realmId": "1",
+    "regionId": "3",
+  },
+]
+`;

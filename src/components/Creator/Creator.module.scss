@@ -1,0 +1,27 @@
+@import 'src/mixins/variables';
+
+.Creator {
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-left: 20px;
+    color: #fff;
+    opacity: 0.5;
+    font-size: 14px;
+    text-decoration: none;
+
+    img {
+      width: 25px;
+      height: 25px;
+      margin-left: 10px;
+      border-radius: 50%;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+}

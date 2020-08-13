@@ -1,0 +1,14 @@
+.AddProfileButton {
+  background: transparent;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  color: #0e86ca;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+  padding: 4px 8px;
+
+  &:hover,
+  &:focus {
+    color: #00aeff;
+  }
+}

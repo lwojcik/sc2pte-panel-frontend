@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return correct tier for all ranks and division ranks 1`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 2`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 3`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 4`] = `2`;
+
+exports[`should return correct tier for all ranks and division ranks 5`] = `2`;
+
+exports[`should return correct tier for all ranks and division ranks 6`] = `3`;
+
+exports[`should return correct tier for all ranks and division ranks 7`] = `3`;
+
+exports[`should return correct tier for all ranks and division ranks 8`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 9`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 10`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 11`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 12`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 13`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 14`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 15`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 16`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 17`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 18`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 19`] = `2`;
+
+exports[`should return correct tier for all ranks and division ranks 20`] = `2`;
+
+exports[`should return correct tier for all ranks and division ranks 21`] = `3`;
+
+exports[`should return correct tier for all ranks and division ranks 22`] = `3`;
+
+exports[`should return correct tier for all ranks and division ranks 23`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 24`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 25`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 26`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 27`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 28`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 29`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 30`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 31`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 32`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 33`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 34`] = `2`;
+
+exports[`should return correct tier for all ranks and division ranks 35`] = `2`;
+
+exports[`should return correct tier for all ranks and division ranks 36`] = `3`;
+
+exports[`should return correct tier for all ranks and division ranks 37`] = `3`;
+
+exports[`should return correct tier for all ranks and division ranks 38`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 39`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 40`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 41`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 42`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 43`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 44`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 45`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 46`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 47`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 48`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 49`] = `2`;
+
+exports[`should return correct tier for all ranks and division ranks 50`] = `2`;
+
+exports[`should return correct tier for all ranks and division ranks 51`] = `3`;
+
+exports[`should return correct tier for all ranks and division ranks 52`] = `3`;
+
+exports[`should return correct tier for all ranks and division ranks 53`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 54`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 55`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 56`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 57`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 58`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 59`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 60`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 61`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 62`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 63`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 64`] = `2`;
+
+exports[`should return correct tier for all ranks and division ranks 65`] = `2`;
+
+exports[`should return correct tier for all ranks and division ranks 66`] = `3`;
+
+exports[`should return correct tier for all ranks and division ranks 67`] = `3`;
+
+exports[`should return correct tier for all ranks and division ranks 68`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 69`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 70`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 71`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 72`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 73`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 74`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 75`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 76`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 77`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 78`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 79`] = `2`;
+
+exports[`should return correct tier for all ranks and division ranks 80`] = `2`;
+
+exports[`should return correct tier for all ranks and division ranks 81`] = `3`;
+
+exports[`should return correct tier for all ranks and division ranks 82`] = `3`;
+
+exports[`should return correct tier for all ranks and division ranks 83`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 84`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 85`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 86`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 87`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 88`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 89`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 90`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 91`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 92`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 93`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 94`] = `1`;
+
+exports[`should return correct tier for all ranks and division ranks 95`] = `2`;
+
+exports[`should return correct tier for all ranks and division ranks 96`] = `2`;
+
+exports[`should return correct tier for all ranks and division ranks 97`] = `2`;
+
+exports[`should return correct tier for all ranks and division ranks 98`] = `3`;
+
+exports[`should return correct tier for all ranks and division ranks 99`] = `3`;
+
+exports[`should return correct tier for all ranks and division ranks 100`] = `3`;
+
+exports[`should return correct tier for all ranks and division ranks 101`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 102`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 103`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 104`] = `4`;
+
+exports[`should return correct tier for all ranks and division ranks 105`] = `4`;

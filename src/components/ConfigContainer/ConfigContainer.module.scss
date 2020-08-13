@@ -1,0 +1,12 @@
+.ConfigContainer {
+  border: 1px solid #163757;
+  padding: 0px;
+  background: rgba(1, 18, 45, 0.75);  
+  color: #cfffff;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+
+  &:last-child {
+    padding: 0;
+  }
+}

@@ -1,0 +1,40 @@
+@import 'src/mixins/variables';
+
+.Ladder {
+  border-bottom: 1px solid #163757;
+  position: relative;
+  padding: 0 #{$edgePadding};
+  height: 111px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &:before {
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+  }
+
+  &.terran:before {
+    background-image: url('./images/terran.png');
+  }
+
+  &.zerg:before {
+    background-image: url('./images/zerg.png');
+  }
+
+  &.protoss:before {
+    background-image: url('./images/protoss.png');
+  }
+
+  &.random:before {
+    background-image: url('./images/random.png');
+  }
+}

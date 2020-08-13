@@ -1,0 +1,5 @@
+@import 'src/mixins/variables';
+
+.LadderWrapper {
+  width: calc(100% - 60px - (2 * #{$edgePadding}));
+}

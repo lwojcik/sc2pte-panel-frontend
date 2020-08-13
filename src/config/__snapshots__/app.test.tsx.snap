@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`exports app config object 1`] = `
+Object {
+  "defaultLanguage": "en",
+  "enableTwitchAuth": false,
+  "maxProfiles": 3,
+  "refreshInterval": 480000,
+}
+`;

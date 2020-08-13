@@ -1,0 +1,50 @@
+@mixin rankImageDimensions {
+  width: 47px;
+  height: 53px;
+}
+
+@mixin rankImage($rank, $bgPositionX) {
+  &.#{$rank}_1:after,
+  &.#{$rank}_2:after,
+  &.#{$rank}_3:after,
+  &.#{$rank}_4:after {
+    background-position-x: $bgPositionX;
+  }
+
+  &.#{$rank}_1:after {
+    background-position-y: -145px;
+  }
+
+
+  &.#{$rank}_2:after {
+    background-position-y: -95px;
+  }
+
+  &.#{$rank}_3:after {
+    background-position-y: -45px;
+  }
+
+  &.#{$rank}_4:after {
+    background-position-y: 5px;
+  }
+}
+
+.RankImage {
+  @include rankImageDimensions;
+  background-image:url('images/frame.png');
+
+  &:after {
+    content: '';
+    display: block;
+    @include rankImageDimensions;
+    background:url('images/ranks.png') no-repeat 3px 5px;
+  }
+
+  @include rankImage("bronze", -41px);
+  @include rankImage("silver", -89px);
+  @include rankImage("gold", -137px);
+  @include rankImage("platinum", -184px);
+  @include rankImage("diamond", -231px);
+  @include rankImage("master", -278px);
+  @include rankImage("grandmaster", -329px);
+}

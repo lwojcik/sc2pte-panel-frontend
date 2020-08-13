@@ -1,0 +1,449 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should calculate correct win ratios for different number combinations 1`] = `
+Array [
+  0,
+  0,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 2`] = `
+Array [
+  0,
+  100,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 3`] = `
+Array [
+  0,
+  100,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 4`] = `
+Array [
+  0,
+  100,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 5`] = `
+Array [
+  0,
+  100,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 6`] = `
+Array [
+  0,
+  100,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 7`] = `
+Array [
+  0,
+  100,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 8`] = `
+Array [
+  0,
+  100,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 9`] = `
+Array [
+  100,
+  0,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 10`] = `
+Array [
+  50,
+  50,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 11`] = `
+Array [
+  5,
+  95,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 12`] = `
+Array [
+  3,
+  97,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 13`] = `
+Array [
+  0,
+  100,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 14`] = `
+Array [
+  4,
+  96,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 15`] = `
+Array [
+  1,
+  99,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 16`] = `
+Array [
+  25,
+  75,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 17`] = `
+Array [
+  100,
+  0,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 18`] = `
+Array [
+  95,
+  5,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 19`] = `
+Array [
+  50,
+  50,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 20`] = `
+Array [
+  36,
+  64,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 21`] = `
+Array [
+  3,
+  97,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 22`] = `
+Array [
+  47,
+  53,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 23`] = `
+Array [
+  17,
+  83,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 24`] = `
+Array [
+  87,
+  13,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 25`] = `
+Array [
+  100,
+  0,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 26`] = `
+Array [
+  97,
+  3,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 27`] = `
+Array [
+  64,
+  36,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 28`] = `
+Array [
+  50,
+  50,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 29`] = `
+Array [
+  5,
+  95,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 30`] = `
+Array [
+  60,
+  40,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 31`] = `
+Array [
+  26,
+  74,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 32`] = `
+Array [
+  92,
+  8,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 33`] = `
+Array [
+  100,
+  0,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 34`] = `
+Array [
+  100,
+  0,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 35`] = `
+Array [
+  97,
+  3,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 36`] = `
+Array [
+  95,
+  5,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 37`] = `
+Array [
+  50,
+  50,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 38`] = `
+Array [
+  96,
+  4,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 39`] = `
+Array [
+  86,
+  14,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 40`] = `
+Array [
+  100,
+  0,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 41`] = `
+Array [
+  100,
+  0,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 42`] = `
+Array [
+  96,
+  4,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 43`] = `
+Array [
+  53,
+  47,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 44`] = `
+Array [
+  40,
+  60,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 45`] = `
+Array [
+  4,
+  96,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 46`] = `
+Array [
+  50,
+  50,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 47`] = `
+Array [
+  19,
+  81,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 48`] = `
+Array [
+  88,
+  12,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 49`] = `
+Array [
+  100,
+  0,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 50`] = `
+Array [
+  99,
+  1,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 51`] = `
+Array [
+  83,
+  17,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 52`] = `
+Array [
+  74,
+  26,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 53`] = `
+Array [
+  14,
+  86,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 54`] = `
+Array [
+  81,
+  19,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 55`] = `
+Array [
+  50,
+  50,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 56`] = `
+Array [
+  97,
+  3,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 57`] = `
+Array [
+  100,
+  0,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 58`] = `
+Array [
+  75,
+  25,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 59`] = `
+Array [
+  13,
+  87,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 60`] = `
+Array [
+  8,
+  92,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 61`] = `
+Array [
+  0,
+  100,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 62`] = `
+Array [
+  12,
+  88,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 63`] = `
+Array [
+  3,
+  97,
+]
+`;
+
+exports[`should calculate correct win ratios for different number combinations 64`] = `
+Array [
+  50,
+  50,
+]
+`;

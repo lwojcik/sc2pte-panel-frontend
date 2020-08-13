@@ -1,0 +1,12 @@
+$mainColor: #0e86ca;
+
+.DragDropIcon {
+  width: 32px;
+  height: 32px;
+  background: url('images/DragDropIcon.svg') no-repeat center center;
+  background-size: 24px;
+
+  &.disabled {
+    opacity: 0.2;
+  }
+}

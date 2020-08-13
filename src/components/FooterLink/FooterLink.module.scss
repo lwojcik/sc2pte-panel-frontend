@@ -1,0 +1,26 @@
+@import 'src/mixins/variables';
+
+.FooterLink {
+  display: flex;
+  align-items: center;
+  opacity: 0.5;
+  font-size: 14px;
+  transition: all $transitionDuration;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+
+    img {
+      width: 25px;
+      height: 25px;
+      margin-right: 8px;
+    }
+  }
+}
