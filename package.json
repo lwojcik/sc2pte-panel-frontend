@@ -17,7 +17,7 @@
     "@types/react-router-dom": "5.1.5",
     "@types/react-tabs": "2.3.2",
     "@types/react-timeago": "4.1.1",
-    "@types/yup": "0.29.3",
+    "@types/yup": "0.29.4",
     "classnames": "2.2.6",
     "formik": "2.1.5",
     "jest-fetch-mock": "3.0.3",
