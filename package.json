@@ -18,6 +18,7 @@
     "@types/react-tabs": "2.3.2",
     "@types/react-timeago": "4.1.1",
     "@types/yup": "0.29.6",
+    "bestzip": "2.1.7",
     "classnames": "2.2.6",
     "formik": "2.1.5",
     "jest-fetch-mock": "3.0.3",
@@ -44,10 +45,11 @@
     "dev": "npm start",
     "lint": "eslint src/**/*.{ts,tsx}",
     "lint:fix": "eslint */**/*.{ts,tsx} --fix",
-    "build": "npm run lint && npm test && craco build",
+    "build": "npm run lint && npm test && craco build && npm run zip",
     "test": "jest",
     "test:watch": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "zip": "cd build; mkdir ../bundle; bestzip ../bundle/bundle.zip *"
   },
   "pre-commit": [
     "lint",
