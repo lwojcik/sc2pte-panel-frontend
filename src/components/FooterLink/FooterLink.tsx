@@ -8,7 +8,7 @@ const cx = classnames.bind(styles);
 const FooterLink = () => (
   <div className={cx('FooterLink')}>
     <a
-      href='https://sc2pte.lukem.net/'
+      href='https://sc2pte.eu/'
       target='_blank'
       rel='noopener noreferrer'
     >
