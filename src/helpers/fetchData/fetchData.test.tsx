@@ -12,6 +12,10 @@ it('fetches data correctly when no method is provided', async () => {
 
   const response = await fetchData({
     url: 'http://example.com',
+    headers: {
+      channelId: '123',
+      token: '456',
+    },
   });
 
   expect(response).toMatchSnapshot();
@@ -26,6 +30,10 @@ it('fetches data correctly for "GET" request', async () => {
   const response = await fetchData({
     url: 'http://example.com',
     method: 'GET',
+    headers: {
+      channelId: '123',
+      token: '456',
+    },
   });
 
   expect(response).toMatchSnapshot();
@@ -40,6 +48,10 @@ it('fetches data correctly for "POST" request', async () => {
   const response = await fetchData({
     url: 'http://example.com',
     method: 'POST',
+    headers: {
+      channelId: '123',
+      token: '456',
+    },
   });
 
   expect(response).toMatchSnapshot();
@@ -51,6 +63,10 @@ it('returns error object when request fails', async () => {
   const response = await fetchData({
     url: 'http://example.com',
     method: 'POST',
+    headers: {
+      channelId: '123',
+      token: '456',
+    },
   });
 
   expect(response).toMatchSnapshot();
