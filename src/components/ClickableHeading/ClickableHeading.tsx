@@ -5,7 +5,6 @@ import styles from './ClickableHeading.module.scss';
 
 interface ClickableHeadingProps {
   as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-  expanded?: boolean;
   onClick?: () => void;
   children: string | ReactElement | (string | ReactElement)[];
 }
@@ -14,11 +13,10 @@ const cx = classnames.bind(styles);
 
 const ClickableHeading = ({
   as: Tag,
-  expanded,
   onClick,
   children,
 }: ClickableHeadingProps) => {
-  const [active, setActive] = useState(expanded);
+  const [active, setActive] = useState(false);
 
   const onClickFn = () => {
     setActive(!active);

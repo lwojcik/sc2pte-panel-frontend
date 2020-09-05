@@ -15,6 +15,7 @@ const useViewerData = ({
 }: ViewerDataParams) => {
   const { url, method } = getViewerUrl(channelId);
   const headers = { channelId, token };
+
   const { data, error } = useData({
     url,
     method,

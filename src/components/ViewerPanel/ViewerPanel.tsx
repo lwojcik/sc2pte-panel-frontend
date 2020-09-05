@@ -9,39 +9,37 @@ import 'typeface-lato';
 import styles from './ViewerPanel.module.scss';
 
 interface ViewerPanelProps {
-  data: {
-    profiles: ProfileObject[];
-  },
+  profiles: ProfileObject[],
   error?: Boolean;
 }
 
 const cx = classnames.bind(styles);
 
-const ViewerPanel = ({ data, error }: ViewerPanelProps) => {
-  const profiles = data?.profiles?.filter(
+const ViewerPanel = ({ profiles, error }: ViewerPanelProps) => {
+  const filteredProfiles = profiles?.filter(
     profile =>
       Object.keys(profile).length > 0
   ) || [];
 
   return (
     <div className={cx('ViewerPanel')}>
-      {(!profiles || error) && (
+      {(!filteredProfiles || error) && (
         <ViewerDataFetchError />
       )}
 
-      {profiles?.length === 0 && !error && (
+      {filteredProfiles?.length === 0 && !error && (
         <NoProfilesFound />
       )}
 
-      {profiles?.length === 1 && (
+      {filteredProfiles?.length === 1 && (
         <Profile
-          data={profiles[0]}
+          data={filteredProfiles[0]}
           single={true}
         />
       )}
 
-      {profiles?.length > 1 && (
-        <ProfileList data={profiles} />
+      {filteredProfiles?.length > 1 && (
+        <ProfileList data={filteredProfiles} />
       )}
     </div>
   );
