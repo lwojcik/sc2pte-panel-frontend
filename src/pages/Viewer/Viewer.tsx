@@ -18,15 +18,23 @@ const Viewer = () => {
   }) as ViewerData;
 
   const [userProfiles, setUserProfiles] = useState([] as ProfileObject[]);
+  const [viewerError, setViewerError] = useState(false);
 
   useEffect(() => {
     data?.profiles?.length > 0 && setUserProfiles(data.profiles);
   }, [ data ]);
 
+  useEffect(() => {
+    error && userProfiles.length < 0 && setViewerError(true);
+  }, [
+    error,
+    userProfiles,
+  ]);
+
   return authorized
     ? (
       <ViewerPanel
-        error={error}
+        error={viewerError}
         profiles={userProfiles}
       />
     )
