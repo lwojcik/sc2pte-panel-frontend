@@ -8,7 +8,7 @@ const cx = classnames.bind(styles);
 const FooterLink = () => (
   <div className={cx('FooterLink')}>
     <a
-      href='https://sc2pte.eu/'
+      href='https://www.sc2pte.eu/'
       target='_blank'
       rel='noopener noreferrer'
     >
@@ -16,7 +16,7 @@ const FooterLink = () => (
         src={homepage}
         alt=''
       />
-      Project homepage
+      About / contact
     </a>
   </div>
 );

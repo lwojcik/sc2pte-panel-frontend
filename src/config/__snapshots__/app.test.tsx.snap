@@ -5,6 +5,6 @@ Object {
   "defaultLanguage": "en",
   "enableTwitchAuth": false,
   "maxProfiles": 3,
-  "refreshInterval": 600000,
+  "refreshInterval": 600,
 }
 `;

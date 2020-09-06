@@ -5,12 +5,13 @@ import styles from './EmptyPlaceholder.module.scss';
 
 interface EmptyPlaceholderProps {
   children: JSX.Element | JSX.Element[];
+  fullHeight?: Boolean;
 }
 
 const cx = classnames.bind(styles);
 
-const EmptyPlaceholder = ({ children }: EmptyPlaceholderProps) => (
-  <div className={cx('EmptyPlaceholder')}>
+const EmptyPlaceholder = ({ children, fullHeight }: EmptyPlaceholderProps) => (
+  <div className={cx('EmptyPlaceholder', fullHeight && 'fullHeight')}>
     <PlaceholderLogo />
     {children}
   </div>
