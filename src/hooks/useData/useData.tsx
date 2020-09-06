@@ -22,7 +22,7 @@ const useData = ({
     // istanbul ignore next
     () => fetchData({ url, method, headers }),
     {
-      refreshInterval: refreshInterval || 0,
+      refreshInterval: (refreshInterval as number * 1000) || 0,
       revalidateOnFocus: false,
       shouldRetryOnError: false,
       suspense: true,
