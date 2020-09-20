@@ -1,3 +1,3 @@
-# @sc2pte/frontend
+# @sc2pte/panel-frontend
 
 README under construction.
