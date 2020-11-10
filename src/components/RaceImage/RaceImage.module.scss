@@ -1,4 +1,11 @@
 .RaceImage {
+  display: none;
+}
+
+.terran,
+.zerg,
+.protoss,
+.random {
   display: inline-block;
   width: 17px;
   height: 17px;
