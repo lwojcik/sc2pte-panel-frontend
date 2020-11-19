@@ -19,6 +19,8 @@ interface LadderProps {
 
 const cx = classnames.bind(styles);
 
+// const ConditionalMMR = ({  });
+
 const Ladder = ({ ladder }: LadderProps) => {
   const {
     race,
@@ -29,6 +31,7 @@ const Ladder = ({ ladder }: LadderProps) => {
     losses,
     mmr,
   } = ladder;
+
   return (
     <div className={cx('Ladder', race)}>
       <RankImage
@@ -59,10 +62,16 @@ const Ladder = ({ ladder }: LadderProps) => {
             losses={losses}
           />
         </Row>
-        <Spacer>
-          <MMR rating={mmr} />
-        </Spacer>
-        <Spacer />
+        <>
+          {mmr > 0 && (
+            <>
+              <Spacer>
+                <MMR rating={mmr} />
+              </Spacer>
+              <Spacer />
+            </>
+          )}
+        </>
         <Spacer>
           <DivisionRank rank={divisionRank} />
         </Spacer>
