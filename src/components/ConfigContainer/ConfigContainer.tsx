@@ -4,11 +4,11 @@ import styles from './ConfigInfoBox.module.scss';
 
 const cx = classnames.bind(styles);
 
-interface ConfigContainer {
+interface ConfigContainerProps {
   children: ReactElement;
 }
 
-const ConfigContainer = ({ children }: ConfigContainer) => (
+const ConfigContainer = ({ children }: ConfigContainerProps) => (
   <div className={cx('ConfigContainer')}>
     {children}
   </div>
