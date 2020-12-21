@@ -10,7 +10,7 @@ interface DeleteProfileButtonProps {
 
 const cx = classnames.bind(styles);
 
-const DeleteProfileButtonProps = ({ onClick, disabled }: DeleteProfileButtonProps) => (
+const DeleteProfileButton = ({ onClick, disabled }: DeleteProfileButtonProps) => (
   <GenericButton
     className={cx('DeleteProfileButton')}
     disabled={disabled}
@@ -19,4 +19,4 @@ const DeleteProfileButtonProps = ({ onClick, disabled }: DeleteProfileButtonProp
   />
 );
 
-export default DeleteProfileButtonProps;
+export default DeleteProfileButton;
