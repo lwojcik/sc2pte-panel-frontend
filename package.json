@@ -17,7 +17,7 @@
     "@types/react-router-dom": "5.1.6",
     "@types/react-tabs": "2.3.2",
     "@types/react-timeago": "4.1.1",
-    "@types/yup": "0.29.9",
+    "@types/yup": "0.29.10",
     "bestzip": "2.1.7",
     "classnames": "2.2.6",
     "formik": "2.2.5",
