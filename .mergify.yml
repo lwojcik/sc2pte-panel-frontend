@@ -22,6 +22,19 @@ pull_request_rules:
       merge:
         method: squash
         strict: true
+  - name: Automatic merge of Snyk dependency upgrades (snyk on behalf of repo admin)
+    conditions:
+      - "author=lwojcik"
+      - "title~=[Snyk]"
+      - "title~=Upgrade"
+      - "-conflict"
+      - "status-success=continuous-integration/appveyor/branch"
+      - "status-success=continuous-integration/appveyor/pr"
+      - "status-success=security/snyk (lukemnet)"
+    actions:
+      merge:
+        method: squash
+        strict: true
   - name: Automatic merge of Dependabot dependency upgrades
     conditions:
       - "author=dependabot[bot]"
