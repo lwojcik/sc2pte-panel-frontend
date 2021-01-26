@@ -30,7 +30,7 @@
     "react-dom": "16.14.0",
     "react-router-dom": "5.2.0",
     "react-scripts": "4.0.1",
-    "react-stroller": "1.6.7",
+    "react-stroller": "1.7.2",
     "react-tabs": "3.1.2",
     "react-timeago": "4.4.0",
     "react-twitch-ext-onauthorized": "2.0.3",
