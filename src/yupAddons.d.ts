@@ -1,7 +1,7 @@
 import * as Yup from 'yup';
 
 declare module 'yup' {
-  export interface NotRequiredArraySchema {
+  export interface ArraySchema {
     unique(message?: TestOptionsMessage, mapperFn: Function): Yup.Schema<any>;
   }
 
