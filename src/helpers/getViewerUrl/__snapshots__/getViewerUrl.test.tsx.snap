@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`returns correct viewer API URL 1`] = `
-Object {
-  "method": "TEST_VIEWER_METHOD",
-  "url": "testViewerUrl",
-}
-`;
