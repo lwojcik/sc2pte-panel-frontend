@@ -8,16 +8,16 @@ const addValidationSchema = (yup: YupInstance) => ({
     .of(
       yup.string()
         .ensure()
-        .min(34, phrases.PROFILE_URL_TOO_SHORT)
+        .min(34, phrases.FORM_VALIDATION_URL_TOO_SHORT)
         .matches(
           StarCraft2API.profileUrlRegex(),
           {
-            message: phrases.DUPLICATE_PROFILE_URLS,
+            message: phrases.FORM_VALIDATION_URL_INVALID,
             excludeEmptyString: false,
           },
         )
     )
-    .unique(phrases.DUPLICATE_PROFILE_URLS, isProfileListUnique),
+    .unique(phrases.FORM_VALIDATION_DUPLICATE_URLS, isProfileListUnique),
 });
 
 export default addValidationSchema;
