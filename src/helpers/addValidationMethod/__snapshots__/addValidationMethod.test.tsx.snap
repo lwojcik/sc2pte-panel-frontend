@@ -2,8 +2,15 @@
 
 exports[`adds validation method correctly 1`] = `
 Object {
+  "ArraySchema": [Function],
+  "BaseSchema": [Function],
+  "BooleanSchema": [Function],
+  "DateSchema": [Function],
+  "MixedSchema": [Function],
+  "NumberSchema": [Function],
+  "ObjectSchema": [Function],
+  "StringSchema": [Function],
   "ValidationError": [Function],
-  "__esModule": true,
   "addMethod": [Function],
   "array": [Function],
   "bool": [Function],

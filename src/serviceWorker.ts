@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 // This optional code is used to register a service worker.
 // register() is not called by default.
 
@@ -10,7 +11,6 @@
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read https://bit.ly/CRA-PWA
 
-/* eslint-disable no-console */
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
     // [::1] is the IPv6 localhost address.
@@ -29,10 +29,7 @@ type Config = {
 export function register(config?: Config) {
   if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
     // The URL constructor is available in all browsers that support SW.
-    const publicUrl = new URL(
-      process.env.PUBLIC_URL as string,
-      window.location.href
-    );
+    const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
     if (publicUrl.origin !== window.location.origin) {
       // Our service worker won't work if PUBLIC_URL is on a different origin
       // from what our page is served on. This might happen if a CDN is used to
@@ -110,7 +107,7 @@ function registerValidSW(swUrl: string, config?: Config) {
 function checkValidServiceWorker(swUrl: string, config?: Config) {
   // Check if the service worker can be found. If it can't reload the page.
   fetch(swUrl, {
-    headers: { 'Service-Worker': 'script' }
+    headers: { 'Service-Worker': 'script' },
   })
     .then(response => {
       // Ensure service worker exists, and that we really are getting a JS file.
@@ -148,4 +145,3 @@ export function unregister() {
       });
   }
 }
-/* eslint-enable no-console */
