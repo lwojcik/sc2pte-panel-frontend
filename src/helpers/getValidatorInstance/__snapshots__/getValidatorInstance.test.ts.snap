@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`returns Yup-compatible validator instance 1`] = `
+Object {
+  "ArraySchema": [Function],
+  "BaseSchema": [Function],
+  "BooleanSchema": [Function],
+  "DateSchema": [Function],
+  "MixedSchema": [Function],
+  "NumberSchema": [Function],
+  "ObjectSchema": [Function],
+  "StringSchema": [Function],
+  "ValidationError": [Function],
+  "addMethod": [Function],
+  "array": [Function],
+  "bool": [Function],
+  "boolean": [Function],
+  "date": [Function],
+  "isSchema": [Function],
+  "lazy": [Function],
+  "mixed": [Function],
+  "number": [Function],
+  "object": [Function],
+  "reach": [Function],
+  "ref": [Function],
+  "setLocale": [Function],
+  "string": [Function],
+}
+`;

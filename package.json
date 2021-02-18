@@ -106,7 +106,8 @@
       "react/jsx-closing-bracket-location": [
         "error",
         "tag-aligned"
-      ]
+      ],
+      "import/no-anonymous-default-export": "off"
     }
   },
   "browserslist": {
