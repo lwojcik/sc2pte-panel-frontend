@@ -131,8 +131,7 @@
       "!src/**/*.d.ts",
       "!src/index.tsx",
       "!src/config/index.ts",
-      "!src/serviceWorker.ts",
-      "!src/testObjects/*"
+      "!src/serviceWorker.ts"
     ],
     "setupFilesAfterEnv": [
       "<rootDir>/src/setupTests.ts"
