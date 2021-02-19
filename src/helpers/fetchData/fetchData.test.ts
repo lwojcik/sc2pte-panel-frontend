@@ -1,72 +1,69 @@
 import fetchData from './fetchData';
 
+const fetch = global.fetch as any;
+
+const request = {
+  url: 'http://example.com',
+  headers: {
+    channelId: '123',
+    token: '456',
+  },
+};
+
+const successfulResponse = (method: 'GET' | 'POST') =>
+  JSON.stringify({
+    status: 200,
+    message: `Mocked data for fetchData "${method}" request`,
+  });
+
 beforeEach(() => {
-  global.fetch.resetMocks();
+  fetch.resetMocks();
 });
 
 it('fetches data correctly when no method is provided', async () => {
-  global.fetch.mockResponseOnce(JSON.stringify({
-    status: 200,
-    message: 'Mocked data for fetchData "GET" request',
-  }));
+  fetch.mockResponseOnce(successfulResponse('GET'));
 
-  const response = await fetchData({
-    url: 'http://example.com',
-    headers: {
-      channelId: '123',
-      token: '456',
-    },
-  });
+  const response = await fetchData(request);
 
   expect(response).toMatchSnapshot();
 });
 
 it('fetches data correctly for "GET" request', async () => {
-  global.fetch.mockResponseOnce(JSON.stringify({
-    status: 200,
-    message: 'Mocked data for fetchData "GET" request',
-  }));
+  fetch.mockResponseOnce(successfulResponse('GET'));
 
   const response = await fetchData({
-    url: 'http://example.com',
+    ...request,
     method: 'GET',
-    headers: {
-      channelId: '123',
-      token: '456',
-    },
   });
 
   expect(response).toMatchSnapshot();
 });
 
 it('fetches data correctly for "POST" request', async () => {
-  global.fetch.mockResponseOnce(JSON.stringify({
-    status: 200,
-    message: 'Mocked data for fetchData "POST" request',
-  }));
+  fetch.mockResponseOnce(successfulResponse('POST'));
 
   const response = await fetchData({
-    url: 'http://example.com',
+    ...request,
     method: 'POST',
-    headers: {
-      channelId: '123',
-      token: '456',
-    },
   });
 
   expect(response).toMatchSnapshot();
 });
 
 it('returns error object when request fails', async () => {
-  global.fetch.mockResponseOnce(Error('mocked_fetch_error'));
+  fetch.mockResponseOnce(Error('mocked_fetch_error'));
+
+  const response = await fetchData(request);
+
+  expect(response).toMatchSnapshot();
+});
+
+it('returns an empty object when request contains no channel id', async () => {
+  fetch.mockResponseOnce({});
 
   const response = await fetchData({
     url: 'http://example.com',
-    method: 'POST',
-    headers: {
-      channelId: '123',
-      token: '456',
-    },
+    headers: {},
   });
 
   expect(response).toMatchSnapshot();

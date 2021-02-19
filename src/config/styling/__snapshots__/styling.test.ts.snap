@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`exports styling object 1`] = `
+Object {
+  "detailsHeight": "calc(100vh - 123px)",
+  "edgePadding": "0.75rem",
+  "fontFamily": "Lato, Arial, Helvetica, sans-serif",
+  "headerHeight": "123px",
+  "tabContainerHeight": "calc(100vh - 123px - 20px)",
+  "tabSectionHeight": "20px",
+  "transitionDuration": "150ms",
+}
+`;

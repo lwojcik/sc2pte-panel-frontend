@@ -21,6 +21,8 @@ Object {
 }
 `;
 
+exports[`returns an empty object when request contains no channel id 1`] = `Object {}`;
+
 exports[`returns error object when request fails 1`] = `
 Object {
   "error": true,

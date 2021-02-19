@@ -1,4 +1,4 @@
-import api from 'config/api';
+import { api } from 'config';
 import {
   FetchMethod,
   ApiUrlType,
@@ -11,7 +11,11 @@ interface GetApiUrlParams {
   channelId: string;
 }
 
-const getApiUrl = ({ channelId, type, activity }: GetApiUrlParams) => {
+const getApiUrl = ({
+  channelId,
+  type,
+  activity,
+}: GetApiUrlParams) => {
   const {
     url,
     version,

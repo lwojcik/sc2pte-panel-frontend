@@ -1,6 +1,6 @@
 const { env } = process;
 
-export default {
+const api = {
   url: env.REACT_APP_SC2PTE_API_URL || 'https://localhost:8883',
   version: env.REACT_APP_SC2PTE_API_VERSION || 'v2',
   endpoints: {
@@ -22,3 +22,5 @@ export default {
     },
   },
 };
+
+export default api;

@@ -8,17 +8,17 @@ const testParams = {
   method: 'GET' as FetchMethod,
 };
 
+const testResponse = {
+  message: 'mocked test data',
+};
+
 jest.mock('src/helpers/fetchData/fetchData', () => {
-  return jest.fn().mockImplementation(() => ({
-    message: 'mocked test data',
-  }));
+  return jest.fn().mockImplementation(() => testResponse);
 });
 
 jest.mock('swr', () => {
   return jest.fn().mockImplementation(() => ({
-    useSWR: () => ({
-      message: 'mocked test data',
-    }),
+    useSWR: () => testResponse,
   }));
 });
 

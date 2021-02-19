@@ -1,4 +1,5 @@
-import getApiUrl, { ApiUrlType, ApiActivity } from './getApiUrl';
+import getApiUrl from './getApiUrl';
+import { ApiUrlType, ApiActivity } from 'types';
 
 const types = [
   'config',
@@ -10,22 +11,29 @@ const activities = [
   'save',
 ] as ApiActivity[];
 
+const config = (
+  type: ApiUrlType,
+  activity: ApiActivity,
+) => ({
+  channelId: '123',
+  type,
+  activity,
+});
+
 it('returns correct API url', () => {
   types.map(type =>
     activities.map(activity =>
       expect(
-        getApiUrl({
-          channelId: '123',
-          type,
-          activity,
-        })
+        getApiUrl(
+          config(type, activity)
+        )
       ).toMatchSnapshot()
     )
   );
 });
 
 it('returns correct API url when no API version is provided', () => {
-  jest.mock('src/config/api', () => {
+  jest.mock('src/config/api/api', () => {
     return jest.fn().mockImplementationOnce(() => ({
       version: '',
     }));
@@ -34,11 +42,9 @@ it('returns correct API url when no API version is provided', () => {
   types.map(type =>
     activities.map(activity =>
       expect(
-        getApiUrl({
-          channelId: '123',
-          type,
-          activity,
-        })
+        getApiUrl(
+          config(type, activity)
+        )
       ).toMatchSnapshot()
     )
   );

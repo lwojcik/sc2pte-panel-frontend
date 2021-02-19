@@ -1,3 +1,4 @@
+import { strings } from 'config';
 import { FormikHelpers, FormikValues } from 'formik';
 import saveConfigUrl from 'helpers/saveConfigUrl/saveConfigUrl';
 import unpackProfileUrls from 'helpers/unpackProfileUrls/unpackProfileUrls';
@@ -35,7 +36,7 @@ const handleSuccess = (values: ConfigFormValues, actions: FormikHelpers<FormikVa
   resetFormWithStatus({
     status: {
       success: true,
-      msg: 'Your configuration has been saved successfully. Please allow up to 30 minutes for changes to be visible in the extension.'
+      msg: strings.CONFIG_SAVE_SUCCESS,
     },
     values,
     actions,
@@ -46,7 +47,7 @@ const handleFailure = (values: ConfigFormValues, actions: FormikHelpers<FormikVa
   resetFormWithStatus({
     status: {
       success: false,
-      msg: 'Failed to save your configuration due to server error. Please try again later.',
+      msg: strings.CONFIG_SAVE_FAILURE,
     },
     values,
     actions,

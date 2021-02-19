@@ -1,4 +1,4 @@
-import { Rank, Tier } from 'components/RankImage/RankImage';
+import { Rank, Tier } from 'types';
 import calculateTierRange from './calculateTierRange';
 
 const ranks = [

@@ -1,4 +1,4 @@
-import api from '../api';
+import api from './api';
 
 it('exports api object', () => {
   expect(api).toMatchSnapshot();
