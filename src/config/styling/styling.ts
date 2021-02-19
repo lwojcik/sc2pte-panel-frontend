@@ -4,7 +4,7 @@ const dimensions = {
 };
 
 const fonts = {
-  main: 'Lato',
+  main: '"Lato"',
   fallback: 'Arial, Helvetica',
   defaultFamily: 'sans-serif',
 };
