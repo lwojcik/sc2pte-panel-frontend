@@ -22,6 +22,8 @@ interface ResetFormParams {
   actions: FormikHelpers<FormikValues>;
 }
 
+const { config } = strings;
+
 const resetFormWithStatus = ({
   status,
   values,
@@ -36,7 +38,7 @@ const handleSuccess = (values: ConfigFormValues, actions: FormikHelpers<FormikVa
   resetFormWithStatus({
     status: {
       success: true,
-      msg: strings.CONFIG_SAVE_SUCCESS,
+      msg: config.SAVE_SUCCESS,
     },
     values,
     actions,
@@ -47,7 +49,7 @@ const handleFailure = (values: ConfigFormValues, actions: FormikHelpers<FormikVa
   resetFormWithStatus({
     status: {
       success: false,
-      msg: strings.CONFIG_SAVE_FAILURE,
+      msg: config.SAVE_FAILURE,
     },
     values,
     actions,

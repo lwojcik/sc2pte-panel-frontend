@@ -147,3 +147,21 @@ export interface ViewerData {
   }
   error?: Boolean;
 }
+
+interface TwitchAuthState {
+  authorized: boolean;
+  channelId: string;
+  token: string;
+}
+
+interface ConfigState {
+  profiles: ProfileObject[];
+}
+
+export interface RootState {
+  entities: {
+    twitchAuth: TwitchAuthState;
+    config: ConfigState;
+    // viewerData: ViewerData;
+  }
+}

@@ -1,5 +1,5 @@
 const Viewer = () => (
-  <div>Config</div>
+  <div>Viewer</div>
 );
 
 export default Viewer;

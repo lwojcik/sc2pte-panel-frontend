@@ -3,21 +3,23 @@ import StarCraft2API from 'starcraft2-api';
 import isProfileListUnique from 'helpers/isProfileListUnique/isProfileListUnique';
 import { strings } from 'config';
 
+const { config } = strings;
+
 const addValidationSchema = (yup: YupInstance) => ({
   profiles: yup.array()
     .of(
       yup.string()
         .ensure()
-        .min(34, strings.CONFIG_VALIDATION_URL_TOO_SHORT)
+        .min(34, config.VALIDATION_URL_TOO_SHORT)
         .matches(
           StarCraft2API.profileUrlRegex(),
           {
-            message: strings.CONFIG_VALIDATION_URL_INVALID,
+            message: config.VALIDATION_URL_INVALID,
             excludeEmptyString: false,
           },
         )
     )
-    .unique(strings.CONFIG_VALIDATION_DUPLICATE_URLS, isProfileListUnique),
+    .unique(config.VALIDATION_DUPLICATE_URLS, isProfileListUnique),
 });
 
 export default addValidationSchema;
