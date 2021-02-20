@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import twitchAuthReducer from './twitchAuth';
+import authReducer from './auth';
 // import configReducer from './config';
 // import viewerDataReducer from './viewerData';
 
 export default combineReducers({
-  auth: twitchAuthReducer,
+  auth: authReducer,
   // config: configReducer,
   // viewerData: viewerDataReducer,
 });

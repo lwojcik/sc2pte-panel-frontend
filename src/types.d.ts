@@ -148,7 +148,7 @@ export interface ViewerData {
   error?: Boolean;
 }
 
-interface TwitchAuthState {
+interface AuthState {
   authorized: boolean;
   channelId: string;
   token: string;
@@ -160,7 +160,7 @@ interface ConfigState {
 
 export interface RootState {
   entities: {
-    twitchAuth: TwitchAuthState;
+    auth: AuthState;
     config: ConfigState;
     // viewerData: ViewerData;
   }

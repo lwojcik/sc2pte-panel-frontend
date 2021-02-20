@@ -1,28 +1,29 @@
 import {
   createSlice,
+  Dispatch,
 } from '@reduxjs/toolkit';
 import { createSelector } from 'reselect';
 // import { apiCallBegan } from './api';
 // import moment from 'moment';
 import {
   RootState,
-  TwitchAuthState,
+  AuthState,
 } from 'types';
 
-interface TwitchAuthAction {
+interface AuthAction {
   type: string;
-  payload: TwitchAuthState;
+  payload: AuthState;
 }
 
 const slice = createSlice({
-  name: 'twitchAuth',
+  name: 'auth',
   initialState: {
     authorized: false,
     channelId: '',
     token: '',
-  } as TwitchAuthState,
+  } as AuthState,
   reducers: {
-    authorized: (twitch, action: TwitchAuthAction) => {
+    authorized: (twitch, action: AuthAction) => {
       const {
         authorized,
         channelId,
@@ -76,11 +77,16 @@ export const {
 
 export default slice.reducer;
 
+// Actions
+
+// export const authorize = () => (dispatch: Dispatch) =>
+//   dispatch(authorized);
+
 // Selectors
 
 export const getChannelId = createSelector(
-  (state: RootState) => state.entities.twitchAuth,
-  twitchAuth => twitchAuth.channelId,
+  (state: RootState) => state.entities.auth,
+  auth => auth.channelId,
 );
 
 // Action Creators

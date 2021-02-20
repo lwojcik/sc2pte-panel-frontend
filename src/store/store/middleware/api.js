@@ -44,6 +44,6 @@ const api = ({ dispatch }) => next => async action => {
       });
     }
   }
-}
+};
 
 export default api;

@@ -5,6 +5,6 @@ const func = ({ dispatch, getState }) => next => action => {
   } else {
     next(action);
   }
-}
+};
 
 export default func;
