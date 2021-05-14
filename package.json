@@ -5,7 +5,7 @@
   "homepage": "./",
   "dependencies": {
     "@craco/craco": "5.9.0",
-    "@testing-library/jest-dom": "5.11.10",
+    "@testing-library/jest-dom": "5.12.0",
     "@testing-library/react": "10.4.9",
     "@testing-library/user-event": "13.1.5",
     "@types/classnames": "2.3.0",
