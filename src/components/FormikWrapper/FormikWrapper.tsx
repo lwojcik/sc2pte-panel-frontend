@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import { Formik, FormikProps, FormikHelpers, FormikValues } from 'formik';
 import * as Yup from 'yup';
+import { ObjectShape } from 'yup/lib/object';
 
 interface FormStateProviderProps {
   initialValues: FormikValues,
@@ -30,7 +31,7 @@ const FormikWrapper = ({
       onSubmit(values, actions);
       actions.resetForm(values);
     }}
-    validationSchema={Yup.object().shape(validationSchema)}
+    validationSchema={Yup.object().shape(validationSchema as ObjectShape)}
   >
     {formikBag => children(formikBag)}
   </Formik>

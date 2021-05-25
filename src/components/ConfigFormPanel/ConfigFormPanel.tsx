@@ -1,5 +1,5 @@
 import React from 'react';
-import { Schema } from 'yup';
+import { SchemaOf } from 'yup';
 import { ConfigFormValues } from 'helpers/submitConfig/submitConfig';
 import { FormikHelpers, FormikValues } from 'formik';
 import classnames from 'classnames/bind';
@@ -19,7 +19,7 @@ const cx = classnames.bind(styles);
 
 interface ConfigFormPanelProps {
   initialValues: ConfigData;
-  validationSchema: ({ profiles: Schema<ConfigData> });
+  validationSchema: ({ profiles: SchemaOf<ConfigData> });
   maxProfiles: number;
   onSubmit: (values: ConfigFormValues, actions: FormikHelpers<FormikValues>) => Promise<void>;
 }
