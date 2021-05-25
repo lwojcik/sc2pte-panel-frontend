@@ -1,5 +1,5 @@
 import { YupInstance } from 'yup';
-import StarCraft2API from 'starcraft2-api';
+import { StarCraft2API } from 'starcraft2-api';
 import isProfileListUnique from 'helpers/isProfileListUnique/isProfileListUnique';
 
 const addValidationSchema = (yup: YupInstance) => ({
