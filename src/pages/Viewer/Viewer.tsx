@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import useTwitchAuth from 'react-twitch-ext-onauthorized';
+import { useTwitchAuth } from 'react-twitch-ext-onauthorized';
 import useViewerData from 'hooks/useViewerData/useViewerData';
 import ViewerPanel from 'components/ViewerPanel/ViewerPanel';
 import Unauthorized from 'components/Unauthorized/Unauthorized';
