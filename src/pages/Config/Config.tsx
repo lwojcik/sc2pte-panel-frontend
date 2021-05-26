@@ -1,5 +1,5 @@
 import React from 'react';
-import useTwitchAuth from 'react-twitch-ext-onauthorized';
+import { useTwitchAuth } from 'react-twitch-ext-onauthorized';
 import useConfigData from 'hooks/useConfigData/useConfigData';
 import ConfigFormPanel from 'components/ConfigFormPanel/ConfigFormPanel';
 import ConfigConnectionError from 'components/ConfigConnectionError/ConfigConnectionError';
