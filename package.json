@@ -19,7 +19,7 @@
     "@types/yup": "0.29.11",
     "bestzip": "2.2.0",
     "classnames": "2.3.1",
-    "formik": "2.2.8",
+    "formik": "2.2.9",
     "jest-fetch-mock": "3.0.3",
     "node-sass": "5.0.0",
     "pre-commit": "1.2.2",
