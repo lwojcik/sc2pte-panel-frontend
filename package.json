@@ -37,7 +37,7 @@
     "swr": "0.5.7",
     "typeface-lato": "1.1.13",
     "typescript": "4.4.3",
-    "yup": "0.32.9"
+    "yup": "0.32.11"
   },
   "scripts": {
     "start": "craco start",
