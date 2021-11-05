@@ -36,7 +36,7 @@
     "starcraft2-api": "2.0.0",
     "swr": "0.5.7",
     "typeface-lato": "1.1.13",
-    "typescript": "4.4.3",
+    "typescript": "4.4.4",
     "yup": "0.32.9"
   },
   "scripts": {
