@@ -1,6 +1,7 @@
-image: Ubuntu2004
+image: Ubuntu
 platform: x64
 stack: node lts/*
+skip_tags: true
 
 install:
   - npm install
@@ -10,3 +11,18 @@ build_script:
 
 test_script:
   - npx codecov
+
+artifacts:
+  - path: bundle/bundle.zip
+    name: ${APPVEYOR_BUILD_VERSION}
+
+deploy:
+  release: ${APPVEYOR_BUILD_VERSION}
+  description: '${APPVEYOR_BUILD_VERSION}'
+  provider: GitHub
+  auth_token:
+    secure: LZivqelZnFmrHH+iuzgusfnKcf0TpgR9aa4JAhkfD4M4i1+1ABtPnUAL2CtlpzCT
+  draft: false
+  prerelease: false
+  on:
+    branch: master
