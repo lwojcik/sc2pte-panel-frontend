@@ -34,7 +34,7 @@
     "react-timeago": "6.2.1",
     "react-twitch-ext-onauthorized": "3.0.2",
     "starcraft2-api": "2.2.1",
-    "swr": "0.3.8",
+    "swr": "1.1.2",
     "typeface-lato": "1.1.13",
     "typescript": "4.5.4",
     "yup": "0.32.11"
